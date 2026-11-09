@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Weinhof Greiner, Mureck</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;1,6..96,400&family=Karla:wght@400;600&display=swap">
+<style>
+/* Weinetikett: Etikettenpapier, Tinte, Goldprägung, Traubenrot. Laut ist nur das Etikett. */
+:root{--label:#f6f5ef;--ink:#1d2421;--foil:#a8843a;--grape:#5a2741;--vine:#3f5a3a;--bg:#e4e6df;
+  --display:"Bodoni Moda",Didot,Georgia,serif;--body:"Karla",system-ui,sans-serif}
+*{box-sizing:border-box}
+html{color-scheme:light}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 var(--body)}
+a{color:var(--grape);font-weight:600}
+a:focus-visible{outline:2px solid var(--grape);outline-offset:3px}
+.wrap{max-width:900px;margin:0 auto;padding-left:max(18px,env(safe-area-inset-left));padding-right:max(18px,env(safe-area-inset-right))}
+.bottle{padding-block:60px;display:grid;place-items:center;background:linear-gradient(90deg,#2f3d33,#43564a 50%,#2f3d33)}
+.etikett{background:var(--label);width:min(520px,100%);padding:44px 36px;text-align:center;outline:1px solid var(--foil);outline-offset:-12px;
+  box-shadow:0 30px 60px rgba(0,0,0,.35)}
+.etikett .est{font:italic 400 18px var(--display);color:var(--foil);margin:0}
+.etikett h1{font:700 clamp(46px,10vw,74px)/1 var(--display);margin:14px 0 6px;letter-spacing:.01em}
+.etikett .sub{font:400 20px var(--display);margin:0}
+.rule{width:80px;height:1px;background:var(--foil);margin:22px auto}
+.etikett .where{font-size:15px;margin:0}
+.vine-art{display:block;margin:18px auto 0}
+section{padding-block:64px}
+h2{font:700 clamp(30px,5vw,42px)/1.1 var(--display);margin:0 0 20px}
+.story{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+.story p{margin:0 0 16px;max-width:32em}
+.quote{font:italic 400 26px/1.35 var(--display);color:var(--grape);border-left:2px solid var(--foil);padding-left:20px;margin:0}
+.wines{background:var(--label)}
+.list{list-style:none;padding:0;margin:0;border-top:1px solid #cfccbf}
+.list li{display:grid;grid-template-columns:1fr auto;gap:12px;padding:16px 0;border-bottom:1px solid #cfccbf}
+.list .n{font:400 22px var(--display)}
+.list .d{font-size:15px;color:#5d625e}
+.list .p{color:#8a8b84;font-size:15px;align-self:center}
+.hint{font-size:14px;color:#6a6f6b;margin-top:14px}
+.visit{display:grid;grid-template-columns:1.1fr .9fr;gap:40px}
+.ph{aspect-ratio:3/4;background:repeating-linear-gradient(160deg,#d7dbd1 0 2px,#e9ebe4 2px 14px);display:flex;align-items:flex-end;padding:14px;font-size:14px;color:#556058}
+footer{padding-block:30px 80px;font-size:15px;color:#4c544f;text-align:center}
+.draft{position:fixed;left:0;right:0;bottom:0;background:var(--grape);color:#fff;font-size:13px;text-align:center;padding:8px 16px calc(8px + env(safe-area-inset-bottom))}
+@media (max-width:720px){.story,.visit{grid-template-columns:1fr}.etikett{padding:36px 24px}}
+</style>
+</head>
+<body>
+<div class="bottle">
+  <div class="etikett">
+    <p class="est">Familienweingut</p>
+    <h1>Greiner</h1>
+    <p class="sub">Weinhof in Mureck</p>
+    <div class="rule"></div>
+    <p class="where">Grazer Straße 34, 8480 Mureck</p>
+    <svg class="vine-art" width="120" height="36" viewBox="0 0 120 36" aria-hidden="true">
+      <path d="M4 18 C30 2, 50 34, 60 18 S90 2, 116 18" fill="none" stroke="#a8843a" stroke-width="1.5"/>
+      <circle cx="60" cy="18" r="4" fill="#5a2741"/><circle cx="53" cy="24" r="4" fill="#5a2741"/><circle cx="67" cy="24" r="4" fill="#5a2741"/><circle cx="60" cy="30" r="4" fill="#5a2741"/>
+    </svg>
+  </div>
+</div>
+
+<section>
+  <div class="wrap story">
+    <div>
+      <h2>Wein aus den eigenen Gärten</h2>
+      <p>Der Weinhof Greiner ist ein Familienbetrieb direkt in Mureck. Die Trauben wachsen und reifen in unseren eigenen Weingärten und werden mit viel Geduld gepflegt.</p>
+      <p>Im Keller arbeiten wir genauso sorgfältig. So schmeckt man im Glas, wie viel Tradition in jeder Flasche steckt.</p>
+    </div>
+    <p class="quote">Typische Weine aus der Gegend, gemacht von einer Familie, die den Weinbau lebt.</p>
+  </div>
+</section>
+
+<section class="wines">
+  <div class="wrap">
+    <h2>Unsere Weine</h2>
+    <ul class="list">
+      <li><div><div class="n">Weißwein</div><div class="d">Sorte und Jahrgang eintragen</div></div><span class="p">Preis</span></li>
+      <li><div><div class="n">Weißwein</div><div class="d">Sorte und Jahrgang eintragen</div></div><span class="p">Preis</span></li>
+      <li><div><div class="n">Rotwein</div><div class="d">Sorte und Jahrgang eintragen</div></div><span class="p">Preis</span></li>
+      <li><div><div class="n">Spezialität</div><div class="d">z. B. Sekt, Most oder Traubensaft</div></div><span class="p">Preis</span></li>
+    </ul>
+    <p class="hint">Platzhalter: Hier kommt die echte Weinliste hin.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap visit">
+    <div>
+      <h2>Wein kaufen</h2>
+      <p>Am besten rufen Sie kurz an, dann ist sicher jemand für Sie da.</p>
+      <p>Heidi Greiner<br>Telefon <a href="tel:+436644109018">0664 410 90 18</a><br>E-Mail <a href="mailto:heidi.greiner@aon.at">heidi.greiner@aon.at</a></p>
+      <p>Weinhof Greiner<br>Grazer Straße 34<br>8480 Mureck</p>
+      <p><a href="https://maps.google.com/?q=Grazer+Straße+34+8480+Mureck">Route in Google Maps öffnen</a></p>
+    </div>
+    <div class="ph">Foto: Weingarten im Herbst</div>
+  </div>
+</section>
+
+<footer>Weinhof Greiner, Mureck. Impressum und Datenschutz folgen.</footer>
+<div class="draft">Entwurf von David Tomoiaga, nicht die offizielle Seite des Weinhof Greiner</div>
+</body>
+</html>

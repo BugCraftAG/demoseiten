@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Erikas Stüberl, Misselsdorf</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;600;800;900&display=swap">
+<style>
+/* Raststation: Wegweiser-Grün, Schild-Weiß, Backhendl-Gold. Laut ist nur das Schild oben. */
+:root{--green:#1d5e36;--green-dark:#123f24;--white:#ffffff;--paper:#eef2ec;--ink:#17231b;--gold:#e3a72f;--font:"Overpass",system-ui,sans-serif}
+*{box-sizing:border-box}
+html{color-scheme:light}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 var(--font)}
+a{color:var(--green)}
+a:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1000px;margin:0 auto;padding-left:max(18px,env(safe-area-inset-left));padding-right:max(18px,env(safe-area-inset-right))}
+.top{background:var(--green);color:var(--white);padding-block:28px 64px}
+.sign{border:5px solid var(--white);border-radius:14px;padding:26px 28px;max-width:640px;position:relative}
+.sign::after{content:"";position:absolute;left:46px;bottom:-69px;width:14px;height:64px;background:#9aa59d}
+.sign .kind{font-weight:600;font-size:17px;margin:0 0 6px}
+.sign h1{font:900 clamp(42px,9vw,82px)/.95 var(--font);margin:0 0 14px;letter-spacing:-.01em}
+.sign .place{display:flex;justify-content:space-between;gap:12px;font-weight:800;font-size:clamp(18px,3vw,24px);border-top:3px solid var(--white);padding-top:12px}
+.intro{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;padding-block:80px 40px;align-items:start}
+.intro p{font-size:19px;margin:0 0 16px;max-width:32em}
+.btn{display:inline-block;background:var(--gold);color:var(--ink);font-weight:800;text-decoration:none;padding:13px 22px;border-radius:8px;margin-top:6px}
+.plate{background:var(--white);border-radius:14px;padding:22px}
+.plate h2{margin-top:0}
+h2{font:900 clamp(28px,5vw,40px)/1.1 var(--font);margin:0 0 18px}
+.menu{list-style:none;margin:0;padding:0}
+.menu li{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:2px dotted #c5d0c7;font-weight:600}
+.menu li span:last-child{color:#5b6b60;font-weight:400;text-align:right}
+.season{display:grid;grid-template-columns:1fr 1fr;gap:18px;padding-block:40px}
+.card{border-radius:14px;padding:26px;color:var(--white)}
+.card.wild{background:#6b3d1f}
+.card.grill{background:var(--green-dark)}
+.card h3{font:900 26px/1.15 var(--font);margin:0 0 8px}
+.card p{margin:0}
+.card .when{font-weight:800;color:var(--gold);margin-bottom:8px}
+.photos{display:grid;grid-template-columns:2fr 1fr;gap:18px;padding-block:20px 40px}
+.ph{min-height:220px;border-radius:14px;background:repeating-linear-gradient(-45deg,#dfe6e0 0 10px,#e8eee9 10px 20px);display:flex;align-items:flex-end;padding:14px;font-size:14px;color:#46564b}
+.info{display:grid;grid-template-columns:1fr 1fr;gap:40px;padding-block:40px 60px}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
+td{padding:9px 0;border-bottom:1px solid #cfd8d1}
+td:last-child{text-align:right;font-weight:600}
+.small{font-size:14px;color:#46564b}
+footer{background:var(--green-dark);color:#d6e3da;padding-block:30px 80px;font-size:15px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.draft{position:fixed;left:0;right:0;bottom:0;background:var(--gold);color:var(--ink);font-size:13px;font-weight:600;text-align:center;padding:8px 16px calc(8px + env(safe-area-inset-bottom))}
+@media (max-width:720px){.intro,.season,.info,.photos{grid-template-columns:1fr}.sign{padding:20px}}
+</style>
+</head>
+<body>
+<div class="top">
+  <div class="wrap">
+    <div class="sign">
+      <p class="kind">Gasthaus, Café, Raststation</p>
+      <h1>Erikas Stüberl</h1>
+      <div class="place"><span>Misselsdorf 120</span><span>Mureck</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="intro">
+    <div>
+      <p>Bei Erika gibt's ehrliche Hausmannskost, wie man sie sich nach einer Radtour oder einem langen Arbeitstag wünscht. Ein knuspriges Schnitzel, ein ordentliches Steak oder einfach Kaffee und Kuchen auf der Durchreise.</p>
+      <p>Einen Tisch reservieren Sie am schnellsten per Telefon.</p>
+      <a class="btn" href="tel:+436642808807">0664 280 88 07 anrufen</a>
+    </div>
+    <div class="plate">
+      <h2>Was auf den Teller kommt</h2>
+      <ul class="menu">
+        <li><span>Wiener Schnitzel</span><span>Klassiker</span></li>
+        <li><span>Cordon bleu</span><span>gefüllt</span></li>
+        <li><span>Backhendl</span><span>knusprig</span></li>
+        <li><span>Steak</span><span>vom Grill</span></li>
+        <li><span>Hausmannskost</span><span>wechselnd</span></li>
+      </ul>
+      <p class="small">Preise und Tagesgerichte bitte ergänzen.</p>
+    </div>
+  </div>
+
+  <div class="season">
+    <div class="card wild">
+      <p class="when">Im Herbst</p>
+      <h3>Wildwochen</h3>
+      <p>Wenn es draußen kühler wird, kommt Wild auf die Karte.</p>
+    </div>
+    <div class="card grill">
+      <p class="when">Juli und August, freitags ab 17 Uhr</p>
+      <h3>Sommergrillen</h3>
+      <p>An den Sommerfreitagen wird draußen gegrillt.</p>
+    </div>
+  </div>
+
+  <div class="photos">
+    <div class="ph">Foto: Schnitzel mit Erdäpfelsalat</div>
+    <div class="ph">Foto: Gastgarten</div>
+  </div>
+
+  <div class="info">
+    <div>
+      <h2>Geöffnet</h2>
+      <table>
+        <tr><td>Montag und Dienstag</td><td>Ruhetag</td></tr>
+        <tr><td>Mittwoch bis Samstag</td><td>9:00–20:00</td></tr>
+        <tr><td>Sonntag</td><td>9:00–15:00</td></tr>
+      </table>
+      <p class="small">Winterzeiten, gültig bis Ende April. An Feiertagen kann es abweichen.</p>
+    </div>
+    <div>
+      <h2>Anfahrt</h2>
+      <p>Erikas Stüberl<br>Misselsdorf 120<br>8480 Mureck</p>
+      <p><a href="https://maps.google.com/?q=Erikas+Stüberl+Misselsdorf+120+Mureck">Route in Google Maps öffnen</a></p>
+      <p>Telefon <a href="tel:+436642808807">0664 280 88 07</a><br>E-Mail <a href="mailto:hanschekerika@gmail.com">hanschekerika@gmail.com</a></p>
+    </div>
+  </div>
+</div>
+
+<footer><div class="wrap"><span>Erikas Stüberl, Erika Hanschek, Misselsdorf</span><span>Impressum und Datenschutz folgen</span></div></footer>
+<div class="draft">Entwurf von David Tomoiaga, nicht die offizielle Seite von Erikas Stüberl</div>
+</body>
+</html>

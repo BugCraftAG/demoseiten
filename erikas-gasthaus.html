@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Erikas Gasthaus, Mureck</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Nunito+Sans:opsz,wght@6..12,400;6..12,700&display=swap">
+<style>
+/* Nudelteig: Eiergelb, Bärlauchgrün, Teigrad-Zacken als Kanten. Laut ist nur die Teigrad-Kante. */
+:root{--dough:#f4d27a;--dough-light:#fbeec4;--garlic:#33502a;--garlic-light:#e3ecd9;--ink:#24301f;--red:#a8321f;
+  --display:"Caprasimo",Georgia,serif;--body:"Nunito Sans",system-ui,sans-serif}
+*{box-sizing:border-box}
+html{color-scheme:light}
+body{margin:0;background:var(--dough-light);color:var(--ink);font:17px/1.65 var(--body)}
+a{color:var(--garlic);font-weight:700}
+a:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+.wrap{max-width:960px;margin:0 auto;padding-left:max(18px,env(safe-area-inset-left));padding-right:max(18px,env(safe-area-inset-right))}
+/* Zackenkante wie vom Teigrad */
+.zig{--z:14px;-webkit-mask:conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) 50%/calc(2*var(--z)) 100%;
+  mask:conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) 50%/calc(2*var(--z)) 100%;padding-bottom:var(--z)}
+.hero{background:var(--dough);padding-block:26px 70px}
+nav{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:50px}
+nav b{font:400 22px var(--display);color:var(--garlic)}
+nav span{font-weight:700}
+.hero h1{font:400 clamp(48px,10vw,104px)/.92 var(--display);margin:0 0 22px;color:var(--garlic);max-width:9em}
+.hero p{font-size:20px;max-width:30em;margin:0}
+.host{margin-top:22px;font-weight:700}
+section{padding-block:60px}
+h2{font:400 clamp(30px,5vw,46px)/1.05 var(--display);color:var(--garlic);margin:0 0 24px}
+.dishes{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.dish{background:#fff;border-radius:6px;padding:24px;border:2px solid var(--dough)}
+.dish h3{font:400 24px/1.15 var(--display);margin:0 0 10px;color:var(--ink)}
+.dish p{margin:0}
+.dish.tip{background:var(--garlic);color:#fff;border-color:var(--garlic)}
+.dish.tip h3{color:var(--dough)}
+.tag{display:inline-block;font-size:14px;font-weight:700;color:var(--red);margin-bottom:6px}
+.dish.tip .tag{color:var(--dough)}
+.veg{background:var(--garlic-light);padding-block:50px}
+.veg .wrap{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center}
+.leaf{width:96px;height:96px;border-radius:0 70% 0 70%;background:var(--garlic);transform:rotate(10deg)}
+.veg p{margin:0;max-width:34em;font-size:18px}
+.rooms{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.ph{aspect-ratio:4/3;border-radius:6px;background:repeating-linear-gradient(90deg,#f1dfa4 0 3px,#f8eac0 3px 16px);display:flex;align-items:flex-end;padding:14px;font-size:14px;color:#6a5a2a}
+.ph + p{margin-top:8px}
+.contact{background:var(--garlic);color:#fff;padding-block:60px 100px}
+.contact h2{color:var(--dough)}
+.contact a{color:var(--dough)}
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.missing{background:rgba(255,255,255,.12);border:2px dashed rgba(255,255,255,.4);padding:14px 16px;border-radius:6px}
+.draft{position:fixed;left:0;right:0;bottom:0;background:var(--red);color:#fff;font-size:13px;text-align:center;padding:8px 16px calc(8px + env(safe-area-inset-bottom))}
+@media (max-width:760px){.dishes,.rooms,.contact .wrap{grid-template-columns:1fr}.veg .wrap{grid-template-columns:1fr}.leaf{width:64px;height:64px}}
+</style>
+</head>
+<body>
+<div class="hero zig">
+  <div class="wrap">
+    <nav><b>Erikas Gasthaus</b><span>Hauptplatz 42, Mureck</span></nav>
+    <h1>Die Nudeln macht der Wirt selbst.</h1>
+    <p>Steirische Wirtshausküche mitten am Murecker Hauptplatz. Bei uns sitzt man mit Freunden zusammen, redet und isst gut.</p>
+    <p class="host">Ihr Wirt: Alexander Breineder</p>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <h2>Was Sie probieren sollten</h2>
+    <div class="dishes">
+      <div class="dish tip">
+        <span class="tag">Tipp vom Wirt</span>
+        <h3>Murecker Bärlauchsackerl</h3>
+        <p>Hausgemachte Teigtaschen mit Öl, Pesto und Senf.</p>
+      </div>
+      <div class="dish">
+        <span class="tag">Steirisch</span>
+        <h3>Kürbis&shy;kern&shy;schnitzel</h3>
+        <p>Paniert mit gehackten Kürbiskernen, wie es sich in der Steiermark gehört.</p>
+      </div>
+      <div class="dish">
+        <span class="tag">Hausgemacht</span>
+        <h3>Nudeln aus eigenem Teig</h3>
+        <p>Jeden Tag frisch gemacht. Was es heute gibt, steht auf der Tafel.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="veg">
+  <div class="wrap">
+    <div class="leaf" aria-hidden="true"></div>
+    <p><strong>Auch vegetarisch und vegan.</strong> Wer kein Fleisch isst, findet bei uns trotzdem mehr als eine Beilage.</p>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <h2>Drinnen und draußen</h2>
+    <div class="rooms">
+      <div><div class="ph">Foto: die rustikale Gaststube</div><p>Die Gaststube für kalte Tage.</p></div>
+      <div><div class="ph">Foto: Gastgarten am Hauptplatz</div><p>Und wenn das Wetter passt, sitzen Sie draußen.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="contact">
+  <div class="wrap">
+    <div>
+      <h2>Vorbeikommen</h2>
+      <p>Erikas Gasthaus<br>Hauptplatz 42<br>8480 Mureck</p>
+      <p><a href="https://maps.google.com/?q=Erikas+Gasthaus+Hauptplatz+42+Mureck">Route in Google Maps öffnen</a></p>
+    </div>
+    <div>
+      <h2>Reservieren</h2>
+      <p class="missing">Telefonnummer und Öffnungszeiten hier eintragen.</p>
+    </div>
+  </div>
+</div>
+<div class="draft">Entwurf von David Tomoiaga, nicht die offizielle Seite von Erikas Gasthaus</div>
+</body>
+</html>

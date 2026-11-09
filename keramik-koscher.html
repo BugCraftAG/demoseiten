@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Keramikatelier Koscher, Bad Radkersburg</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Work+Sans:wght@400;500;600&display=swap">
+<style>
+/* Glasur: Schlickergrau, Kobaltblau, Seladon, Eisenbraun. Laut sind nur die handgeformten Glasurflecken. */
+:root{--slip:#d9d8d2;--slip-light:#ecebe6;--cobalt:#1f3e8a;--celadon:#9cc1ad;--iron:#5a3420;--ink:#22252b;
+  --display:"Young Serif",Georgia,serif;--body:"Work Sans",system-ui,sans-serif}
+*{box-sizing:border-box}
+html{color-scheme:light}
+body{margin:0;background:var(--slip-light);color:var(--ink);font:17px/1.65 var(--body)}
+a{color:var(--cobalt);font-weight:600}
+a:focus-visible{outline:2px solid var(--cobalt);outline-offset:3px}
+.wrap{max-width:1000px;margin:0 auto;padding-left:max(18px,env(safe-area-inset-left));padding-right:max(18px,env(safe-area-inset-right))}
+header{padding-block:22px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-weight:500}
+.hero{position:relative;padding-block:40px 90px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:30px}
+.blob{aspect-ratio:1;width:100%;max-width:420px;justify-self:center;background:var(--cobalt);
+  border-radius:58% 42% 61% 39% / 46% 55% 45% 54%;display:grid;place-items:center;color:#fff;text-align:center;padding:40px;
+  box-shadow:inset -18px -22px 0 rgba(0,0,0,.18), inset 14px 12px 0 rgba(255,255,255,.12)}
+.blob p{margin:0;font:400 22px/1.3 var(--display)}
+.drip{position:absolute;width:90px;aspect-ratio:1;background:var(--celadon);border-radius:44% 56% 38% 62% / 60% 40% 60% 40%;right:8%;bottom:40px}
+h1{font:400 clamp(44px,8vw,84px)/1 var(--display);margin:0 0 18px;text-wrap:balance}
+.hero .lead{font-size:19px;max-width:28em;margin:0}
+section{padding-block:60px}
+h2{font:400 clamp(30px,5vw,44px)/1.1 var(--display);margin:0 0 22px}
+.works{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.piece{aspect-ratio:3/4;background:var(--slip);display:flex;flex-direction:column;justify-content:flex-end;padding:14px;font-size:14px;
+  border-radius:40% 40% 8px 8px / 30% 30% 8px 8px}
+.piece:nth-child(2){border-radius:8px 8px 45% 45% / 8px 8px 28% 28%}
+.piece:nth-child(3){border-radius:50%/40%}
+.atelier{background:var(--iron);color:#f2ebe4}
+.atelier .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:start}
+.atelier p{max-width:32em}
+.atelier a{color:var(--celadon)}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
+td{padding:10px 0;border-bottom:1px solid rgba(242,235,228,.25)}
+td:last-child{text-align:right;font-weight:600}
+.small{font-size:14px;opacity:.8}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+footer{padding-block:30px 80px;font-size:15px;color:#555}
+.draft{position:fixed;left:0;right:0;bottom:0;background:var(--cobalt);color:#fff;font-size:13px;text-align:center;padding:8px 16px calc(8px + env(safe-area-inset-bottom))}
+@media (max-width:760px){.hero,.atelier .wrap,.contact{grid-template-columns:1fr}.blob{max-width:300px;order:-1}.works{grid-template-columns:1fr 1fr}.drip{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header><span>Friederike Koscher</span><span>Hauptplatz 2, Bad Radkersburg</span></header>
+  <div class="hero">
+    <div>
+      <h1>Keramik aus dem Arkadenhof</h1>
+      <p class="lead">Mitten in der Altstadt von Bad Radkersburg, im Arkadenhof am Hauptplatz, entstehen in meinem Atelier Stücke aus Ton. Jedes davon geht durch meine Hände und durch den Brennofen.</p>
+    </div>
+    <div class="blob"><p>Keramikatelier<br>Koscher</p></div>
+    <div class="drip" aria-hidden="true"></div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <h2>Aus dem Atelier</h2>
+    <div class="works">
+      <div class="piece">Foto: Schale</div>
+      <div class="piece">Foto: Krug</div>
+      <div class="piece">Foto: Vase</div>
+      <div class="piece">Foto: Becher</div>
+    </div>
+    <p class="small">Platzhalter für Fotos Ihrer Arbeiten. Jedes Bild kann einen Namen und, wenn Sie wollen, einen Preis bekommen.</p>
+  </div>
+</section>
+
+<section class="atelier">
+  <div class="wrap">
+    <div>
+      <h2>Kommen Sie vorbei</h2>
+      <p>Am schönsten ist Keramik in der Hand. Schauen Sie während der Öffnungszeiten ins Atelier und sehen Sie sich in Ruhe um.</p>
+      <p class="small">Hier ist Platz für Ihre Geschichte: seit wann Sie töpfern, wie Sie arbeiten und ob Sie Kurse anbieten.</p>
+    </div>
+    <div>
+      <table>
+        <tr><td>Montag bis Mittwoch</td><td>10:00–12:00</td></tr>
+        <tr><td>Donnerstag bis Samstag</td><td>15:00–20:00</td></tr>
+        <tr><td>Sonntag</td><td>geschlossen</td></tr>
+      </table>
+      <p class="small">Bitte prüfen, ob die Zeiten noch stimmen.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap contact">
+    <div>
+      <h2>Kontakt</h2>
+      <p>Friederike Koscher<br>Hauptplatz 2 (Arkadenhof)<br>8490 Bad Radkersburg</p>
+      <p><a href="https://maps.google.com/?q=Hauptplatz+2+8490+Bad+Radkersburg">Route in Google Maps öffnen</a></p>
+    </div>
+    <div>
+      <h2>Anfragen</h2>
+      <p>Telefon <a href="tel:+4369910665088">0699 1066 5088</a><br>E-Mail <a href="mailto:ceramic.i.centrum@inode.at">ceramic.i.centrum@inode.at</a></p>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><footer>Keramikatelier Koscher, Bad Radkersburg. Impressum und Datenschutz folgen.</footer></div>
+<div class="draft">Entwurf von David Tomoiaga, nicht die offizielle Seite des Keramikateliers Koscher</div>
+</body>
+</html>

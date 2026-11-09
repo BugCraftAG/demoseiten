@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Holzbau Pamper, Bad Radkersburg</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;700&family=Source+Sans+3:wght@400;600&display=swap">
+<style>
+/* Zimmerei: Waldgrün, Lärchenholz, Hobelspan-Weiß. Laut ist nur der Zollstock als Trenner. */
+:root{--forest:#22362b;--forest-2:#2f4a3b;--larch:#c4874a;--larch-light:#e6c79f;--shaving:#faf8f3;--ink:#1d2620;
+  --display:"Zilla Slab",Georgia,serif;--body:"Source Sans 3",system-ui,sans-serif}
+*{box-sizing:border-box}
+html{color-scheme:light}
+body{margin:0;background:var(--shaving);color:var(--ink);font:18px/1.6 var(--body)}
+a{color:var(--forest);font-weight:600}
+a:focus-visible{outline:3px solid var(--larch);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding-left:max(18px,env(safe-area-inset-left));padding-right:max(18px,env(safe-area-inset-right))}
+.hero{background:var(--forest);color:#eef1ec;padding-block:24px 70px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:60px}
+header b{font:700 24px var(--display)}
+header a{color:var(--larch-light);text-decoration:none}
+.hero h1{font:700 clamp(48px,9vw,100px)/.95 var(--display);margin:0 0 20px;max-width:9em}
+.hero p{font-size:20px;max-width:30em;margin:0;color:#cfd8d1}
+/* Zollstock */
+.ruler{height:58px;background:var(--larch);position:relative;overflow:hidden;
+  background-image:
+    linear-gradient(90deg,var(--ink) 2px,transparent 2px),
+    linear-gradient(90deg,var(--ink) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(0,0,0,.25) 3px,transparent 3px);
+  background-size:100px 26px,10px 12px,200px 100%;background-repeat:repeat-x;background-position:0 0,0 0,198px 0}
+.ruler span{position:absolute;top:24px;font:700 15px var(--display);color:var(--ink);transform:translateX(4px)}
+section{padding-block:70px}
+h2{font:700 clamp(32px,5vw,48px)/1.05 var(--display);margin:0 0 24px;color:var(--forest)}
+.jobs{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:2px solid var(--forest)}
+.job{padding:22px 22px 26px 0;border-bottom:1px solid #d9d4c8}
+.job h3{font:700 24px/1.15 var(--display);margin:0 0 8px}
+.job p{margin:0;font-size:17px}
+.hint{font-size:15px;color:#6b7068;margin-top:14px}
+.family{background:var(--larch-light)}
+.family .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+.family p{max-width:30em}
+.ph{aspect-ratio:4/3;background:repeating-linear-gradient(100deg,#d2ab79 0 3px,#dcbb8f 3px 9px,#d6b182 9px 11px,#e0c39b 11px 22px);display:flex;align-items:flex-end;padding:14px;font-size:14px;color:#4a3720}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;counter-reset:s}
+.steps li{counter-increment:s}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:44px;height:44px;border:2px solid var(--forest);border-radius:50%;font:700 20px var(--display);margin-bottom:12px;color:var(--forest)}
+.steps b{display:block;font-size:19px}
+.contact{background:var(--forest);color:#eef1ec}
+.contact h2{color:#fff}
+.contact a{color:var(--larch-light)}
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px}
+.missing{border:2px dashed rgba(255,255,255,.35);padding:14px 16px;font-size:16px}
+footer{background:var(--forest);color:#9fb2a6;font-size:14px;padding-block:0 80px}
+.draft{position:fixed;left:0;right:0;bottom:0;background:var(--larch);color:var(--ink);font-size:13px;font-weight:600;text-align:center;padding:8px 16px calc(8px + env(safe-area-inset-bottom))}
+@media (max-width:780px){.jobs{grid-template-columns:1fr}.family .wrap,.contact .wrap{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <header><b>Holzbau Pamper</b><a href="tel:+436641964845">0664 196 48 45</a></header>
+    <h1>Gebaut aus Holz, gebaut zum Bleiben.</h1>
+    <p>Holzbau Pamper ist ein Familienbetrieb aus Pridahof bei Bad Radkersburg. Wir beraten Sie, liefern pünktlich und bauen sauber, vom Dachstuhl bis zur Terrasse.</p>
+  </div>
+</div>
+<div class="ruler" id="ruler" aria-hidden="true"></div>
+
+<section>
+  <div class="wrap">
+    <h2>Was wir bauen</h2>
+    <div class="jobs">
+      <div class="job"><h3>Dachstühle</h3><p>Neu oder saniert, gezimmert für Ihr Haus.</p></div>
+      <div class="job"><h3>Zubauten und Aufstockungen</h3><p>Mehr Platz in Holzbauweise, schnell und trocken.</p></div>
+      <div class="job"><h3>Carports und Vordächer</h3><p>Damit das Auto und der Eingang im Trockenen sind.</p></div>
+      <div class="job"><h3>Terrassen und Balkone</h3><p>Aus heimischem Holz, das lange hält.</p></div>
+      <div class="job"><h3>Pergolen und Gartenhäuser</h3><p>Für mehr Zeit im Garten.</p></div>
+      <div class="job"><h3>Sanierung</h3><p>Morsche Balken tauschen, Altes erhalten.</p></div>
+    </div>
+    <p class="hint">Vorschlag: Leistungen bitte an Ihr echtes Angebot anpassen.</p>
+  </div>
+</section>
+
+<section class="family">
+  <div class="wrap">
+    <div>
+      <h2>Ein Familienbetrieb mit Handwerk</h2>
+      <p>Bei uns sprechen Sie direkt mit dem Chef. Von der ersten Beratung bis zum letzten Nagel kümmert sich dasselbe Team um Ihr Projekt.</p>
+      <p>Hier ist Platz für die Geschichte des Betriebs: seit wann es Holzbau Pamper gibt und wer dahinter steht.</p>
+    </div>
+    <div class="ph">Foto: das Team vor einem fertigen Dachstuhl</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>So kommen wir zusammen</h2>
+    <ol class="steps">
+      <li><b>Anrufen</b>Sie erzählen uns, was Sie vorhaben.</li>
+      <li><b>Besichtigung</b>Wir schauen uns alles vor Ort an.</li>
+      <li><b>Angebot</b>Sie bekommen ein klares Angebot.</li>
+      <li><b>Bauen</b>Wir liefern pünktlich und bauen sauber.</li>
+    </ol>
+  </div>
+</section>
+
+<div class="contact">
+  <section>
+    <div class="wrap">
+      <div>
+        <h2>Projekt besprechen</h2>
+        <p>Telefon <a href="tel:+436641964845">0664 196 48 45</a></p>
+        <p>Holzbau Pamper GmbH<br>Pridahof 28<br>8490 Bad Radkersburg</p>
+        <p><a href="https://maps.google.com/?q=Pridahof+28+8490+Bad+Radkersburg">Route in Google Maps öffnen</a></p>
+      </div>
+      <div>
+        <h2>Referenzen</h2>
+        <p class="missing">Hier kommen Fotos von fertigen Projekten hin. Das ist für einen Holzbau das stärkste Argument.</p>
+      </div>
+    </div>
+  </section>
+</div>
+<footer><div class="wrap">Holzbau Pamper GmbH, Pridahof. Impressum und Datenschutz folgen.</div></footer>
+<div class="draft">Entwurf von David Tomoiaga, nicht die offizielle Seite von Holzbau Pamper</div>
+
+<script>
+// Zentimeter-Zahlen auf den Zollstock
+const r=document.getElementById("ruler");
+for(let i=1;i*100<window.innerWidth+100;i++){const s=document.createElement("span");s.style.left=(i*100)+"px";s.textContent=i*10;r.appendChild(s)}
+</script>
+</body>
+</html>

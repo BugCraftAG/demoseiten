@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Poredos Cars, Bad Radkersburg</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;800&family=Barlow:wght@400;500;600&display=swap">
+<style>
+/* Werkstatt-Arbeitsauftrag: Stahlblau, Formularpapier, Signalorange. Laut ist nur der ankreuzbare Auftrag. */
+:root{--steel:#26333f;--steel-2:#3a4a59;--form:#f3f4f2;--line:#c9ced3;--signal:#e66a1f;--ink:#1a2128;
+  --display:"Barlow Condensed",Impact,sans-serif;--body:"Barlow",system-ui,sans-serif}
+*{box-sizing:border-box}
+html{color-scheme:light}
+body{margin:0;background:var(--steel);color:var(--ink);font:17px/1.6 var(--body)}
+a{color:var(--signal);font-weight:600}
+a:focus-visible,input:focus-visible+span,button:focus-visible{outline:3px solid var(--signal);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding-left:max(18px,env(safe-area-inset-left));padding-right:max(18px,env(safe-area-inset-right))}
+.top{color:#fff;padding-block:22px 50px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:44px}
+header b{font:800 26px/1 var(--display);letter-spacing:.02em}
+header a{color:#fff;text-decoration:none;font-weight:600}
+.hero{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:48px;align-items:start}
+.hero h1{font:800 clamp(50px,8vw,92px)/.9 var(--display);margin:0 0 18px;text-transform:uppercase}
+.hero p{font-size:19px;color:#d7dee4;margin:0 0 12px;max-width:28em}
+.order{background:var(--form);color:var(--ink);padding:24px;border-radius:2px;position:relative}
+.order label{border-bottom:1px solid var(--line)}
+.order::before{content:"";position:absolute;top:0;left:0;right:0;height:8px;background:var(--signal)}
+.order h2{font:800 28px/1 var(--display);margin:6px 0 4px;color:var(--ink)}
+.order .meta{display:flex;justify-content:space-between;font-size:14px;color:#5d6873;margin-bottom:12px}
+.order label{display:flex;align-items:center;gap:12px;height:40px;cursor:pointer;font-weight:500}
+.order input{appearance:none;width:22px;height:22px;border:2px solid var(--ink);border-radius:2px;margin:0;flex:0 0 auto;display:grid;place-items:center}
+.order input:checked{background:var(--ink)}
+.order input:checked::after{content:"";width:6px;height:11px;border:solid #fff;border-width:0 3px 3px 0;transform:rotate(45deg) translate(-1px,-1px)}
+.order .send{display:block;margin-top:16px;background:var(--signal);color:#fff;text-align:center;text-decoration:none;font:800 22px var(--display);padding:12px;letter-spacing:.02em}
+.order .alt{font-size:14px;margin:10px 0 0;color:#5d6873}
+.light{background:var(--form)}
+section{padding-block:64px}
+h2.big{font:800 clamp(34px,6vw,56px)/1 var(--display);margin:0 0 22px;text-transform:uppercase}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+.two p{max-width:32em;margin:0 0 14px}
+.parts{border:2px solid var(--ink);padding:22px}
+.parts b{font:800 24px var(--display);display:block;margin-bottom:6px}
+.ph{aspect-ratio:16/10;background:repeating-linear-gradient(90deg,#dfe3e6 0 22px,#e9ecee 22px 44px);display:flex;align-items:flex-end;padding:14px;font-size:14px;color:#5d6873}
+.info{color:#fff}
+.info .two{grid-template-columns:1fr 1fr}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
+td{padding:10px 0;border-bottom:1px solid #4a5b6b}
+td:last-child{text-align:right;font-weight:600}
+.info a{color:#ffb27f}
+footer{color:#9fb0bf;font-size:14px;padding-block:10px 80px}
+.draft{position:fixed;left:0;right:0;bottom:0;background:var(--signal);color:#fff;font-size:13px;text-align:center;padding:8px 16px calc(8px + env(safe-area-inset-bottom))}
+@media (max-width:780px){.hero,.two,.info .two{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="top">
+  <div class="wrap">
+    <header><b>Poredos Cars</b><a href="tel:+4366499274394">0664 992 74 394</a></header>
+    <div class="hero">
+      <div>
+        <h1>Reparieren statt tauschen.</h1>
+        <p>Unsere Werkstatt in Bad Radkersburg sucht zuerst den Fehler und repariert, was sich reparieren lässt. Erst wenn es nicht anders geht, kommt ein neues Teil rein.</p>
+        <p>Fairer Preis, ehrliche Auskunft, und Ihr Auto ist schnell wieder fahrbereit.</p>
+      </div>
+      <form class="order" id="order" onsubmit="return false">
+        <h2>Arbeitsauftrag</h2>
+        <div class="meta"><span>Was braucht Ihr Auto?</span><span>Bitte ankreuzen</span></div>
+        <label><input type="checkbox" id="o1" value="Service"><span>Service und Inspektion</span></label>
+        <label><input type="checkbox" id="o2" value="Reifenwechsel"><span>Reifenwechsel</span></label>
+        <label><input type="checkbox" id="o3" value="Bremsen"><span>Bremsen</span></label>
+        <label><input type="checkbox" id="o4" value="Ölwechsel"><span>Ölwechsel</span></label>
+        <label><input type="checkbox" id="o5" value="Fehlersuche"><span>Fehlersuche, Lampe leuchtet</span></label>
+        <label><input type="checkbox" id="o6" value="Ersatzteile"><span>Ersatzteile</span></label>
+        <a class="send" id="send" href="https://wa.me/4366499274394">Per WhatsApp anfragen</a>
+        <p class="alt">Oder anrufen: <a href="tel:+4366499274394">0664 992 74 394</a></p>
+      </form>
+    </div>
+  </div>
+</div>
+
+<section class="light">
+  <div class="wrap two">
+    <div>
+      <h2 class="big">Werkstatt und Teile</h2>
+      <p>Bei uns bekommen Sie beides: die Reparatur in der Werkstatt und Ersatzteile zum Mitnehmen. Fragen Sie einfach nach, wir suchen das passende Teil für Ihr Auto.</p>
+      <div class="parts"><b>Teil gesucht?</b>Rufen Sie an und nennen Sie Marke, Modell und Baujahr. Den Rest klären wir.</div>
+    </div>
+    <div class="ph">Foto: Hebebühne in der Werkstatt</div>
+  </div>
+</section>
+
+<section class="info">
+  <div class="wrap two">
+    <div>
+      <h2 class="big">Geöffnet</h2>
+      <table>
+        <tr><td>Montag bis Freitag</td><td>8:00–17:00</td></tr>
+        <tr><td>Samstag</td><td>8:00–12:00</td></tr>
+        <tr><td>Sonntag</td><td>geschlossen</td></tr>
+      </table>
+    </div>
+    <div>
+      <h2 class="big">Anfahrt</h2>
+      <p>Poredos Cars<br>Kirchweg 37/2<br>8490 Bad Radkersburg</p>
+      <p><a href="https://maps.google.com/?q=Kirchweg+37+8490+Bad+Radkersburg">Route in Google Maps öffnen</a></p>
+    </div>
+  </div>
+</section>
+<div class="wrap"><footer>Poredos Cars, Bad Radkersburg. Leistungen bitte bestätigen. Impressum und Datenschutz folgen.</footer></div>
+<div class="draft">Entwurf von David Tomoiaga, nicht die offizielle Seite von Poredos Cars</div>
+
+<script>
+const send=document.getElementById("send");
+document.getElementById("order").addEventListener("change",()=>{
+  const v=[...document.querySelectorAll("#order input:checked")].map(i=>i.value);
+  const text="Hallo, ich brauche einen Termin"+(v.length?" für: "+v.join(", "):"")+".";
+  send.href="https://wa.me/4366499274394?text="+encodeURIComponent(text);
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Bäckerei & Café Lang, Halbenrain</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Rethink+Sans:wght@400;500;700&display=swap">
+<style>
+/* Mehlsack: Kraftpapier, blauer Stempel, Krustenbraun. Ein Element laut: der Stempel mit der Uhrzeit. */
+:root{
+  --kraft:#d9c4a1; --kraft-dark:#c4aa80; --crust:#3b2414; --stamp:#24457f; --gold:#b8860b; --flour:#fbf8f2;
+  --display:"Alfa Slab One", Georgia, serif; --body:"Rethink Sans", system-ui, sans-serif;
+}
+*{box-sizing:border-box}
+html{color-scheme:light}
+body{margin:0;background:var(--kraft);color:var(--crust);font:17px/1.6 var(--body);
+  background-image:radial-gradient(rgba(59,36,20,.07) 1px,transparent 1px);background-size:5px 5px}
+a{color:var(--stamp)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--stamp);outline-offset:3px}
+.wrap{max-width:980px;margin:0 auto;padding-left:max(18px,env(safe-area-inset-left));padding-right:max(18px,env(safe-area-inset-right))}
+header{padding-block:22px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.logo{font:400 22px/1 var(--display);letter-spacing:.01em}
+.logo small{display:block;font:500 13px var(--body);letter-spacing:.04em;margin-top:4px}
+.call{font-weight:700;text-decoration:none;border:2px solid var(--crust);color:var(--crust);padding:9px 16px;border-radius:999px}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center;padding-block:30px 60px}
+.hero h1{font:400 clamp(44px,8vw,86px)/.95 var(--display);margin:0 0 20px;text-wrap:balance}
+.hero p{max-width:30em;margin:0 0 14px;font-size:19px}
+.stamp{justify-self:center;width:min(320px,80vw);aspect-ratio:1;border:6px double var(--stamp);border-radius:50%;
+  display:grid;place-items:center;text-align:center;color:var(--stamp);transform:rotate(-8deg);padding:30px;
+  mix-blend-mode:multiply;opacity:.9}
+.stamp b{display:block;font:400 clamp(54px,12vw,78px)/1 var(--display)}
+.stamp span{font-weight:700;font-size:15px;letter-spacing:.06em}
+.status{display:inline-flex;align-items:center;gap:10px;background:var(--flour);border-radius:999px;padding:8px 16px;font-weight:700}
+.dot{width:10px;height:10px;border-radius:50%;background:#888}
+.dot.open{background:#2f7d3b}
+section{padding-block:56px}
+h2{font:400 clamp(30px,5vw,44px)/1.05 var(--display);margin:0 0 22px}
+.paper{background:var(--flour);padding-block:56px;box-shadow:0 -14px 0 -8px var(--flour)}
+.medal{display:grid;grid-template-columns:auto 1fr;gap:26px;align-items:center}
+.medal-badge{width:120px;height:120px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#f1d27a,var(--gold) 60%,#7a5a08);
+  display:grid;place-items:center;color:#3a2a00;font:400 34px var(--display);box-shadow:inset 0 0 0 6px rgba(255,255,255,.35)}
+.medal p{margin:0;max-width:34em}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.photo{aspect-ratio:4/5;background:repeating-linear-gradient(135deg,var(--kraft-dark) 0 2px,transparent 2px 12px),var(--kraft);
+  border:2px dashed rgba(59,36,20,.35);display:flex;align-items:flex-end;padding:14px;font-size:14px;font-weight:500}
+.hours{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
+td{padding:10px 0;border-bottom:1px solid rgba(59,36,20,.2);vertical-align:top}
+td:last-child{text-align:right;font-weight:500}
+tr.today td{font-weight:700;color:var(--stamp)}
+.note{font-size:15px;opacity:.85}
+footer{padding-block:40px 90px;font-size:15px;display:flex;gap:24px;flex-wrap:wrap;justify-content:space-between}
+.draft{position:fixed;left:0;right:0;bottom:0;background:var(--crust);color:var(--flour);font-size:13px;text-align:center;
+  padding:8px 16px calc(8px + env(safe-area-inset-bottom))}
+@media (max-width:720px){
+  .hero,.hours{grid-template-columns:1fr}
+  .stamp{order:-1;width:220px;padding:20px}
+  .grid{grid-template-columns:1fr 1fr}
+  .grid .photo:last-child{display:none}
+  .medal{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo">Bäckerei & Café Lang<small>Halbenrain 16</small></div>
+    <a class="call" href="tel:+43347624222">03476 24222</a>
+  </header>
+
+  <div class="hero">
+    <div>
+      <h1>Frisches Brot, bevor der Ort aufwacht.</h1>
+      <p>Seit früh um 5:45 Uhr stehen Kornspitz, Semmeln und Bauernbrot im Regal. Und wer Zeit hat, frühstückt gleich bei uns im Café.</p>
+      <p class="status" id="status"><span class="dot" id="dot"></span><span id="statusText">Öffnungszeiten unten</span></p>
+    </div>
+    <div class="stamp" aria-hidden="true"><div><span>Täglich ab</span><b>5:45</b><span>Halbenrain</span></div></div>
+  </div>
+</div>
+
+<div class="paper">
+  <div class="wrap medal">
+    <div class="medal-badge" aria-hidden="true">Gold</div>
+    <div>
+      <h2>Unser Bauernbrot hat Gold geholt.</h2>
+      <p>Beim Internationalen Brotbackwettbewerb 2020 wurde unser Bauernbrot mit Gold ausgezeichnet. Gebacken wird es heute noch genauso, jeden Tag frisch in Halbenrain.</p>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <h2>Aus der Backstube</h2>
+    <div class="grid">
+      <div class="photo">Foto: Bauernbrot, frisch angeschnitten</div>
+      <div class="photo">Foto: Kornspitz auf dem Blech</div>
+      <div class="photo">Foto: Frühstück im Café</div>
+    </div>
+    <p class="note">Platzhalter für Ihre eigenen Fotos.</p>
+  </div>
+</section>
+
+<section class="paper">
+  <div class="wrap hours">
+    <div>
+      <h2>Wann wir offen haben</h2>
+      <table id="hoursTable">
+        <tr data-d="1"><td>Montag</td><td>5:45–12:30 und 15:00–18:30</td></tr>
+        <tr data-d="2"><td>Dienstag</td><td>5:45–12:30 und 15:00–18:30</td></tr>
+        <tr data-d="3"><td>Mittwoch</td><td>5:45–12:30 und 15:00–18:30</td></tr>
+        <tr data-d="4"><td>Donnerstag</td><td>5:45–12:30 und 15:00–18:30</td></tr>
+        <tr data-d="5"><td>Freitag</td><td>5:45–12:30 und 15:00–18:30</td></tr>
+        <tr data-d="6"><td>Samstag</td><td>5:45–12:00</td></tr>
+        <tr data-d="0"><td>Sonntag</td><td>geschlossen</td></tr>
+      </table>
+    </div>
+    <div>
+      <h2>So finden Sie uns</h2>
+      <p>Bäckerei & Café Lang<br>Halbenrain 16<br>8492 Halbenrain</p>
+      <p>Parkplätze direkt vor der Tür.<br>Gleich nebenan: der Milchautomat.</p>
+      <p><a href="https://maps.google.com/?q=Bäckerei+Lang+Halbenrain+16">Route in Google Maps öffnen</a></p>
+      <p>Telefon <a href="tel:+43347624222">03476 24222</a><br>E-Mail <a href="mailto:baeckerei.lang@aon.at">baeckerei.lang@aon.at</a></p>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <footer>
+    <span>Bäckerei & Café Lang, Günther Lang, Halbenrain</span>
+    <span>Impressum und Datenschutz folgen</span>
+  </footer>
+</div>
+<div class="draft">Entwurf von David Tomoiaga, nicht die offizielle Seite der Bäckerei Lang</div>
+
+<script>
+// [Tag]: Liste von [von, bis] in Minuten
+const H={1:[[345,750],[900,1110]],2:[[345,750],[900,1110]],3:[[345,750],[900,1110]],4:[[345,750],[900,1110]],5:[[345,750],[900,1110]],6:[[345,720]],0:[]};
+const fmt=m=>Math.floor(m/60)+":"+String(m%60).padStart(2,"0");
+const now=new Date(),d=now.getDay(),m=now.getHours()*60+now.getMinutes();
+document.querySelector(`tr[data-d="${d}"]`)?.classList.add("today");
+const open=H[d].find(([a,b])=>m>=a&&m<b);
+const t=document.getElementById("statusText");
+if(open){document.getElementById("dot").classList.add("open");t.textContent="Jetzt geöffnet, bis "+fmt(open[1])+" Uhr";}
+else{const next=H[d].find(([a])=>a>m);t.textContent=next?"Gerade zu, wir öffnen um "+fmt(next[0])+" Uhr":"Gerade geschlossen";}
+</script>
+</body>
+</html>

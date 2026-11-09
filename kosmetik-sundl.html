@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Kosmetik Sundl, Bad Radkersburg</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;1,400&family=Hanken+Grotesk:wght@400;600&display=swap">
+<style>
+/* Ruhe: Eukalyptus, Leinen, Kiesel, ein warmes Apricot. Laut ist nur der Ablauf des Termins. */
+:root{--euc:#355f52;--euc-2:#4c7a6b;--linen:#f3f1ea;--pebble:#dfe4df;--apricot:#e7a77a;--ink:#1f2a26;
+  --display:"Spectral",Georgia,serif;--body:"Hanken Grotesk",system-ui,sans-serif}
+*{box-sizing:border-box}
+html{color-scheme:light}
+body{margin:0;background:#fff;color:var(--ink);font:17px/1.65 var(--body)}
+a{color:var(--euc);font-weight:600}
+a:focus-visible{outline:2px solid var(--apricot);outline-offset:3px}
+.wrap{max-width:1000px;margin:0 auto;padding-left:max(18px,env(safe-area-inset-left));padding-right:max(18px,env(safe-area-inset-right))}
+header{padding-block:22px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+header b{font:600 20px var(--display);color:var(--euc)}
+header a{text-decoration:none}
+.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;padding-block:40px 70px;align-items:end}
+.hero h1{font:400 clamp(46px,8.5vw,92px)/.98 var(--display);margin:0;color:var(--euc)}
+.hero h1 em{font-style:italic}
+.hero p{margin:0;font-size:19px;max-width:24em}
+.pebbles{display:flex;gap:10px;margin-top:22px}
+.pebbles span{display:block;background:var(--pebble);border-radius:50%}
+.pebbles span:nth-child(1){width:54px;height:40px}.pebbles span:nth-child(2){width:34px;height:28px;background:var(--apricot)}.pebbles span:nth-child(3){width:44px;height:34px}
+section{padding-block:64px}
+h2{font:400 clamp(30px,5vw,46px)/1.1 var(--display);margin:0 0 24px;color:var(--euc)}
+.steps-sec{background:var(--euc);color:#eef4f1}
+.steps-sec h2{color:#fff}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:22px;counter-reset:s}
+.steps li{counter-increment:s;border-top:1px solid rgba(255,255,255,.35);padding-top:16px}
+.steps li::before{content:counter(s);display:block;font:400 44px/1 var(--display);color:var(--apricot);margin-bottom:10px}
+.steps b{display:block;font-size:18px;margin-bottom:4px}
+.offer{display:grid;grid-template-columns:1fr 1fr;gap:44px}
+.offer ul{list-style:none;padding:0;margin:0}
+.offer li{padding:14px 0;border-bottom:1px solid var(--pebble)}
+.offer li b{display:block}
+.offer li span{color:#5a6a63;font-size:15px}
+.guests{background:var(--linen);border-radius:4px;padding:28px}
+.guests h3{font:400 26px/1.2 var(--display);margin:0 0 10px;color:var(--euc)}
+.guests p{margin:0}
+.info{display:grid;grid-template-columns:1fr 1fr;gap:44px;background:var(--pebble);padding:36px;border-radius:4px}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
+td{padding:10px 0;border-bottom:1px solid #c4ccc6}
+td:last-child{text-align:right;font-weight:600}
+footer{padding-block:20px 80px;font-size:14px;color:#5a6a63}
+.draft{position:fixed;left:0;right:0;bottom:0;background:var(--euc);color:#fff;font-size:13px;text-align:center;padding:8px 16px calc(8px + env(safe-area-inset-bottom))}
+@media (max-width:760px){.hero,.offer,.info{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.info{padding:24px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header><b>Kosmetik Sundl</b><a href="tel:+436645452801">0664 545 28 01</a></header>
+  <div class="hero">
+    <h1>Fußpflege, die sich Zeit nimmt.</h1>
+    <div>
+      <p>Im Studio in der Emmenstraße kümmern wir uns gründlich um Ihre Füße und Ihre Haut. Ruhig, sauber und ohne Eile.</p>
+      <div class="pebbles" aria-hidden="true"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+</div>
+
+<section class="steps-sec">
+  <div class="wrap">
+    <h2>So läuft eine Fußpflege bei uns ab</h2>
+    <ol class="steps">
+      <li><b>Ankommen</b>Ein warmes Fußbad, damit Haut und Nägel weich werden.</li>
+      <li><b>Nägel</b>Kürzen, formen und eingewachsene Ecken behandeln.</li>
+      <li><b>Hornhaut und Hühneraugen</b>Sanft und gründlich entfernen.</li>
+      <li><b>Pflege</b>Eincremen und zum Schluss die Füße hochlegen.</li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <div class="wrap offer">
+    <div>
+      <h2>Unser Angebot</h2>
+      <ul>
+        <li><b>Fußpflege</b><span>Nägel, Hornhaut, Hühneraugen</span></li>
+        <li><b>Pediküre</b><span>Pflege und auf Wunsch Lack</span></li>
+        <li><b>Kosmetik</b><span>Gesichtsbehandlung und Pflege</span></li>
+      </ul>
+      <p style="font-size:14px;color:#5a6a63">Leistungen und Preise bitte bestätigen und ergänzen.</p>
+    </div>
+    <div class="guests">
+      <h3>Auf Kur oder Reha in Bad Radkersburg?</h3>
+      <p>Viele unserer Kundinnen und Kunden kommen während ihres Aufenthalts in Bad Radkersburg zu uns. Rufen Sie an, wir finden meist schnell einen Termin.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="info">
+      <div>
+        <h2>Öffnungszeiten</h2>
+        <table>
+          <tr><td>Montag bis Freitag</td><td>9:00–16:00</td></tr>
+          <tr><td>Samstag und Sonntag</td><td>geschlossen</td></tr>
+        </table>
+        <p style="font-size:14px">Termine nach Vereinbarung.</p>
+      </div>
+      <div>
+        <h2>Termin</h2>
+        <p>Telefon <a href="tel:+436645452801">0664 545 28 01</a></p>
+        <p>Wellnesszentrum & Kosmetikstudio Sundl<br>Emmenstraße 21<br>8490 Bad Radkersburg</p>
+        <p><a href="https://maps.google.com/?q=Emmenstraße+21+8490+Bad+Radkersburg">Route in Google Maps öffnen</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><footer>Kosmetik Sundl, Bad Radkersburg. Impressum und Datenschutz folgen.</footer></div>
+<div class="draft">Entwurf von David Tomoiaga, nicht die offizielle Seite von Kosmetik Sundl</div>
+</body>
+</html>
