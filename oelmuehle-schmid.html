@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Ölmühle Schmid</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rozha+One&family=Petrona:wght@400;600&display=swap">
+<style>
+/* Kernöl: dunkles Kernölgrün, das rote Leuchten im Gegenlicht, Kürbisorange. Laut ist nur der Öltropfen mit 1802. */
+:root{--oil:#16301a;--oil-2:#244a28;--ruby:#8a2c14;--pumpkin:#e08a2e;--seed:#eef0e4;--ink:#18231a;
+  --display:"Rozha One",Georgia,serif;--body:"Petrona",Georgia,serif}
+*{box-sizing:border-box}
+html{color-scheme:light}
+body{margin:0;background:var(--seed);color:var(--ink);font:18px/1.65 var(--body)}
+a{color:var(--ruby);font-weight:600}
+a:focus-visible{outline:3px solid var(--pumpkin);outline-offset:3px}
+.wrap{max-width:1000px;margin:0 auto;padding-left:max(18px,env(safe-area-inset-left));padding-right:max(18px,env(safe-area-inset-right))}
+.hero{background:var(--oil);color:#eef3e6;padding-block:24px 80px;overflow:hidden}
+header{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:50px}
+header b{font:400 24px var(--display)}
+header a{color:#f3c58c;text-decoration:none}
+.hero .wrap>div.grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.hero h1{font:400 clamp(48px,9vw,96px)/.95 var(--display);margin:0 0 20px}
+.hero p{font-size:20px;max-width:28em;margin:0;color:#cfdcc8}
+.drop{justify-self:center;width:min(300px,70vw);aspect-ratio:3/4;border-radius:50% 50% 50% 50% / 62% 62% 38% 38%;
+  background:radial-gradient(circle at 38% 72%,#c2461b 0,#8a2c14 22%,#2f5a24 55%,#13260f 80%);
+  display:grid;place-items:center;color:#fff;text-align:center;box-shadow:inset -14px -18px 30px rgba(0,0,0,.35)}
+.drop span{font:400 clamp(54px,12vw,80px)/1 var(--display)}
+.drop small{display:block;font-size:16px;letter-spacing:.04em}
+section{padding-block:66px}
+h2{font:400 clamp(32px,5vw,48px)/1.05 var(--display);margin:0 0 24px;color:var(--oil)}
+.products{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:2px solid var(--oil)}
+.p{padding:20px 16px 22px 0;border-bottom:1px solid #cdd3c0}
+.p h3{font:600 20px/1.2 var(--body);margin:0 0 4px}
+.p p{margin:0;font-size:16px;color:#4a5a4b}
+.p.main{grid-column:span 2;background:var(--oil-2);color:#fff;padding:22px;border-bottom:0}
+.p.main h3{font:400 32px var(--display)}
+.p.main p{color:#d6e2cf}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+.mills{background:#fff}
+.mills .box{border-left:4px solid var(--pumpkin);padding:4px 0 4px 18px;margin-bottom:22px}
+.mills .box h3{font:400 26px var(--display);margin:0 0 6px}
+.mills .box p{margin:0}
+.ph{aspect-ratio:4/3;background:repeating-linear-gradient(45deg,#dfe4d3 0 10px,#e9ede0 10px 20px);display:flex;align-items:flex-end;padding:14px;font-size:15px;color:#526052}
+.missing{border:2px dashed #b9c2ad;padding:14px 16px;font-size:16px;color:#4a5a4b}
+.contact{background:var(--ruby);color:#fbe9df}
+.contact h2{color:#fff}
+.contact a{color:#ffd19c}
+footer{background:var(--ruby);color:#f0c7b5;font-size:15px;padding-block:0 80px}
+.draft{position:fixed;left:0;right:0;bottom:0;background:var(--pumpkin);color:var(--ink);font-size:13px;font-weight:600;text-align:center;padding:8px 16px calc(8px + env(safe-area-inset-bottom))}
+@media (max-width:780px){.hero .wrap>div.grid,.two{grid-template-columns:1fr}.products{grid-template-columns:1fr 1fr}.drop{order:-1;width:200px}}
+</style>
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <header><b>Ölmühle Schmid</b><a href="tel:+436644431051">0664 443 10 51</a></header>
+    <div class="grid">
+      <div>
+        <h1>Reines Kürbiskernöl aus der eigenen Mühle.</h1>
+        <p>Bei uns wird das Öl noch selbst gepresst. Ein Tropfen auf dem Teller und Sie wissen, warum die Steiermark dafür bekannt ist.</p>
+      </div>
+      <div class="drop"><div><small>Tradition seit</small><span>1802</span></div></div>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <h2>Aus unserem Hofladen</h2>
+    <div class="products">
+      <div class="p main"><h3>Kürbiskernöl</h3><p>100 Prozent reines Öl aus steirischen Kürbiskernen. Flaschengrößen und Preise hier eintragen.</p></div>
+      <div class="p"><h3>Kürbiskerne</h3><p>Zum Knabbern und Kochen</p></div>
+      <div class="p"><h3>Kürbiskernpesto</h3><p>Für Nudeln und Brot</p></div>
+      <div class="p"><h3>Käferbohnen</h3><p>Steirischer Klassiker</p></div>
+      <div class="p"><h3>Essig</h3><p>Passt zum Kernöl</p></div>
+      <div class="p"><h3>Wein und Sekt</h3><p>Aus der Region</p></div>
+      <div class="p"><h3>Kekse und Fruchtprodukte</h3><p>Zum Verschenken</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="mills">
+  <div class="wrap two">
+    <div>
+      <h2>Ölmühle und Sägewerk</h2>
+      <div class="box"><h3>Die Ölmühle</h3><p>Hier werden die Kürbiskerne geröstet und gepresst. Hier ist Platz, um zu erzählen, wie Ihr Öl entsteht.</p></div>
+      <div class="box"><h3>Das Sägewerk</h3><p>Neben dem Öl bearbeiten wir auch Holz. Aus dem Sägewerk kommen unsere Holzprodukte.</p></div>
+    </div>
+    <div class="ph">Foto: die Ölpresse in Betrieb</div>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="wrap two">
+    <div>
+      <h2>Einkaufen und Kontakt</h2>
+      <p>Telefon <a href="tel:+436644431051">0664 443 10 51</a> oder <a href="tel:+43347520393">03475 20 393</a></p>
+      <p>E-Mail <a href="mailto:kernoel@schmid-oelmuehle.at">kernoel@schmid-oelmuehle.at</a></p>
+    </div>
+    <div>
+      <h2>Hier finden Sie uns</h2>
+      <p class="missing" style="color:#fbe9df;border-color:rgba(255,255,255,.4)">Adresse und Öffnungszeiten vom Hofladen hier eintragen.</p>
+    </div>
+  </div>
+</section>
+<footer><div class="wrap">Ölmühle Schmid. Impressum und Datenschutz folgen.</div></footer>
+<div class="draft">Entwurf von David Tomoiaga für eine neue Website, nicht die offizielle Seite der Ölmühle Schmid</div>
+</body>
+</html>

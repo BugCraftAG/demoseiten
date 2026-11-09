@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Weingut Gießauf-Nell, Klöch</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Italiana&family=Jost:wght@400;500;600&display=swap">
+<style>
+/* Traminer: Rosenblüte, Traminergold, Vulkanbasalt. Laut sind nur die drei Traminer nebeneinander. */
+:root{--rose:#c2627a;--rose-light:#f6e4e8;--gold:#cfa53f;--basalt:#2c292a;--white:#fffdfb;--ink:#241f21;
+  --display:"Italiana",Didot,Georgia,serif;--body:"Jost",system-ui,sans-serif}
+*{box-sizing:border-box}
+html{color-scheme:light}
+body{margin:0;background:var(--white);color:var(--ink);font:17px/1.65 var(--body)}
+a{color:var(--rose);font-weight:600}
+a:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1020px;margin:0 auto;padding-left:max(18px,env(safe-area-inset-left));padding-right:max(18px,env(safe-area-inset-right))}
+.hero{background:var(--basalt);color:#f3ecee;padding-block:24px 80px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:64px}
+header b{font:400 26px var(--display);letter-spacing:.04em}
+header a{color:var(--gold);text-decoration:none;font-weight:500}
+.hero h1{font:400 clamp(52px,11vw,124px)/.9 var(--display);margin:0 0 22px;letter-spacing:.01em}
+.hero p{font-size:19px;max-width:30em;margin:0;color:#cfc4c8}
+section{padding-block:66px}
+h2{font:400 clamp(34px,6vw,54px)/1.05 var(--display);margin:0 0 24px}
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.wine{padding:30px 26px 34px;min-height:260px;display:flex;flex-direction:column;justify-content:flex-end}
+.wine h3{font:400 34px/1.05 var(--display);margin:0 0 10px}
+.wine p{margin:0}
+.w1{background:var(--rose-light)}
+.w2{background:var(--rose);color:#fff}
+.w3{background:#f3e6c2}
+.note{font-size:15px;color:#6c6266;margin-top:14px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+.two p{max-width:32em;margin:0 0 14px}
+.terrace{background:var(--rose-light)}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
+td{padding:10px 0;border-bottom:1px solid #e3c9cf}
+td:last-child{text-align:right;font-weight:500}
+.ph{aspect-ratio:4/3;background:linear-gradient(180deg,#d8c7cb 0 40%,#b8c29b 40% 100%);display:flex;align-items:flex-end;padding:14px;font-size:14px;color:#3f4430}
+.contact{background:var(--basalt);color:#e9e1e4}
+.contact h2{color:var(--gold)}
+.contact a{color:#f0b6c4}
+footer{background:var(--basalt);color:#9b9095;font-size:14px;padding-block:0 80px}
+.draft{position:fixed;left:0;right:0;bottom:0;background:var(--rose);color:#fff;font-size:13px;text-align:center;padding:8px 16px calc(8px + env(safe-area-inset-bottom))}
+@media (max-width:780px){.trio,.two{grid-template-columns:1fr}.wine{min-height:180px}}
+</style>
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <header><b>Gießauf-Nell</b><a href="tel:+4334757265">03475 7265</a></header>
+    <h1>Traminer aus Klöch</h1>
+    <p>Weinbau hat in unserem Haus eine lange Tradition. Einen besonderen Platz hat bei uns der Traminer, der vielfach ausgezeichnet wurde.</p>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <h2>Drei Traminer, drei Charaktere</h2>
+    <div class="trio">
+      <div class="wine w1"><h3>Gewürztraminer</h3><p>Beschreibung, Jahrgang und Auszeichnungen eintragen.</p></div>
+      <div class="wine w2"><h3>Roter Traminer</h3><p>Beschreibung, Jahrgang und Auszeichnungen eintragen.</p></div>
+      <div class="wine w3"><h3>Gelber Traminer</h3><p>Beschreibung, Jahrgang und Auszeichnungen eintragen.</p></div>
+    </div>
+    <p class="note">Platzhalter: Die ganze Weinliste mit Weiß und Rotweinen kommt hier hin.</p>
+  </div>
+</section>
+
+<section class="terrace">
+  <div class="wrap two">
+    <div>
+      <h2>Buschenschank mit Aussicht</h2>
+      <p>Auf unserer Terrasse sitzen Sie mit Blick über die Weingärten von Klöch. Dazu gibt es kalte Platten, steirische Spezialitäten und natürlich unseren Wein zu fairen Preisen.</p>
+      <table>
+        <tr><td>Montag</td><td>14:00–22:00</td></tr>
+        <tr><td>Dienstag</td><td>16:00–22:00</td></tr>
+        <tr><td>Mittwoch und Donnerstag</td><td>Ruhetag</td></tr>
+        <tr><td>Freitag bis Sonntag</td><td>14:00–22:00</td></tr>
+      </table>
+      <p class="note">Zeiten bitte bestätigen, sie können sich je nach Saison ändern.</p>
+    </div>
+    <div class="ph">Foto: Blick von der Terrasse über die Weingärten</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap two">
+    <div>
+      <h2>Gästezimmer</h2>
+      <p>Wer länger bleiben möchte, übernachtet bei uns direkt am Weingut. Hier ist Platz für Zimmer, Preise und Fotos.</p>
+      <p>Zimmeranfragen an <a href="mailto:giessauf-nell@aon.at">giessauf-nell@aon.at</a></p>
+    </div>
+    <div class="ph" style="background:repeating-linear-gradient(90deg,#efe3e6 0 2px,#f8f0f2 2px 30px)">Foto: Gästezimmer</div>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="wrap two">
+    <div>
+      <h2>Kontakt</h2>
+      <p>Telefon <a href="tel:+4334757265">03475 7265</a><br>E-Mail <a href="mailto:giessaufnell@gmail.com">giessaufnell@gmail.com</a></p>
+    </div>
+    <div>
+      <h2>Anfahrt</h2>
+      <p>Weingut Gießauf-Nell<br>Klöch 63<br>8493 Klöch</p>
+      <p><a href="https://maps.google.com/?q=Weingut+Giessauf-Nell+Klöch+63">Route in Google Maps öffnen</a></p>
+    </div>
+  </div>
+</section>
+<footer><div class="wrap">Weingut Gießauf-Nell, Familie Nell, Klöch. Impressum und Datenschutz folgen.</div></footer>
+<div class="draft">Entwurf von David Tomoiaga für eine neue Website, nicht die offizielle Seite vom Weingut Gießauf-Nell</div>
+</body>
+</html>

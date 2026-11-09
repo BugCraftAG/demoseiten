@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Grieslerei, Mureck</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Public+Sans:wght@400;600&display=swap">
+<style>
+/* Apothekerregal: Kräutersalbei, Kaffeebraun, Braunglas, Etikettenweiß. Laut sind nur die Etiketten der vier Regale. */
+:root{--sage:#7b9876;--sage-light:#e8eee5;--coffee:#4a2d21;--amber:#b06a26;--label:#fffdf8;--ink:#2a2420;
+  --display:"Libre Baskerville",Georgia,serif;--body:"Public Sans",system-ui,sans-serif}
+*{box-sizing:border-box}
+html{color-scheme:light}
+body{margin:0;background:var(--sage-light);color:var(--ink);font:17px/1.65 var(--body)}
+a{color:var(--coffee);font-weight:600}
+a:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+.wrap{max-width:1000px;margin:0 auto;padding-left:max(18px,env(safe-area-inset-left));padding-right:max(18px,env(safe-area-inset-right))}
+header{padding-block:22px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+header b{font:700 22px var(--display)}
+.hero{padding-block:30px 70px;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.hero h1{font:400 clamp(44px,8vw,84px)/1.02 var(--display);margin:0 0 18px}
+.hero p{font-size:19px;max-width:28em;margin:0}
+.jar{justify-self:center;width:min(260px,70vw);aspect-ratio:3/4;border-radius:24px 24px 18px 18px;background:linear-gradient(90deg,#8a4f1c,var(--amber) 40%,#cf8a45 55%,#8a4f1c);position:relative;box-shadow:0 20px 40px rgba(74,45,33,.25)}
+.jar::before{content:"";position:absolute;left:12%;right:12%;top:-20px;height:30px;background:#3b2a20;border-radius:8px}
+.jar .lbl{position:absolute;left:12%;right:12%;top:30%;background:var(--label);border:1px solid #c9b9a1;padding:16px 10px;text-align:center}
+.jar .lbl b{display:block;font:700 22px var(--display)}
+.jar .lbl i{font:italic 400 15px var(--display);color:#6b5a4c}
+section{padding-block:64px}
+h2{font:400 clamp(30px,5vw,44px)/1.1 var(--display);margin:0 0 24px}
+.shelf{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.tag{background:var(--label);border:1px solid #cdbfa9;padding:22px 18px;position:relative}
+.tag::before{content:"";position:absolute;inset:5px;border:1px solid #e3d8c6;pointer-events:none}
+.tag{min-width:0}
+.tag h3{font:700 19px/1.2 var(--display);margin:0 0 8px;hyphens:auto;overflow-wrap:anywhere}
+.tag p{margin:0;font-size:15px;color:#5b4d42}
+.cafe{background:var(--coffee);color:#f3e7dc}
+.cafe .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+.cafe h2{color:#fff}
+.cafe p{max-width:32em}
+.ph{aspect-ratio:4/3;background:repeating-radial-gradient(circle at 30% 40%,#5e3a2b 0 6px,#563527 6px 12px);display:flex;align-items:flex-end;padding:14px;font-size:14px;color:#d8c2b0}
+.brands{display:flex;flex-wrap:wrap;gap:8px}
+.brands span{background:var(--label);border:1px solid #cdbfa9;padding:6px 12px;font-size:14px}
+.info .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
+td{padding:10px 0;border-bottom:1px solid #c8d3c4}
+td:last-child{text-align:right;font-weight:600}
+.warn{background:#fff3df;border-left:4px solid var(--amber);padding:10px 14px;font-size:15px}
+footer{font-size:14px;color:#5b4d42;padding-block:10px 80px}
+.draft{position:fixed;left:0;right:0;bottom:0;background:var(--sage);color:#fff;font-size:13px;text-align:center;padding:8px 16px calc(8px + env(safe-area-inset-bottom))}
+@media (max-width:780px){.hero,.cafe .wrap,.info .wrap{grid-template-columns:1fr}.shelf{grid-template-columns:1fr 1fr}.jar{order:-1;width:180px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header><b>Grieslerei</b><span>Drogerie und Café in Mureck</span></header>
+  <div class="hero">
+    <div>
+      <h1>Wir nehmen´s persönlich.</h1>
+      <p>Tee in Arzneibuchqualität, Naturkosmetik und ein Kaffee aus dem Vulkanland. In der Grieslerei kaufen Sie natürlich und gesund ein und bleiben gerne auf einen Kaffee.</p>
+    </div>
+    <div class="jar" aria-hidden="true"><div class="lbl"><b>Grieslerei</b><i>Quellengasse 1</i></div></div>
+  </div>
+</div>
+
+<section style="background:#fff">
+  <div class="wrap">
+    <h2>Aus unseren Regalen</h2>
+    <div class="shelf">
+      <div class="tag"><h3>Tee und Kräuter</h3><p>Teemischungen und Kräuter in Arzneibuchqualität</p></div>
+      <div class="tag"><h3>Naturkosmetik</h3><p>Biologische und handgemachte Pflege</p></div>
+      <div class="tag"><h3>Nahrungsergänzung</h3><p>Ausgewählte Produkte und Superfoods</p></div>
+      <div class="tag"><h3>Kleine Geschenke</h3><p>Handverpackte Schokolade und mehr</p></div>
+    </div>
+    <h3 style="font:700 18px var(--display);margin:30px 0 12px">Bei uns erhältlich</h3>
+    <div class="brands"><span>Hildegard von Bingen</span><span>SonnenMoor</span><span>Vinoble Cosmetics</span><span>BioPlanete</span><span>Kenrico</span><span>espara</span><span>bano</span></div>
+  </div>
+</section>
+
+<section class="cafe">
+  <div class="wrap">
+    <div>
+      <h2>Das Café</h2>
+      <p>Unser Kaffee kommt von Maika Kaffee und wird im Steirischen Vulkanland geröstet. Dazu gibt es täglich frisches Gebäck, regionale Snacks und Frühstück.</p>
+    </div>
+    <div class="ph">Foto: Cappuccino an der Theke</div>
+  </div>
+</section>
+
+<section class="info">
+  <div class="wrap">
+    <div>
+      <h2>Öffnungszeiten</h2>
+      <table>
+        <tr><td>Montag bis Freitag</td><td>7:00–18:00</td></tr>
+        <tr><td>Samstag</td><td>8:00–12:00</td></tr>
+      </table>
+      <p class="warn">Auf der jetzigen Seite stehen zwei verschiedene Zeiten. Bitte die richtigen bestätigen.</p>
+    </div>
+    <div>
+      <h2>Besuchen Sie uns</h2>
+      <p>Grieslerei, Inhaberin Dr. Sabrina Gries<br>Quellengasse 1<br>8480 Mureck</p>
+      <p>Telefon <a href="tel:+436644367200">0664 436 72 00</a><br>E-Mail <a href="mailto:office@grieslerei.at">office@grieslerei.at</a></p>
+      <p><a href="https://maps.google.com/?q=Grieslerei+Quellengasse+1+Mureck">Route in Google Maps öffnen</a></p>
+    </div>
+  </div>
+</section>
+<div class="wrap"><footer>Grieslerei, Drogerie und Café, Mureck. Impressum und Datenschutz folgen.</footer></div>
+<div class="draft">Entwurf von David Tomoiaga für eine neue Website, nicht die offizielle Seite der Grieslerei</div>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Autohaus Peternel, Bad Radkersburg</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&family=Red+Hat+Text:wght@400;500&display=swap">
+<style>
+/* Werkstatt-Terminplaner: Graphit, Aluminium, Signalblau. Laut ist nur die Marken-Leiste mit den drei Marken. */
+:root{--graphite:#262a31;--graphite-2:#353a43;--alu:#e8eaed;--alu-2:#f5f6f8;--blue:#1d5bd6;--ink:#15181d;
+  --display:"Red Hat Display",system-ui,sans-serif;--body:"Red Hat Text",system-ui,sans-serif}
+*{box-sizing:border-box}
+html{color-scheme:light}
+body{margin:0;background:var(--alu-2);color:var(--ink);font:17px/1.6 var(--body)}
+a{color:var(--blue);font-weight:500}
+a:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.wrap{max-width:1060px;margin:0 auto;padding-left:max(18px,env(safe-area-inset-left));padding-right:max(18px,env(safe-area-inset-right))}
+.top{background:var(--graphite);color:#fff}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding-block:20px}
+header b{font:900 22px var(--display);letter-spacing:.01em}
+header a{color:#fff;text-decoration:none;font-weight:500}
+.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;padding-block:50px 70px;align-items:end}
+.hero h1{font:900 clamp(42px,7.5vw,80px)/1 var(--display);margin:0 0 18px}
+.hero p{font-size:19px;max-width:30em;margin:0;color:#c6ccd6}
+.since{border-left:3px solid var(--blue);padding-left:18px}
+.since b{display:block;font:900 clamp(58px,10vw,96px)/1 var(--display)}
+.since span{color:#c6ccd6}
+.brands{display:grid;grid-template-columns:repeat(3,1fr);background:var(--graphite-2)}
+.brands div{padding:22px 18px;text-align:center;font:700 clamp(18px,3vw,26px) var(--display);color:#fff;border-right:1px solid #4a515c}
+.brands div:last-child{border-right:0}
+section{padding-block:64px}
+h2{font:900 clamp(30px,5vw,46px)/1.05 var(--display);margin:0 0 24px}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.svc{background:#fff;border:1px solid #dde1e6;border-radius:8px;padding:22px}
+.svc h3{font:700 20px var(--display);margin:0 0 6px}
+.svc p{margin:0;color:#4a515c}
+.svc.wide{grid-column:span 2;background:var(--blue);color:#fff;border-color:var(--blue)}
+.svc.wide p{color:#dbe6ff}
+.sale{background:#fff}
+.sale .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+.ph{aspect-ratio:16/10;border-radius:8px;background:linear-gradient(180deg,var(--alu) 0 62%,#d5d9df 62% 64%,var(--alu) 64%);display:flex;align-items:flex-end;padding:14px;font-size:14px;color:#5b636e}
+.cert{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.cert span{border:1px solid #c7ccd3;border-radius:999px;padding:5px 12px;font-size:14px;font-weight:500}
+.info{background:var(--graphite);color:#e6e9ee}
+.info h2{color:#fff}
+.info a{color:#8fb2ff}
+.info .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
+td{padding:10px 0;border-bottom:1px solid #47505c}
+td:last-child{text-align:right;font-weight:500}
+footer{background:var(--graphite);color:#9aa3af;font-size:14px;padding-block:0 80px}
+.draft{position:fixed;left:0;right:0;bottom:0;background:var(--blue);color:#fff;font-size:13px;text-align:center;padding:8px 16px calc(8px + env(safe-area-inset-bottom))}
+@media (max-width:800px){.hero,.sale .wrap,.info .wrap{grid-template-columns:1fr}.services{grid-template-columns:1fr}.svc.wide{grid-column:auto}}
+</style>
+</head>
+<body>
+<div class="top">
+  <div class="wrap">
+    <header><b>Autohaus Peternel</b><a href="tel:+4334763242">03476 3242</a></header>
+    <div class="hero">
+      <div>
+        <h1>Ihre Werkstatt in Bad Radkersburg.</h1>
+        <p>Service, Reparatur, Teile und Fahrzeugverkauf aus einer Hand. Als Meisterbetrieb kümmern wir uns um Ihr Auto, vom Jahresservice bis zur Scheibenreparatur.</p>
+      </div>
+      <div class="since"><b>35+</b><span>Jahre in Bad Radkersburg</span></div>
+    </div>
+  </div>
+  <div class="brands"><div>Mercedes-Benz</div><div>smart</div><div>Mazda</div></div>
+</div>
+
+<section>
+  <div class="wrap">
+    <h2>Werkstatt</h2>
+    <div class="services">
+      <div class="svc wide"><h3>Jahresservice und Überprüfung</h3><p>Regelmäßige Wartung, damit Ihr Auto zuverlässig bleibt.</p></div>
+      <div class="svc"><h3>Räderwechsel</h3><p>Sommer und Winterräder schnell gewechselt.</p></div>
+      <div class="svc"><h3>Smart Repair</h3><p>Kleine Schäden ausbessern, ohne gleich ganze Teile zu tauschen.</p></div>
+      <div class="svc"><h3>Klimaservice und Scheiben</h3><p>Vom Klimaservice bis zur Reparatur der Windschutzscheibe.</p></div>
+      <div class="svc"><h3>Teile, Zubehör und Garantie</h3><p>Ersatzteile, Zubehör und Garantiearbeiten für alle drei Marken.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sale">
+  <div class="wrap">
+    <div>
+      <h2>Neu und gebraucht</h2>
+      <p>Bei uns finden Sie Neuwagen und Gebrauchte. Ist Ihr Wunschauto nicht dabei, suchen wir es gerne für Sie.</p>
+      <div class="cert"><span>Meisterbetrieb</span><span>ISO 9001</span><span>ISO 14001</span></div>
+    </div>
+    <div class="ph">Foto: Schauraum mit aktuellen Modellen</div>
+  </div>
+</section>
+
+<section class="info">
+  <div class="wrap">
+    <div>
+      <h2>Öffnungszeiten</h2>
+      <table>
+        <tr><td>Montag bis Freitag</td><td>7:45–12:00 und 13:00–17:00</td></tr>
+        <tr><td>Samstag</td><td>nach Voranmeldung</td></tr>
+      </table>
+    </div>
+    <div>
+      <h2>Termin vereinbaren</h2>
+      <p>Telefon <a href="tel:+4334763242">03476 3242</a><br>E-Mail <a href="mailto:office@peternel.at">office@peternel.at</a></p>
+      <p>Autohaus Peternel<br>Halbenrainer Straße 10<br>8490 Bad Radkersburg</p>
+      <p><a href="https://maps.google.com/?q=Autohaus+Peternel+Bad+Radkersburg">Route in Google Maps öffnen</a></p>
+    </div>
+  </div>
+</section>
+<footer><div class="wrap">Autohaus Peternel, Bad Radkersburg. Datenschutz und Impressum folgen.</div></footer>
+<div class="draft">Entwurf von David Tomoiaga für eine neue Website, nicht die offizielle Seite vom Autohaus Peternel</div>
+</body>
+</html>

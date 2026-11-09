@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Gasthof Röck am Röcksee</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Prata&family=Rubik:wght@400;500;600&display=swap">
+<style>
+/* Am See: Seeblau, Schilfgrün, Morgennebel, Steg-Holz. Laut ist nur die Wasserlinie mit den Wellen im Hero. */
+:root{--lake:#2a6a8a;--lake-deep:#1b4a63;--reed:#6c7d3a;--mist:#e7f1f4;--wood:#a87a4c;--white:#ffffff;--ink:#16303d;
+  --display:"Prata",Georgia,serif;--body:"Rubik",system-ui,sans-serif}
+*{box-sizing:border-box}
+html{color-scheme:light}
+body{margin:0;background:var(--white);color:var(--ink);font:17px/1.65 var(--body)}
+a{color:var(--lake-deep);font-weight:500}
+a:focus-visible{outline:3px solid var(--wood);outline-offset:3px}
+.wrap{max-width:1000px;margin:0 auto;padding-left:max(18px,env(safe-area-inset-left));padding-right:max(18px,env(safe-area-inset-right))}
+.hero{background:var(--mist);padding-block:24px 0;position:relative}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:50px}
+header b{font:400 22px var(--display)}
+.hero h1{font:400 clamp(46px,9vw,98px)/1 var(--display);margin:0 0 12px}
+.hero .since{font-size:20px;margin:0 0 50px}
+.waves{height:130px;background-color:var(--lake);background:
+  radial-gradient(ellipse 60px 8px at 60px 20px,rgba(255,255,255,.35) 98%,transparent) 0 0/180px 40px,
+  radial-gradient(ellipse 40px 6px at 130px 30px,rgba(255,255,255,.25) 98%,transparent) 0 0/240px 50px,var(--lake)}
+.intro{background:var(--lake);color:#e6f2f7;padding-block:0 64px}
+.intro p{font-size:20px;max-width:34em;margin:0}
+section{padding-block:64px}
+h2{font:400 clamp(30px,5vw,44px)/1.1 var(--display);margin:0 0 24px;color:var(--lake-deep)}
+.do{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.do div{padding-top:16px;border-top:3px solid var(--reed)}
+.do h3{font:400 24px var(--display);margin:0 0 6px}
+.do p{margin:0;color:#3c5561}
+.stay{background:var(--mist)}
+.stay .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+.stay h2 em{font-style:normal}
+.ph{aspect-ratio:4/3;background:linear-gradient(180deg,#cfe1e8 0 55%,#4b84a0 55% 100%);display:flex;align-items:flex-end;padding:14px;font-size:14px;color:#e8f3f7}
+.kitchen .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+.missing{border:2px dashed #b7cbd3;padding:14px 16px;font-size:15px;color:#3c5561}
+.book{background:var(--lake-deep);color:#e6f2f7}
+.book h2{color:#fff}
+.book a{color:#bfe3f2}
+.book .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px}
+.book .note{background:rgba(255,255,255,.08);padding:14px 16px;border-left:3px solid var(--wood)}
+footer{background:var(--lake-deep);color:#9fbccb;font-size:14px;padding-block:0 80px}
+.draft{position:fixed;left:0;right:0;bottom:0;background:var(--wood);color:#fff;font-size:13px;text-align:center;padding:8px 16px calc(8px + env(safe-area-inset-bottom))}
+@media (max-width:780px){.do{grid-template-columns:1fr 1fr}.stay .wrap,.kitchen .wrap,.book .wrap{grid-template-columns:1fr}.waves{height:90px}}
+</style>
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <header><b>Gasthof Röck</b><a href="tel:+4334722292">03472 2292</a></header>
+    <h1>Der Gasthof am See.</h1>
+    <p class="since">Familie Röck, seit 1966 in Misselsdorf bei Mureck.</p>
+  </div>
+  <div class="waves" aria-hidden="true"></div>
+</div>
+<div class="intro">
+  <div class="wrap"><p>Direkt am Röcksee essen Sie gute steirische Küche, übernachten am See und verbringen den Tag am Ufer. Seit fast sechzig Jahren.</p></div>
+</div>
+
+<section>
+  <div class="wrap">
+    <h2>Was Sie am See erwartet</h2>
+    <div class="do">
+      <div><h3>Baden</h3><p>Erfrischende Stunden im Röcksee.</p></div>
+      <div><h3>Fischen</h3><p>Sportfischen direkt am Gasthof.</p></div>
+      <div><h3>Camping</h3><p>Mit Zelt oder Wohnwagen am See.</p></div>
+      <div><h3>Essen</h3><p>Steirische Küche im Gasthof.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="stay">
+  <div class="wrap">
+    <div>
+      <h2>Aufwachen. Am See.</h2>
+      <p>Übernachten Sie bei uns am Röcksee und starten Sie den Tag mit einem Frühstück am Wasser.</p>
+      <p style="font-size:15px;color:#3c5561">Zimmertypen, Preise und Fotos hier ergänzen.</p>
+    </div>
+    <div class="ph">Foto: Blick vom Zimmer auf den Röcksee</div>
+  </div>
+</section>
+
+<section class="kitchen">
+  <div class="wrap">
+    <div>
+      <h2>Steirische Küche</h2>
+      <p>Im Gasthof kochen wir so, wie man es in der Steiermark mag. Hier ist Platz für Ihre Spezialitäten und die Speisekarte.</p>
+    </div>
+    <div>
+      <h2>Öffnungszeiten</h2>
+      <p class="missing">Öffnungszeiten vom Gasthof und Ruhetag hier eintragen.</p>
+    </div>
+  </div>
+</section>
+
+<section class="book">
+  <div class="wrap">
+    <div>
+      <h2>Zimmer und Platz buchen</h2>
+      <p class="note">Buchungen und Stornierungen bearbeiten wir schriftlich. Bei dringenden Fragen rufen Sie uns einfach an.</p>
+      <p>E-Mail <a href="mailto:info@roecksee.at">info@roecksee.at</a><br>Telefon <a href="tel:+4334722292">03472 2292</a></p>
+    </div>
+    <div>
+      <h2>Anfahrt</h2>
+      <p>Gasthof Röck<br>Misselsdorf 40<br>8480 Mureck</p>
+      <p><a href="https://maps.google.com/?q=Gasthof+Röck+Misselsdorf+40+Mureck">Route in Google Maps öffnen</a></p>
+    </div>
+  </div>
+</section>
+<footer><div class="wrap">Gasthof Röck, Familie Röck, Mureck. Impressum, Datenschutz und AGB folgen.</div></footer>
+<div class="draft">Entwurf von David Tomoiaga für eine neue Website, nicht die offizielle Seite vom Gasthof Röck</div>
+</body>
+</html>

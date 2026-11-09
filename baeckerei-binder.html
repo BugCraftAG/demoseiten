@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Bäckerei Binder seit 1931</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gelasio:wght@500;700&family=Figtree:wght@400;600;700&display=swap">
+<style>
+/* Lieferroute: Nachtblau, Weizengold, Mehlweiß. Laut ist nur die Route mit den vier Standorten. */
+:root{--navy:#1c2a48;--navy-2:#2b3d63;--wheat:#c8952f;--wheat-light:#f4e3bd;--flour:#ffffff;--mist:#eef0f5;--ink:#17203a;
+  --display:"Gelasio",Georgia,serif;--body:"Figtree",system-ui,sans-serif}
+*{box-sizing:border-box}
+html{color-scheme:light}
+body{margin:0;background:var(--flour);color:var(--ink);font:17px/1.6 var(--body)}
+a{color:var(--navy-2);font-weight:600}
+a:focus-visible{outline:3px solid var(--wheat);outline-offset:3px}
+.wrap{max-width:1000px;margin:0 auto;padding-left:max(18px,env(safe-area-inset-left));padding-right:max(18px,env(safe-area-inset-right))}
+.hero{background:var(--navy);color:#e9edf6;padding-block:24px 70px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:56px}
+header b{font:700 22px var(--display)}
+header span{color:var(--wheat-light);font-weight:600}
+.hero h1{font:700 clamp(46px,9vw,94px)/.98 var(--display);margin:0 0 18px}
+.hero h1 small{display:block;font:600 18px var(--body);color:var(--wheat);margin-bottom:10px;letter-spacing:.02em}
+.hero p{font-size:19px;max-width:32em;margin:0;color:#c9d1e4}
+section{padding-block:64px}
+h2{font:700 clamp(30px,5vw,44px)/1.1 var(--display);margin:0 0 26px;color:var(--navy)}
+/* Route */
+.route{position:relative;display:grid;gap:26px;padding-left:44px}
+.route::before{content:"";position:absolute;left:14px;top:10px;bottom:10px;width:4px;background:var(--wheat);border-radius:2px}
+.stop{position:relative;display:grid;grid-template-columns:1.1fr 1fr auto;gap:12px 24px;align-items:baseline;padding-bottom:20px;border-bottom:1px solid #dfe3ec}
+.stop::before{content:"";position:absolute;left:-40px;top:6px;width:22px;height:22px;border-radius:50%;background:#fff;border:4px solid var(--navy)}
+.stop.main::before{background:var(--wheat);border-color:var(--wheat)}
+.stop h3{font:700 22px/1.2 var(--display);margin:0}
+.stop .tag{display:block;font-size:14px;color:var(--wheat);font-weight:700}
+.stop .addr{color:#4a5470}
+.stop .hours{font-variant-numeric:tabular-nums;font-weight:600;white-space:nowrap}
+.stop .tel{grid-column:1/-1;font-size:15px}
+.water{background:var(--mist)}
+.water .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+.water p{max-width:32em}
+.well{aspect-ratio:1;max-width:320px;border-radius:50%;background:radial-gradient(circle,#cfe0ee 0 30%,#a9c4dc 31% 45%,#e5edf5 46% 60%,#cbdbe9 61%);justify-self:center;width:100%}
+.vans{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center}
+.vans b{font:700 clamp(70px,14vw,130px)/1 var(--display);color:var(--wheat)}
+.vans p{margin:0;max-width:30em;font-size:19px}
+.orders{background:var(--navy);color:#e9edf6}
+.orders h2{color:#fff}
+.orders a{color:var(--wheat-light)}
+.orders .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.ph{aspect-ratio:16/10;background:repeating-linear-gradient(0deg,var(--wheat-light) 0 8px,#f8edd3 8px 16px);display:flex;align-items:flex-end;padding:14px;font-size:14px;color:#6e5523}
+footer{background:var(--navy);color:#9aa6c2;font-size:14px;padding-block:0 80px}
+.draft{position:fixed;left:0;right:0;bottom:0;background:var(--wheat);color:var(--ink);font-size:13px;font-weight:600;text-align:center;padding:8px 16px calc(8px + env(safe-area-inset-bottom))}
+@media (max-width:760px){.stop{grid-template-columns:1fr}.water .wrap,.orders .wrap,.vans{grid-template-columns:1fr}.well{max-width:200px}}
+</style>
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <header><b>Bäckerei Binder</b><span>Bäckerei, Café, Konditorei</span></header>
+    <h1><small>Seit 1931</small>Jeden Morgen frisch, an vier Orten.</h1>
+    <p>Wir backen Brot noch auf traditionelle Weise mit Dampf, aus regionalem Getreide und mit Wasser aus unserem eigenen Brunnen.</p>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <h2>Unsere Standorte</h2>
+    <div class="route">
+      <div class="stop main">
+        <div><span class="tag">Hauptsitz und Backstube</span><h3>Deutsch Goritz</h3></div>
+        <span class="addr">Deutsch Goritz 50</span>
+        <span class="hours">Mo–Fr 6–12:30, Sa 6–12</span>
+        <span class="tel">Telefon <a href="tel:+4334748235">03474 8235</a></span>
+      </div>
+      <div class="stop">
+        <div><h3>Bad Radkersburg</h3></div>
+        <span class="addr">Hauptplatz 32</span>
+        <span class="hours">Mo–Sa 6–12</span>
+        <span class="tel">Telefon <a href="tel:+43347623463">03476 23463</a></span>
+      </div>
+      <div class="stop">
+        <div><h3>Mureck</h3></div>
+        <span class="addr">Hauptplatz 31</span>
+        <span class="hours">Mo–Sa 6–12</span>
+        <span class="tel">Telefon <a href="tel:+436767515840">0676 751 58 40</a></span>
+      </div>
+      <div class="stop">
+        <div><h3>Gnas</h3></div>
+        <span class="addr">Gnas 25</span>
+        <span class="hours">Mo–Sa 6–12</span>
+        <span class="tel">Telefon <a href="tel:+436644255446">0664 425 54 46</a></span>
+      </div>
+    </div>
+    <p style="font-size:15px;color:#4a5470;margin-top:20px">Frühstücksbuffet Montag bis Samstag von 8 bis 11 Uhr. Bitte eintragen, an welchem Standort.</p>
+  </div>
+</section>
+
+<section class="water">
+  <div class="wrap">
+    <div>
+      <h2>Das Wasser kommt aus dem eigenen Brunnen</h2>
+      <p>Unser Brunnen liegt im Schutzgebiet der Peter Quelle. Mit diesem Wasser, regionalem Getreide und viel Zeit entsteht unser Brot, so wie seit 1931.</p>
+    </div>
+    <div class="well" aria-hidden="true"></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap vans">
+    <b>5</b>
+    <p>Lieferbusse sind jeden Tag für uns unterwegs. Sie bringen Brot, Gebäck, Nudeln, Milchprodukte und Kaffee zu Haushalten und Geschäften im Umkreis von über 25 Kilometern.</p>
+  </div>
+</section>
+
+<section class="orders">
+  <div class="wrap">
+    <div>
+      <h2>Bestellen und liefern lassen</h2>
+      <p>Für Privatkunden: Rufen Sie einfach im nächsten Standort an.</p>
+      <p>Für Geschäfte und Gastronomie: <a href="mailto:bestellung@baeckerei-binder.at">bestellung@baeckerei-binder.at</a></p>
+      <p>Allgemein: <a href="mailto:office@baeckerei-binder.at">office@baeckerei-binder.at</a></p>
+    </div>
+    <div class="ph">Foto: Lieferbus vor der Backstube</div>
+  </div>
+</section>
+<footer><div class="wrap">Bäckerei Binder, seit 1931. Impressum und Datenschutz folgen.</div></footer>
+<div class="draft">Entwurf von David Tomoiaga für eine neue Website, nicht die offizielle Seite der Bäckerei Binder</div>
+</body>
+</html>

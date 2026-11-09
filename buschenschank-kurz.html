@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Buschenschank Kurz, Klöchberg</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Hind:wght@400;500;600&display=swap">
+<style>
+/* Terrassenblick: Rebengrün, Herbsthimmel, Vulkanerde, Weinlaub-Gelb. Laut ist nur das Rebzeilen-Panorama im Hero. */
+:root{--vine:#4c6a28;--vine-dark:#2f4419;--sky:#d4e6ec;--soil:#6f4f33;--leaf:#e2b13c;--white:#fffefa;--ink:#22261b;
+  --display:"Bree Serif",Georgia,serif;--body:"Hind",system-ui,sans-serif}
+*{box-sizing:border-box}
+html{color-scheme:light}
+body{margin:0;background:var(--white);color:var(--ink);font:18px/1.6 var(--body)}
+a{color:var(--vine-dark);font-weight:600}
+a:focus-visible{outline:3px solid var(--leaf);outline-offset:3px}
+.wrap{max-width:1000px;margin:0 auto;padding-left:max(18px,env(safe-area-inset-left));padding-right:max(18px,env(safe-area-inset-right))}
+.hero{background:var(--sky);padding-block:24px 0;overflow:hidden}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:46px}
+header b{font:400 22px var(--display);color:var(--vine-dark)}
+.hero h1{font:400 clamp(44px,8.5vw,88px)/1 var(--display);margin:0 0 14px;color:var(--vine-dark);max-width:10em}
+.hero p{font-size:20px;max-width:30em;margin:0 0 40px}
+/* Rebzeilen in Perspektive */
+.rows{height:220px;position:relative;perspective:400px}
+.rows::before{content:"";position:absolute;left:-30%;right:-30%;top:0;bottom:-120px;transform:rotateX(62deg);transform-origin:top;
+  background:repeating-linear-gradient(90deg,var(--vine) 0 22px,#8a6a45 22px 46px)}
+.rows::after{content:"";position:absolute;left:0;right:0;top:0;height:40px;background:linear-gradient(var(--sky),transparent)}
+section{padding-block:64px}
+h2{font:400 clamp(30px,5vw,44px)/1.1 var(--display);margin:0 0 22px;color:var(--vine-dark)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+.two p{max-width:32em;margin:0 0 14px}
+.jause{list-style:none;margin:0;padding:0}
+.jause li{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px dashed #c9c3a8}
+.jause li span:last-child{color:#6b6650}
+.sweet{background:var(--leaf);padding:26px;border-radius:2px}
+.sweet h3{font:400 26px var(--display);margin:0 0 8px}
+.sweet p{margin:0}
+.open{background:var(--vine-dark);color:#eef2e6}
+.open h2{color:var(--leaf)}
+.open a{color:var(--leaf)}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
+td{padding:10px 0;border-bottom:1px solid #4d6534}
+td:last-child{text-align:right;font-weight:600}
+.small{font-size:15px;opacity:.85}
+.ph{aspect-ratio:4/3;background:linear-gradient(180deg,var(--sky) 0 45%,var(--vine) 45% 100%);display:flex;align-items:flex-end;padding:14px;font-size:14px;color:#eef2e6}
+footer{background:var(--vine-dark);color:#a9b89a;font-size:14px;padding-block:0 80px}
+.draft{position:fixed;left:0;right:0;bottom:0;background:var(--soil);color:#fff;font-size:13px;text-align:center;padding:8px 16px calc(8px + env(safe-area-inset-bottom))}
+@media (max-width:760px){.two{grid-template-columns:1fr}.rows{height:150px}}
+</style>
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <header><b>Buschenschank Kurz</b><a href="tel:+4334752266">03475 2266</a></header>
+    <h1>Ein Glas Wein mit Blick über Klöch.</h1>
+    <p>Unsere Terrasse liegt oben am Klöchberg, mitten in den Weingärten. Hier sitzen Sie bei Wein, Jause und hausgemachten Mehlspeisen und schauen weit über das Land.</p>
+  </div>
+  <div class="rows" aria-hidden="true"></div>
+</div>
+
+<section>
+  <div class="wrap two">
+    <div>
+      <h2>Auf den Tisch</h2>
+      <ul class="jause">
+        <li><span>Brettljause</span><span>kalt aufgeschnitten</span></li>
+        <li><span>Belegte Brote</span><span>mit Aufstrichen</span></li>
+        <li><span>Kürbiskernaufstrich</span><span>hausgemacht</span></li>
+        <li><span>Käferbohnensalat</span><span>steirisch</span></li>
+      </ul>
+      <p class="small" style="margin-top:14px">Speisen und Preise bitte bestätigen und ergänzen.</p>
+    </div>
+    <div class="sweet">
+      <h3>Unsere Mehlspeisen</h3>
+      <p>Viele Gäste kommen auch wegen der Torten und Kuchen. Hier ist Platz für Ihre Spezialitäten, zum Beispiel Ihr Kokosdessert.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap two">
+    <div class="ph">Foto: die Terrasse am späten Nachmittag</div>
+    <div>
+      <h2>Unsere Weine</h2>
+      <p>Wir schenken unsere eigenen Weine aus Klöch aus. Gerne auch eine Flasche zum Mitnehmen.</p>
+      <p class="small">Weinliste mit Sorten und Jahrgängen hier eintragen.</p>
+    </div>
+  </div>
+</section>
+
+<section class="open">
+  <div class="wrap two">
+    <div>
+      <h2>Wann wir ausschenken</h2>
+      <table>
+        <tr><td>Dienstag und Mittwoch</td><td>14:00–21:00</td></tr>
+        <tr><td>Übrige Tage</td><td>siehe Ausschankkalender</td></tr>
+      </table>
+      <p class="small">Die Zeiten stammen von Google und ändern sich je nach Saison. Bitte den aktuellen Ausschankkalender eintragen.</p>
+    </div>
+    <div>
+      <h2>Kontakt</h2>
+      <p>Buschenschank Kurz<br>Klöchberg 120<br>8493 Klöch</p>
+      <p>Telefon <a href="tel:+4334752266">03475 2266</a> oder <a href="tel:+436645056406">0664 505 64 06</a><br>E-Mail <a href="mailto:kontakt@weingut-kurz.at">kontakt@weingut-kurz.at</a></p>
+      <p><a href="https://maps.google.com/?q=Buschenschank+Kurz+Klöchberg+120">Route in Google Maps öffnen</a></p>
+    </div>
+  </div>
+</section>
+<footer><div class="wrap">Buschenschank Kurz, Klöchberg. Impressum und Datenschutz folgen.</div></footer>
+<div class="draft">Entwurf von David Tomoiaga für eine neue Website, nicht die offizielle Seite der Buschenschank Kurz</div>
+</body>
+</html>

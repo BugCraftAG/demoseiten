@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>High Gloss Car, Gosdorf</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Michroma&family=Manrope:wght@400;600;700&display=swap">
+<style>
+/* Lack: Tiefseeblau-Metallic, Chromsilber, Spiegelung. Laut ist nur der Glanzstreifen im Hero. */
+:root{--paint:#0f2a4a;--paint-2:#173d68;--chrome:#d9dee5;--steel:#8b97a6;--white:#f7f9fb;--ink:#0d1726;--amber:#f0a73a;
+  --display:"Michroma",system-ui,sans-serif;--body:"Manrope",system-ui,sans-serif}
+*{box-sizing:border-box}
+html{color-scheme:light}
+body{margin:0;background:var(--white);color:var(--ink);font:17px/1.65 var(--body)}
+a{color:var(--paint-2);font-weight:700}
+a:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding-left:max(18px,env(safe-area-inset-left));padding-right:max(18px,env(safe-area-inset-right))}
+.hero{position:relative;overflow:hidden;color:#fff;padding-block:24px 90px;
+  background:linear-gradient(160deg,#0b1f38 0%,var(--paint) 40%,#1f4f86 62%,var(--paint) 75%,#081a30 100%)}
+.hero::after{content:"";position:absolute;inset:-40% -10%;background:linear-gradient(115deg,transparent 42%,rgba(255,255,255,.22) 48%,rgba(255,255,255,.04) 53%,transparent 58%);pointer-events:none}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:70px;position:relative;z-index:1}
+header b{font:400 17px var(--display);letter-spacing:.06em}
+header a{color:var(--chrome);text-decoration:none}
+.hero h1{font:400 clamp(30px,6vw,62px)/1.15 var(--display);margin:0 0 22px;max-width:14em;position:relative;z-index:1}
+.hero p{font-size:19px;max-width:30em;margin:0 0 26px;color:#c8d6e8;position:relative;z-index:1}
+.btn{display:inline-block;position:relative;z-index:1;background:var(--chrome);color:var(--ink);text-decoration:none;font-weight:700;padding:13px 22px;border-radius:4px;margin-right:10px;margin-bottom:10px}
+.btn.ghost{background:transparent;color:#fff;border:1px solid var(--chrome)}
+section{padding-block:66px}
+h2{font:400 clamp(22px,3.6vw,32px)/1.3 var(--display);margin:0 0 24px;color:var(--paint)}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:#fff;border:1px solid #dde3ea;border-radius:6px;padding:24px}
+.card h3{margin:0 0 8px;font-size:20px}
+.card p{margin:0 0 12px}
+.brands{background:var(--paint);color:#dbe6f3}
+.brands h2{color:#fff}
+.brands .two{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.brand{border:1px solid rgba(217,222,229,.35);border-radius:6px;padding:26px}
+.brand h3{font:400 20px var(--display);color:#fff;margin:0 0 10px}
+.brand p{margin:0}
+.ph{aspect-ratio:16/9;border-radius:6px;background:linear-gradient(135deg,#e3e8ee,#f2f5f8 50%,#dfe5ec);display:flex;align-items:flex-end;padding:14px;font-size:14px;color:#5a6676}
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px}
+.missing{border:2px dashed #c4ccd6;padding:14px 16px;font-size:15px;color:#5a6676;border-radius:6px}
+footer{font-size:14px;color:#5a6676;padding-block:10px 80px}
+.draft{position:fixed;left:0;right:0;bottom:0;background:var(--amber);color:var(--ink);font-size:13px;font-weight:600;text-align:center;padding:8px 16px calc(8px + env(safe-area-inset-bottom))}
+@media (max-width:780px){.three,.brands .two,.contact .wrap{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <header><b>HIGH GLOSS CAR</b><a href="tel:+436642222927">0664 222 29 27</a></header>
+    <h1>Ausgesuchte Gebrauchtwagen, die glänzen wie neu.</h1>
+    <p>Wir suchen unsere Fahrzeuge sorgfältig aus und bereiten jedes einzelne auf, bevor es bei uns im Hof steht. In Gosdorf bei Mureck.</p>
+    <a class="btn" href="https://www.autoscout24.at/haendler/high-gloss-car">Aktuelle Fahrzeuge ansehen</a>
+    <a class="btn ghost" href="tel:+436642222927">Anrufen</a>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <h2>Was wir für Sie tun</h2>
+    <div class="three">
+      <div class="card"><h3>Gebrauchtwagen</h3><p>Geprüft, aufbereitet und genau so beschrieben, wie sie sind.</p><a href="https://www.autoscout24.at/haendler/high-gloss-car">Zum Fahrzeugbestand</a></div>
+      <div class="card"><h3>Finanzierung</h3><p>Wir finden mit Ihnen eine Finanzierung, die zu Ihnen passt.</p><a href="mailto:kontakt@highglosscar.at?subject=Finanzierungsanfrage">Anfrage schicken</a></div>
+      <div class="card"><h3>Ankauf</h3><p>Sie wollen Ihr Auto verkaufen? Schicken Sie uns Fotos und ein paar Eckdaten.</p><a href="mailto:kontakt@highglosscar.at?subject=Fahrzeugankauf">Fahrzeug anbieten</a></div>
+    </div>
+    <p style="font-size:14px;color:#5a6676">Leistungen bitte bestätigen, vor allem den Ankauf.</p>
+  </div>
+</section>
+
+<section class="brands">
+  <div class="wrap">
+    <h2>Pflegeprodukte vom Profi</h2>
+    <div class="two">
+      <div class="brand"><h3>Flex</h3><p>Wir sind Ihr regionaler Ansprechpartner für Produkte von Flex. Wir beraten Sie gerne, welche Maschine zu Ihrem Vorhaben passt.</p></div>
+      <div class="brand"><h3>Meguiar's</h3><p>Auch für die Pflegeprodukte von Meguiar's sind wir Ihr Ansprechpartner in der Region.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap"><div class="ph">Foto: frisch aufbereitetes Fahrzeug im Hof</div></div>
+</section>
+
+<section class="contact">
+  <div class="wrap">
+    <div>
+      <h2>Kontakt</h2>
+      <p>Telefon <a href="tel:+436642222927">0664 222 29 27</a><br>E-Mail <a href="mailto:kontakt@highglosscar.at">kontakt@highglosscar.at</a></p>
+      <p>High Gloss Car<br>Gosdorf 185<br>8480 Gosdorf</p>
+      <p><a href="https://maps.google.com/?q=High+Gloss+Car+Gosdorf+185">Route in Google Maps öffnen</a></p>
+    </div>
+    <div>
+      <h2>Besichtigung</h2>
+      <p class="missing">Öffnungszeiten oder „Besichtigung nach Vereinbarung“ hier eintragen.</p>
+    </div>
+  </div>
+</section>
+<div class="wrap"><footer>High Gloss Car, Gosdorf. Impressum und Datenschutz folgen.</footer></div>
+<div class="draft">Entwurf von David Tomoiaga für eine neue Website, nicht die offizielle Seite von High Gloss Car</div>
+</body>
+</html>

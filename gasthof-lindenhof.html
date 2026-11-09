@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Gasthof Zum Lindenhof, Laafeld</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rufina:wght@400;700&family=Albert+Sans:wght@400;600&display=swap">
+<style>
+/* Linde: Lindenblattgrün, Blütenhonig, tiefes Waldgrün. Laut ist nur die Familienlinie von der Oma zu den drei Schwestern. */
+:root{--linden:#6f8f3a;--linden-light:#e7eedb;--honey:#e2b04a;--deep:#26381f;--white:#fdfdfb;--ink:#1f2a1a;
+  --display:"Rufina",Georgia,serif;--body:"Albert Sans",system-ui,sans-serif}
+*{box-sizing:border-box}
+html{color-scheme:light}
+body{margin:0;background:var(--white);color:var(--ink);font:17px/1.65 var(--body)}
+a{color:var(--deep);font-weight:600}
+a:focus-visible{outline:3px solid var(--honey);outline-offset:3px}
+.wrap{max-width:1000px;margin:0 auto;padding-left:max(18px,env(safe-area-inset-left));padding-right:max(18px,env(safe-area-inset-right))}
+.hero{background:var(--linden-light);padding-block:24px 70px;position:relative;overflow:hidden}
+.leaf{position:absolute;right:-40px;top:30px;width:360px;height:360px;transform:rotate(-24deg)}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:60px;position:relative}
+header b{font:700 22px var(--display);color:var(--deep)}
+.hero h1{font:700 clamp(44px,8.5vw,90px)/1 var(--display);margin:0 0 18px;max-width:9.5em;color:var(--deep);position:relative}
+.hero p{font-size:19px;max-width:30em;margin:0 0 24px;position:relative}
+.btn{display:inline-block;background:var(--deep);color:#fff;text-decoration:none;font-weight:600;padding:12px 20px;border-radius:999px;position:relative}
+section{padding-block:66px}
+h2{font:700 clamp(30px,5vw,44px)/1.1 var(--display);margin:0 0 24px;color:var(--deep)}
+/* Familienlinie */
+.line{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;position:relative}
+.line::before{content:"";position:absolute;left:0;right:0;top:15px;height:3px;background:var(--honey)}
+.gen{position:relative;padding:44px 18px 0 0}
+.gen::before{content:"";position:absolute;top:4px;left:0;width:26px;height:26px;border-radius:50%;background:var(--white);border:3px solid var(--deep)}
+.gen.now::before{background:var(--honey);border-color:var(--honey)}
+.gen h3{font:700 22px/1.2 var(--display);margin:0 0 6px}
+.gen p{margin:0}
+.hendl{background:var(--deep);color:#e8eedf}
+.hendl .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center}
+.hendl h2{color:var(--honey)}
+.hendl p{max-width:32em}
+.badge{display:inline-block;border:1px solid var(--honey);color:var(--honey);padding:6px 14px;border-radius:999px;font-weight:600;font-size:15px}
+.ph{aspect-ratio:4/3;background:repeating-linear-gradient(60deg,#33492a 0 8px,#2c4024 8px 16px);display:flex;align-items:flex-end;padding:14px;font-size:14px;color:#b9c7ad;border-radius:4px}
+.stay{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.stay div{border-top:3px solid var(--linden);padding-top:14px}
+.stay b{display:block;font:700 34px var(--display);color:var(--deep)}
+.info{background:var(--linden-light)}
+.info .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
+td{padding:10px 0;border-bottom:1px solid #c9d4b6;vertical-align:top}
+td:last-child{text-align:right;font-weight:600}
+td small{display:block;font-weight:400;color:#56614b}
+footer{background:var(--linden-light);font-size:14px;color:#56614b;padding-block:0 80px}
+.draft{position:fixed;left:0;right:0;bottom:0;background:var(--deep);color:#fff;font-size:13px;text-align:center;padding:8px 16px calc(8px + env(safe-area-inset-bottom))}
+@media (max-width:760px){.line,.stay,.hendl .wrap,.info .wrap{grid-template-columns:1fr}.line::before{left:12px;right:auto;top:0;bottom:0;width:3px;height:auto}.gen{padding:0 0 26px 44px}.gen::before{top:0}.leaf{width:200px;height:200px;right:-70px;top:10px;opacity:.5}}
+</style>
+</head>
+<body>
+<div class="hero">
+  <svg class="leaf" viewBox="0 0 200 200" aria-hidden="true">
+    <path d="M100 178 C60 150 18 120 22 74 C26 40 58 26 84 40 C92 44 97 52 100 60 C103 52 108 44 116 40 C142 26 174 40 178 74 C182 120 140 150 100 178 Z" fill="#6f8f3a"/>
+    <path d="M100 178 L100 60 M100 120 L62 90 M100 120 L138 90 M100 150 L72 128 M100 150 L128 128" stroke="#e7eedb" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M100 178 L104 198" stroke="#6f8f3a" stroke-width="5" stroke-linecap="round"/>
+  </svg>
+  <div class="wrap">
+    <header><b>Gasthof Zum Lindenhof</b><a href="tel:+4334762460">03476 2460</a></header>
+    <h1>Seit Omas Zeiten bekannt fürs Backhendl.</h1>
+    <p>Drei Schwestern führen den Lindenhof in Laafeld bei Bad Radkersburg in dritter Generation. Mit steirischer Küche, 28 Zimmern und einem schattigen Gastgarten.</p>
+    <a class="btn" href="tel:+4334762460">Tisch oder Zimmer anfragen</a>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <h2>Drei Generationen Lindenhof</h2>
+    <div class="line">
+      <div class="gen"><h3>Das kleine Gasthaus</h3><p>Angefangen hat alles mit einem kleinen Wirtshaus und dem Backhendl der Großmutter.</p></div>
+      <div class="gen"><h3>Die zweite Generation</h3><p>Hier ist Platz für die Geschichte der Eltern und wie der Lindenhof gewachsen ist.</p></div>
+      <div class="gen now"><h3>Christine, Cornelia und Veronika</h3><p>Heute führen die drei Schwestern Kollmanitsch den Betrieb.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="hendl">
+  <div class="wrap">
+    <div>
+      <h2>Traditionell und modern gekocht</h2>
+      <p>Das Backhendl ist bis heute das Herzstück unserer Küche. Dazu kochen wir steirische Gerichte, die sich an der Tradition orientieren und trotzdem nicht stehen bleiben.</p>
+      <span class="badge">Steirisches Wirtshaus</span>
+    </div>
+    <div class="ph">Foto: Backhendl mit Erdäpfelsalat</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Übernachten im Lindenhof</h2>
+    <div class="stay">
+      <div><b>28</b>Zimmer für Ihren Urlaub in der Thermenregion</div>
+      <div><b>Pool</b>Mitten im Grünen zum Abkühlen</div>
+      <div><b>Gastgarten</b>Schattig unter Bäumen</div>
+    </div>
+    <p style="font-size:15px;color:#56614b">Zimmerpreise und Buchungsanfrage hier ergänzen.</p>
+  </div>
+</section>
+
+<section class="info">
+  <div class="wrap">
+    <div>
+      <h2>Küchenzeiten</h2>
+      <table>
+        <tr><td>Montag bis Samstag</td><td>11:00–22:00<small>warme Küche bis 21:00</small></td></tr>
+        <tr><td>Sonntag</td><td>11:00–21:30<small>warme Küche bis 20:00</small></td></tr>
+      </table>
+      <p style="font-size:14px;color:#56614b">Ruhetag bitte ergänzen, falls es einen gibt.</p>
+    </div>
+    <div>
+      <h2>Anfahrt</h2>
+      <p>Gasthof Zum Lindenhof<br>Laafeld 22<br>8490 Bad Radkersburg</p>
+      <p>Telefon <a href="tel:+4334762460">03476 2460</a><br>E-Mail <a href="mailto:office@zumlindenhof.at">office@zumlindenhof.at</a></p>
+      <p><a href="https://maps.google.com/?q=Gasthof+Zum+Lindenhof+Laafeld+22">Route in Google Maps öffnen</a></p>
+    </div>
+  </div>
+</section>
+<footer><div class="wrap">Gasthof Zum Lindenhof, Familie Kollmanitsch, Laafeld. Impressum und Datenschutz folgen.</div></footer>
+<div class="draft">Entwurf von David Tomoiaga für eine neue Website, nicht die offizielle Seite vom Gasthof Zum Lindenhof</div>
+</body>
+</html>

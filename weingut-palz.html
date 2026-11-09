@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Weingut Palz, Klöch</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<style>
+/* Gewölbekeller: Kellerstein, Kalkweiß, Weinrot, Kerzenlicht. Laut ist nur der Gewölbebogen mit 1847. */
+:root{--stone:#37322c;--stone-2:#4a443c;--lime:#efece5;--wine:#6b1f2a;--candle:#e6ad48;--ink:#231f1b;
+  --display:"Marcellus",Georgia,serif;--body:"Source Serif 4",Georgia,serif}
+*{box-sizing:border-box}
+html{color-scheme:light}
+body{margin:0;background:var(--lime);color:var(--ink);font:18px/1.7 var(--body)}
+a{color:var(--wine);font-weight:600}
+a:focus-visible{outline:3px solid var(--candle);outline-offset:3px}
+.wrap{max-width:980px;margin:0 auto;padding-left:max(18px,env(safe-area-inset-left));padding-right:max(18px,env(safe-area-inset-right))}
+.hero{background:var(--stone);color:#efe8dc;padding-block:24px 0}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:40px}
+header b{font:400 22px var(--display);letter-spacing:.03em}
+header a{color:var(--candle);text-decoration:none}
+.arch{background:radial-gradient(ellipse at 50% 85%,rgba(230,173,72,.28),transparent 60%),var(--stone-2);
+  border-radius:50% 50% 0 0 / 38% 38% 0 0;padding:90px 30px 60px;text-align:center;max-width:760px;margin:0 auto;
+  box-shadow:inset 0 0 0 10px #2d2924}
+.arch .year{font:400 clamp(70px,15vw,140px)/1 var(--display);color:var(--candle)}
+.arch h1{font:400 clamp(30px,5.5vw,50px)/1.15 var(--display);margin:10px 0 14px}
+.arch p{margin:0 auto;max-width:30em;color:#d8cfc1}
+section{padding-block:64px}
+h2{font:400 clamp(30px,5vw,44px)/1.1 var(--display);margin:0 0 22px;color:var(--wine)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+.two p{margin:0 0 14px;max-width:32em}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:10px}
+.facts div{border-top:2px solid var(--wine);padding-top:12px}
+.facts b{display:block;font:400 32px var(--display);color:var(--wine)}
+.open{background:var(--wine);color:#f5e7e3;text-align:center}
+.open h2{color:#fff}
+.open .big{font:400 clamp(40px,8vw,72px)/1 var(--display);color:var(--candle);margin:6px 0 10px}
+.open p{margin:0 auto;max-width:34em}
+.rooms .ph{aspect-ratio:4/3;background:repeating-linear-gradient(90deg,#ddd7cc 0 2px,#e8e3da 2px 26px);display:flex;align-items:flex-end;padding:14px;font-size:14px;color:#6d655a;border-radius:50% 50% 0 0 / 22% 22% 0 0}
+.missing{border:2px dashed #c9c1b4;padding:14px 16px;font-size:16px;color:#6d655a}
+.contact{background:var(--stone);color:#efe8dc}
+.contact h2{color:var(--candle)}
+.contact a{color:var(--candle)}
+footer{background:var(--stone);color:#a89e90;font-size:14px;padding-block:0 80px}
+.draft{position:fixed;left:0;right:0;bottom:0;background:var(--candle);color:var(--ink);font-size:13px;font-weight:600;text-align:center;padding:8px 16px calc(8px + env(safe-area-inset-bottom))}
+@media (max-width:760px){.two,.facts{grid-template-columns:1fr}.arch{padding:70px 18px 44px}}
+</style>
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <header><b>Weingut Palz</b><a href="tel:+436644210987">0664 421 09 87</a></header>
+    <div class="arch">
+      <div class="year">1847</div>
+      <h1>Ein Gewölbekeller mitten im Klöcher Weinberg</h1>
+      <p>Unser Keller stammt aus dem Jahr 1847 und wurde neu gestaltet. Hier reifen unsere Weine, und hier führen wir Sie gerne durch, mit einer Verkostung zum Abschluss.</p>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap two">
+    <div>
+      <h2>Unser Weingut</h2>
+      <p>Rudolf und Anita Palz bewirtschaften rund 9 Hektar Rebfläche am Klöcher Vulkanweinberg. Gekeltert werden ausschließlich Qualitätsrebsorten.</p>
+      <p class="missing">Hier kommen Ihre Weine hin: Sorten, Jahrgänge und was sie besonders macht.</p>
+    </div>
+    <div>
+      <div class="facts">
+        <div><b>9 ha</b>Weingärten</div>
+        <div><b>1847</b>Gewölbekeller</div>
+        <div><b>täglich</b>Buschenschank</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="open">
+  <div class="wrap">
+    <h2>Buschenschank</h2>
+    <div class="big">täglich 10 bis 24 Uhr</div>
+    <p>Auch an Sonn und Feiertagen. Zum Wein servieren wir hausgemachte Spezialitäten.</p>
+  </div>
+</section>
+
+<section class="rooms">
+  <div class="wrap two">
+    <div class="ph">Foto: Zimmer mit Blick in die Weingärten</div>
+    <div>
+      <h2>Übernachten zwischen den Reben</h2>
+      <p>Komfortzimmer und eine Ferienwohnung in ruhiger Lage mitten im Weingarten. Am Morgen wartet ein reichhaltiges Frühstück.</p>
+      <p style="font-size:15px;color:#6d655a">Preise und Ausstattung bitte ergänzen.</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="wrap two">
+    <div>
+      <h2>Besuchen Sie uns</h2>
+      <p>Weingut Palz<br>Klöchberg 55<br>8493 Klöch</p>
+      <p><a href="https://maps.google.com/?q=Weingut+Palz+Klöchberg+55+Klöch">Route in Google Maps öffnen</a></p>
+    </div>
+    <div>
+      <h2>Kellerführung anfragen</h2>
+      <p>Telefon <a href="tel:+436644210987">0664 421 09 87</a> oder <a href="tel:+43347525900">03475 25900</a><br>E-Mail <a href="mailto:office@weingutpalz.at">office@weingutpalz.at</a></p>
+    </div>
+  </div>
+</section>
+<footer><div class="wrap">Weingut Palz, Rudolf und Anita Palz, Klöch. Impressum und Datenschutz folgen.</div></footer>
+<div class="draft">Entwurf von David Tomoiaga für eine neue Website, nicht die offizielle Seite vom Weingut Palz</div>
+</body>
+</html>
