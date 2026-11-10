@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Hairartist Haarmonic, Straß</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap">
+<style>
+/* Nach dem Prompt "Skincare Brand" von websiteprompts.ai: Creme, Kakao, Terrakotta, Instrument Serif und DM Sans, Ton Blob im Hero und klebendes Bild bei den Leistungen. */
+:root{--bg:#F6F2EE;--fg:#362B26;--pri:#BD816B;--pf:#FAF7F5;--mf:#81716A;--border:#E0D8D1;--card:#ECE1DA;
+  --serif:"Instrument Serif",Georgia,serif;--sans:"DM Sans",system-ui,sans-serif}
+*{box-sizing:border-box}
+html{color-scheme:light;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font:300 17px/1.7 var(--sans)}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--pri);outline-offset:3px}
+.wrap{max-width:1360px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left));padding-right:max(20px,env(safe-area-inset-right))}
+.lbl{display:block;font:500 12px var(--sans);text-transform:uppercase;letter-spacing:.12em;color:var(--mf);margin-bottom:16px}
+h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0}
+h1 em,h2 em,h3 em{font-style:italic}
+h2{font-size:clamp(40px,5vw,72px);line-height:1;margin-bottom:26px}
+.btn{display:inline-block;text-decoration:none;background:var(--pri);color:var(--pf);font:500 12px var(--sans);letter-spacing:.12em;text-transform:uppercase;padding:16px 28px;border-radius:999px;transition:background .3s}
+.btn:hover{background:#a86d58}
+.ann{height:36px;background:var(--pri);color:var(--pf);display:flex;align-items:center;justify-content:center;font-size:13px;padding-inline:16px;text-align:center}
+nav{position:sticky;top:0;z-index:20;height:76px;background:var(--bg);border-bottom:1px solid var(--border)}
+nav .wrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:100%}
+.word{font:400 32px var(--serif);text-decoration:none}
+.links{display:flex;gap:26px;font:500 12px var(--sans);letter-spacing:.12em;text-transform:uppercase}
+.links a{text-decoration:none}
+.r{justify-self:end}
+.r a{font:500 12px var(--sans);letter-spacing:.12em;text-transform:uppercase;text-decoration:none}
+.menu-btn{display:none;background:none;border:0;font:500 12px var(--sans);letter-spacing:.12em;text-transform:uppercase;padding:8px 0;justify-self:start}
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;min-height:calc(100vh - 112px);padding-block:60px}
+h1{font-size:clamp(56px,9vw,140px);line-height:.92;letter-spacing:-.03em;margin-bottom:24px}
+h1 .ln{display:block;overflow:hidden;padding-bottom:.1em;margin-bottom:-.1em}
+h1 .ln span{display:block;transform:translateY(105%);animation:ln .9s cubic-bezier(.22,1,.36,1) forwards}
+h1 .ln:nth-child(2) span{animation-delay:.12s}h1 .ln:nth-child(3) span{animation-delay:.24s}
+@keyframes ln{to{transform:none}}
+.hero p{max-width:440px;color:var(--mf);margin:0 0 30px}
+.art{position:relative;aspect-ratio:1;display:grid;place-items:center;animation:art 1.2s .3s both}
+@keyframes art{from{opacity:0;transform:scale(.96)}}
+.art svg{position:absolute;inset:0;width:100%;height:100%}
+.art .ph{position:relative;width:46%;aspect-ratio:3/4;border-radius:200px 200px 16px 16px;background:linear-gradient(170deg,#c99a83,#7a5546);display:flex;align-items:flex-end;justify-content:center;padding:14px;color:#fff;font-size:12px;text-align:center}
+.marq{border-block:1px solid var(--border);overflow:hidden;padding-block:18px}
+.marq .t{display:flex;width:max-content;animation:mq 40s linear infinite}
+.marq:hover .t{animation-play-state:paused}
+.marq span{font:italic 400 28px var(--serif);padding-inline:22px;white-space:nowrap}
+.marq i{font-style:normal;color:var(--pri)}
+@keyframes mq{to{transform:translateX(-50%)}}
+section{padding-block:120px}
+.tiles{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.tile .im{aspect-ratio:4/5;background:var(--card);overflow:hidden;display:flex;align-items:flex-end;padding:12px;font-size:12px;color:var(--mf)}
+.tile h3{font-size:28px;margin:14px 0 2px}
+.tile p{margin:0;font-size:15px;color:var(--mf)}
+.tile .pr{font:500 12px var(--sans);letter-spacing:.12em;text-transform:uppercase;margin-top:8px;display:block}
+.stick{display:grid;grid-template-columns:1fr 1fr;gap:70px}
+.stick .im{position:sticky;top:96px;height:calc(100vh - 128px);background:linear-gradient(170deg,#d7b5a3,#8b6151);display:flex;align-items:flex-end;padding:18px;color:#fff;font-size:13px}
+.blk{min-height:60vh;display:flex;flex-direction:column;justify-content:center;opacity:.3;transition:opacity .6s}
+.blk.on{opacity:1}
+.blk h3{font-size:44px;line-height:1;margin-bottom:14px}
+.blk p{margin:0;color:var(--mf);max-width:460px}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;border-top:1px solid var(--border);padding-top:40px}
+.three h3{font-size:30px;margin-bottom:10px}
+.three p{margin:0;color:var(--mf);font-size:16px}
+.bleed{height:70vh;min-height:380px;position:relative;display:flex;align-items:flex-end;background:linear-gradient(to top,rgba(54,43,38,.65),transparent 60%),linear-gradient(140deg,#c59783,#6f4c3f)}
+.bleed p{color:var(--pf);font:italic 400 clamp(28px,4vw,48px)/1.1 var(--serif);margin:0;padding:40px 0}
+.bleed .ph{position:absolute;top:20px;right:20px;color:#fff;font-size:12px;opacity:.75}
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+.revs .st{color:var(--pri);font-size:12px;letter-spacing:3px}
+.revs p{font:400 24px/1.35 var(--serif);margin:12px 0}
+.revs small{font:500 12px var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--mf)}
+.cta{background:var(--pri);color:var(--pf);padding:70px;display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center}
+.cta h2{margin:0}
+.cta .lbl{color:var(--pf);opacity:.8}
+.cta a.t{color:var(--pf);font:500 12px var(--sans);letter-spacing:.12em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid var(--pf);padding-bottom:4px}
+.hrs div{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px solid rgba(250,247,245,.3);font-size:15px}
+footer{padding-top:80px;overflow:hidden}
+footer .cols{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;font-size:15px}
+footer .cols a{display:block;text-decoration:none;color:var(--mf)}
+footer .giant{font:400 22vw/.8 var(--serif);letter-spacing:-.04em;margin:50px 0 -5vw;white-space:nowrap;text-align:center}
+.draft{position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--fg);color:var(--pf);font-size:13px;text-align:center;padding:8px 16px calc(8px + env(safe-area-inset-bottom))}
+.fade{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.fade.in{opacity:1;transform:none}
+@media (max-width:1023px){.tiles{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;padding-bottom:6px}.tile{flex:0 0 40%;scroll-snap-align:start}}
+@media (max-width:767px){.links,.r{display:none}.menu-btn{display:block}nav .wrap{grid-template-columns:auto 1fr}.word{justify-self:center;margin-right:40px}
+  nav.open .links{display:flex;flex-direction:column;position:fixed;inset:112px 0 0;background:var(--bg);padding:30px 20px;gap:20px;font:italic 400 34px var(--serif);letter-spacing:0;text-transform:none}
+  .hero,.stick,.three,.revs,.cta,footer .cols{grid-template-columns:1fr}.art{order:-1;aspect-ratio:auto;height:60vh}.tile{flex-basis:76%}
+  .stick .im{position:static;height:300px}.blk{min-height:auto;opacity:1;padding:30px 0}.cta{padding:40px 24px}section{padding-block:80px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}h1 .ln span{transform:none}.fade,.blk{opacity:1;transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="ann">Termine unter 0664 5166944</div>
+<nav id="nav"><div class="wrap">
+  <button class="menu-btn" onclick="document.getElementById('nav').classList.toggle('open')">Menü</button>
+  <div class="links"><a href="#leistungen">Leistungen</a><a href="#salon">Der Salon</a><a href="#termin">Termin</a></div>
+  <a class="word" href="#">Haarmonic</a>
+  <div class="r"><a href="tel:+436645166944">Anrufen</a></div>
+</div></nav>
+
+<header class="wrap hero">
+  <div>
+    <span class="lbl">Hairartist Haarmonic in Straß</span>
+    <h1><span class="ln"><span>Haare,</span></span><span class="ln"><span>die <em>natürlich</em></span></span><span class="ln"><span>wirken.</span></span></h1>
+    <p>Strähnen mit weichen Übergängen, Schnitte für die ganze Familie und Frisuren für besondere Tage. Mit Beratung und einem Preis, der passt.</p>
+    <a class="btn" href="tel:+436645166944">Termin ausmachen</a>
+  </div>
+  <div class="art" aria-hidden="false">
+    <svg viewBox="0 0 600 600" aria-hidden="true"><path id="blob" fill="#ECE1DA" d="M300,60C420,60,540,150,540,290C540,430,440,540,300,540C160,540,60,440,60,300C60,170,180,60,300,60Z"/></svg>
+    <div class="ph">Foto: Strähnen, frisch gemacht</div>
+  </div>
+</header>
+
+<div class="marq" aria-hidden="true"><div class="t"><span>Schneiden <i>*</i></span><span>Strähnen <i>*</i></span><span>Farbe <i>*</i></span><span>Brautfrisuren <i>*</i></span><span>Kinderschnitt <i>*</i></span><span>Beratung <i>*</i></span><span>Schneiden <i>*</i></span><span>Strähnen <i>*</i></span><span>Farbe <i>*</i></span><span>Brautfrisuren <i>*</i></span><span>Kinderschnitt <i>*</i></span><span>Beratung <i>*</i></span></div></div>
+
+<section id="leistungen"><div class="wrap">
+  <span class="lbl">Leistungen</span>
+  <h2 class="fade">Was wir <em>machen</em></h2>
+  <div class="tiles">
+    <div class="tile fade"><div class="im">Foto</div><h3>Schneiden</h3><p>Für Damen und Herren</p><span class="pr">Preis</span></div>
+    <div class="tile fade"><div class="im">Foto</div><h3>Strähnen</h3><p>Natürlich, mit weichem Übergang</p><span class="pr">Preis</span></div>
+    <div class="tile fade"><div class="im">Foto</div><h3>Farbe</h3><p>Vom Auffrischen bis neu</p><span class="pr">Preis</span></div>
+    <div class="tile fade"><div class="im">Foto</div><h3>Brautfrisur</h3><p>Für den großen Tag</p><span class="pr">Preis</span></div>
+    <div class="tile fade"><div class="im">Foto</div><h3>Kinder</h3><p>Auch für die Kleinsten</p><span class="pr">Preis</span></div>
+  </div>
+</div></section>
+
+<section id="salon" style="padding-top:0"><div class="wrap stick">
+  <div class="im">Foto: der Salon im Industriezentrum Straß</div>
+  <div>
+    <div class="blk"><span class="lbl">01</span><h3>Strähnen, die <em>nachwachsen</em> dürfen</h3><p>Für einen natürlichen Look kommt es auf den Übergang an. Dann sieht es auch nach ein paar Wochen noch gut aus.</p></div>
+    <div class="blk"><span class="lbl">02</span><h3>Für den <em>großen</em> Tag</h3><p>Brautfrisuren und Hochsteckfrisuren. Hier kann stehen, ob es vorher eine Probefrisur gibt.</p></div>
+    <div class="blk"><span class="lbl">03</span><h3>Mit der <em>ganzen</em> Familie</h3><p>Auch mit Kleinkind kommt man gerne wieder, das schreiben Kundinnen in den Bewertungen.</p></div>
+    <div class="blk"><span class="lbl">04</span><h3>Ehrliche <em>Beratung</em></h3><p>Erst reden, dann schneiden. Damit das Ergebnis auch wirklich zu Ihnen passt.</p></div>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <div class="three">
+    <div class="fade"><h3>Termin <em>ausmachen</em></h3><p>Am einfachsten telefonisch unter 0664 5166944.</p></div>
+    <div class="fade"><h3>Für <em>wen</em></h3><p>Damen, Herren und Kinder. Hier anpassen, falls nötig.</p></div>
+    <div class="fade"><h3>Was Sie <em>mitbringen</em></h3><p>Gerne ein Foto von der Frisur, die Ihnen gefällt.</p></div>
+  </div>
+</div></section>
+
+<div class="bleed"><span class="ph">Foto: Detail einer Frisur</span><div class="wrap"><p>Schön, wenn man sich nach dem Termin im Spiegel gefällt.</p></div></div>
+
+<section><div class="wrap">
+  <span class="lbl">Bewertungen · 4,9 auf Google</span>
+  <h2 class="fade">Was Kundinnen <em>sagen</em></h2>
+  <div class="revs">
+    <div class="fade"><span class="st">★★★★★</span><p>Perfekte Strähnen, und auch meine Brautfrisur war ein Traum.</p><small>sinngemäß aus Google</small></div>
+    <div class="fade"><span class="st">★★★★★</span><p>Immer zufrieden mit dem Ergebnis und der Freundlichkeit, und die Preise passen.</p><small>sinngemäß aus Google</small></div>
+    <div class="fade"><span class="st">★★★★★</span><p>Schon das zweite Mal mit meinem kleinen Sohn da, einfach schön.</p><small>sinngemäß aus Google</small></div>
+  </div>
+</div></section>
+
+<section id="termin" style="padding-top:0"><div class="wrap">
+  <div class="cta fade">
+    <div><span class="lbl">Termin</span><h2>Bis <em>bald</em> im Salon.</h2><p style="margin:20px 0 26px">Industriezentrum Straße 5, 8472 Straß in Steiermark</p><a class="t" href="tel:+436645166944">0664 5166944 anrufen</a></div>
+    <div class="hrs">
+      <div><span>Montag und Dienstag</span><span>geschlossen</span></div>
+      <div><span>Mittwoch</span><span>8 bis 16 Uhr</span></div>
+      <div><span>Donnerstag</span><span>8 bis 18 Uhr</span></div>
+      <div><span>Freitag</span><span>8 bis 12 und 13 bis 19:30 Uhr</span></div>
+      <div><span>Samstag</span><span>7 bis 12 Uhr</span></div>
+      <p style="font-size:13px;opacity:.8">Zeiten laut Google, bitte bestätigen</p>
+    </div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="cols">
+    <div>Hairartist Haarmonic OG<br><span style="color:var(--mf)">Friseur in Straß</span></div>
+    <div><a href="#leistungen">Leistungen</a><a href="#salon">Der Salon</a><a href="#termin">Termin</a></div>
+    <div><a href="tel:+436645166944">0664 5166944</a><a href="mailto:hairartist.haarmonic@gmail.com">Nachricht schreiben</a></div>
+    <div><a href="#">Impressum</a><a href="#">Datenschutz</a></div>
+  </div>
+  <p class="giant" aria-hidden="true">haarmonic</p>
+</div></footer>
+<div class="draft">Entwurf von David Tomoiaga für eine neue Website, nicht die offizielle Seite von Hairartist Haarmonic</div>
+<script>
+const red=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const A=[[300,60,420,60,540,150,540,290,540,430,440,540,300,540,160,540,60,440,60,300,60,170,180,60],[310,80,450,70,520,180,530,300,540,450,420,520,290,530,140,540,70,420,80,290,90,160,190,90]];
+const blob=document.getElementById('blob');
+function draw(t){const k=(Math.sin(t/12000*Math.PI*2)+1)/2;const p=A[0].map((v,i)=>v+(A[1][i]-v)*k);blob.setAttribute('d',`M${p[0]},${p[1]}C${p[2]},${p[3]},${p[4]},${p[5]},${p[6]},${p[7]}C${p[8]},${p[9]},${p[10]},${p[11]},${p[12]},${p[13]}C${p[14]},${p[15]},${p[16]},${p[17]},${p[18]},${p[19]}C${p[20]},${p[21]},${p[22]},${p[23]},${p[0]},${p[1]}Z`);requestAnimationFrame(draw)}
+if(!red)requestAnimationFrame(draw);
+const io=new IntersectionObserver(es=>es.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('in'),(i%5)*80);io.unobserve(e.target)}}),{threshold:.1});
+document.querySelectorAll('.fade').forEach(el=>io.observe(el));
+const bo=new IntersectionObserver(es=>es.forEach(e=>e.target.classList.toggle('on',e.isIntersecting)),{rootMargin:'-40% 0px -40% 0px'});
+document.querySelectorAll('.blk').forEach(el=>bo.observe(el));
+</script>
+</body>
+</html>

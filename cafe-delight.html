@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Cafe Delight, Pistorf</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=Inter:wght@300;400;500&display=swap">
+<style>
+/* Nach dem Prompt "Bakery" von websiteprompts.ai: flach, warm, Playfair kursiv und Inter, Klammer Buttons, keine Rundungen, Laufband. */
+:root{--bg:#F5F2ED;--fg:#2A1C10;--acc:#9B7550;--muted:#EDE9E2;--border:#DCD3C7;--nav:#2A1608;
+  --serif:"Playfair Display",Georgia,serif;--sans:Inter,system-ui,sans-serif}
+*{box-sizing:border-box}
+html{color-scheme:light;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font:300 16px/1.75 var(--sans)}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+.wrap{max-width:1152px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left));padding-right:max(20px,env(safe-area-inset-right))}
+.lbl{display:block;font:500 10px var(--sans);text-transform:uppercase;letter-spacing:.27em;color:var(--acc);margin-bottom:16px}
+h1,h2,h3{font-family:var(--serif);font-style:italic;font-weight:400;margin:0}
+h2{font-size:clamp(36px,5vw,60px);line-height:1.05;margin-bottom:22px}
+.bb{display:inline-flex;align-items:center;justify-content:center;white-space:nowrap;flex-shrink:0;height:40px;padding:0 24px;font:400 12px var(--sans);letter-spacing:.08em;text-decoration:none;background:transparent;transition:background .3s}
+.bb.l{border:1px solid rgba(255,255,255,.65);color:#fff}.bb.l:hover{background:rgba(255,255,255,.12)}
+.bb.d{border:1px solid rgba(42,28,16,.4);color:var(--fg)}.bb.d:hover{background:rgba(42,28,16,.06)}
+.row{display:flex;gap:12px;flex-wrap:wrap}
+nav{position:sticky;top:0;z-index:20;background:var(--nav);color:#F5F2ED}
+nav .wrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding-block:18px}
+nav .z{display:flex;gap:26px;font:400 12px var(--sans);letter-spacing:.08em}
+nav .z a{text-decoration:none;opacity:.85}nav .z a:hover{opacity:1}
+nav .z.r{justify-self:end}
+.word{font:400 22px var(--serif);letter-spacing:.2em;text-decoration:none;text-transform:uppercase}
+.burger{display:none;background:none;border:1px solid rgba(255,255,255,.4);color:#fff;font:400 11px var(--sans);letter-spacing:.1em;padding:8px 12px;justify-self:end}
+.hero{position:relative;min-height:85vh;display:flex;align-items:flex-end;color:#fff;background:linear-gradient(to bottom,rgba(40,28,16,.10),rgba(40,28,16,.58)),linear-gradient(150deg,#b88e62,#5a3a22 70%)}
+.hero .ph{position:absolute;top:20px;right:20px;font-size:12px;opacity:.7}
+.hero .wrap{padding-block:70px;width:100%}
+.hero .lbl{color:#f1e3d2}
+.hero h1{font-size:clamp(44px,7vw,84px);line-height:1.02;margin-bottom:18px}
+.hero p{max-width:470px;margin:0 0 30px;font-size:17px;color:#f6ecdf}
+section{padding-block:100px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.img{background:linear-gradient(160deg,#cfb08a,#8d6644);display:flex;align-items:flex-end;padding:14px;color:#fff;font-size:12px;overflow:hidden}
+.img.b{aspect-ratio:4/5;margin-right:-64px}
+.tick{background:var(--muted);border-block:1px solid var(--border);overflow:hidden;padding-block:16px}
+.tick .t{display:flex;width:max-content;animation:mq 30s linear infinite}
+.tick span{font:300 11px var(--sans);letter-spacing:.3em;text-transform:uppercase;color:var(--acc);padding-inline:26px;white-space:nowrap}
+@keyframes mq{to{transform:translateX(-50%)}}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:40px}
+.head h2{margin:0}
+.prod{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.prod .sq{aspect-ratio:1;overflow:hidden}
+.prod .sq div{height:100%;transition:transform .7s cubic-bezier(.25,.1,.25,1)}
+.prod article:hover .sq div{transform:scale(1.04)}
+.prod h3{font-size:26px;margin:14px 0 6px}
+.prod p{margin:0;color:var(--acc);font-size:14px}
+.proc{background:var(--muted)}
+.proc .img{aspect-ratio:3/4}
+.st{display:grid;grid-template-columns:70px 1fr;gap:10px;padding:20px 0;border-top:1px solid var(--border)}
+.st b{font:italic 400 40px/1 var(--serif);color:var(--acc)}
+.st h3{font-size:22px;margin-bottom:4px}.st p{margin:0;font-size:15px}
+.banner{height:380px;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;background:linear-gradient(rgba(40,28,16,.55),rgba(40,28,16,.55)),linear-gradient(120deg,#a07a52,#4b2f1b)}
+.banner h2{margin-bottom:10px}
+.banner p{margin:0 0 22px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.two div{border-top:2px solid var(--fg);padding-top:26px}
+.two h3{font-size:30px;margin-bottom:12px}
+.quotes{background:var(--muted);border-block:1px solid var(--border);text-align:center}
+.quotes .q{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:40px}
+.quotes p{font:italic 400 21px/1.45 var(--serif);margin:10px 0}
+.quotes small{font:500 10px var(--sans);letter-spacing:.25em;text-transform:uppercase;color:var(--acc)}
+.stars{color:var(--acc);letter-spacing:4px;font-size:13px}
+.contact{background:var(--muted)}
+.det div{border:1px solid var(--border);padding:18px 20px;margin-bottom:12px;background:var(--bg)}
+.det .lbl{margin-bottom:6px}
+.det p{margin:0}
+.contact .img{aspect-ratio:4/3}
+footer{background:var(--nav);color:#e9dfd2;padding-block:60px 90px}
+footer .wrap{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:40px}
+footer .bn{font:400 22px var(--serif);letter-spacing:.22em;text-transform:uppercase}
+footer a{text-decoration:none;display:block;opacity:.8;font-size:14px;margin-bottom:6px}
+.draft{position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--fg);color:#F5F2ED;font-size:13px;text-align:center;padding:8px 16px calc(8px + env(safe-area-inset-bottom))}
+.fade{opacity:0;transform:translateY(20px);transition:opacity .65s cubic-bezier(.25,.1,.25,1),transform .65s cubic-bezier(.25,.1,.25,1)}
+.fade.in{opacity:1;transform:none}
+.h-in{animation:hin .65s cubic-bezier(.25,.1,.25,1) both}
+.h-in.d2{animation-delay:.12s}.h-in.d3{animation-delay:.24s}.h-in.d4{animation-delay:.36s}
+@keyframes hin{from{opacity:0;transform:translateY(20px)}}
+@media (max-width:767px){nav .z{display:none}.burger{display:block}nav .wrap{grid-template-columns:1fr auto}
+  nav.open .z.l{display:flex;flex-direction:column;position:fixed;inset:64px 0 0;background:rgba(42,22,8,.97);padding:30px 20px;gap:20px;font:italic 400 30px var(--serif);letter-spacing:0}
+  .split,.two,.prod,.quotes .q,footer .wrap{grid-template-columns:1fr}.img.b{margin-right:0}.banner{height:260px}section{padding-block:72px}.proc .img{order:-1}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.fade{opacity:1;transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<nav id="nav"><div class="wrap">
+  <div class="z l"><a href="#angebot">Angebot</a><a href="#ueber">Über uns</a><a href="#besuch">Besuch</a></div>
+  <a class="word" href="#">Delight</a>
+  <div class="z r"><a href="tel:+436648631516">Anrufen</a><a href="#besuch">Anfahrt</a></div>
+  <button class="burger" onclick="document.getElementById('nav').classList.toggle('open')">Menü</button>
+</div></nav>
+
+<header class="hero">
+  <span class="ph">Foto: Frühstück im Gastgarten</span>
+  <div class="wrap">
+    <span class="lbl h-in">Früh offen, schon ab 5:30 Uhr</span>
+    <h1 class="h-in d2">Frisches Gebäck.<br>Schon in der Früh.</h1>
+    <p class="h-in d3">Kaffee, Frühstück, Kuchen und Torten in Pistorf. Und für zu Hause gibt es Brot und Gebäck aus unserem kleinen Shop.</p>
+    <div class="row h-in d4"><a class="bb l" href="#angebot">[ Zum Angebot ]</a><a class="bb l" href="#besuch">[ So findest du uns ]</a></div>
+  </div>
+</header>
+
+<section id="ueber"><div class="wrap split">
+  <div class="fade">
+    <span class="lbl">Cafe Delight in Pistorf</span>
+    <h2>Ein Kaffee<br>und was Süßes</h2>
+    <p>Viele kommen in der Früh auf einen schnellen Kaffee und ein Kipferl vorbei, andere nehmen sich Zeit für ein ganzes Frühstück. Im Sommer sitzt man draußen im Gastgarten, und wer es eilig hat, nimmt sich Brot und Gebäck aus dem Shop mit.</p>
+    <p>Hier kann noch ein Satz über Sie und Ihr Team stehen.</p>
+    <div class="row" style="margin-top:26px"><a class="bb d" href="#angebot">[ Was es gibt ]</a><a class="bb d" href="tel:+436648631516">[ Anrufen ]</a></div>
+  </div>
+  <div class="img b fade">Foto: Vitrine mit Kuchen und Torten</div>
+</div></section>
+
+<div class="tick" aria-hidden="true"><div class="t"><span>Brot</span><span>Gebäck</span><span>Frühstück</span><span>Kuchen</span><span>Torten</span><span>Eisbecher</span><span>Snacks</span><span>Kaffee</span><span>Brot</span><span>Gebäck</span><span>Frühstück</span><span>Kuchen</span><span>Torten</span><span>Eisbecher</span><span>Snacks</span><span>Kaffee</span></div></div>
+
+<section id="angebot"><div class="wrap">
+  <div class="head"><div><span class="lbl">Unser Angebot</span><h2 class="fade">Was es bei uns gibt</h2></div><a class="bb d" href="tel:+436648631516">[ Vorbestellen ]</a></div>
+  <div class="prod">
+    <article class="fade"><div class="sq"><div class="img" style="height:100%">Foto: Frühstück</div></div><span class="lbl" style="margin:14px 0 0">In der Früh</span><h3>Frühstück</h3><p>Angebot hier eintragen</p></article>
+    <article class="fade"><div class="sq"><div class="img" style="height:100%;background:linear-gradient(160deg,#d9bf9c,#9a7350)">Foto: Kuchen</div></div><span class="lbl" style="margin:14px 0 0">Aus der Vitrine</span><h3>Kuchen und Torten</h3><p>Sorten hier eintragen</p></article>
+    <article class="fade"><div class="sq"><div class="img" style="height:100%;background:linear-gradient(160deg,#c49d74,#7c5535)">Foto: Brot und Gebäck</div></div><span class="lbl" style="margin:14px 0 0">Zum Mitnehmen</span><h3>Brot und Gebäck</h3><p>Sorten hier eintragen</p></article>
+  </div>
+</div></section>
+
+<section class="proc"><div class="wrap split">
+  <div class="img fade">Foto: der Gastgarten</div>
+  <div class="fade">
+    <span class="lbl">Ihr Tag bei uns</span>
+    <h2>Von früh bis Mittag</h2>
+    <div class="st"><b>01</b><div><h3>Ab 5:30 Uhr</h3><p>Der erste Kaffee und frisches Gebäck, bevor es in die Arbeit geht.</p></div></div>
+    <div class="st"><b>02</b><div><h3>Frühstück</h3><p>In Ruhe sitzen, drinnen oder draußen im Gastgarten.</p></div></div>
+    <div class="st"><b>03</b><div><h3>Am Nachmittag</h3><p>Ein Stück Kuchen oder ein Eisbecher, wenn es warm ist.</p></div></div>
+  </div>
+</div></section>
+
+<div class="banner"><div class="fade"><h2>Pistorf 193, Gleinstätten</h2><p>Gleich in der Früh offen</p><a class="bb l" href="https://maps.google.com/?q=Cafe+Delight+Pistorf+193+Gleinst%C3%A4tten" target="_blank" rel="noopener">[ Route planen ]</a></div></div>
+
+<section><div class="wrap two">
+  <div class="fade"><span class="lbl">Für Feiern</span><h3>Torten auf Bestellung</h3><p>Ob Geburtstag oder Familienfeier: hier steht, wie man eine Torte bestellt und wie lange vorher. Bitte anpassen.</p><a class="bb d" href="tel:+436648631516">[ Anfragen ]</a></div>
+  <div class="fade"><span class="lbl">Für Betriebe</span><h3>Gebäck für die Jause</h3><p>Hier könnte stehen, ob Sie auch für Firmen oder Vereine Gebäck vorbereiten. Bitte anpassen oder weglassen.</p><a class="bb d" href="tel:+436648631516">[ Anfragen ]</a></div>
+</div></section>
+
+<section class="quotes"><div class="wrap">
+  <span class="lbl">Bewertungen</span><h2 class="fade">Was Gäste sagen</h2>
+  <div class="q">
+    <div class="fade"><span class="stars">★★★★★</span><p>Wunderbare Stimmung, beim Frühstück fehlt nichts und der Service passt.</p><small>sinngemäß aus Google</small></div>
+    <div class="fade"><span class="stars">★★★★★</span><p>Freundlicher Service, guter Kaffee und ein sehr schöner Gastgarten.</p><small>sinngemäß aus Google</small></div>
+    <div class="fade"><span class="stars">★★★★★</span><p>Sie haben sehr früh offen, das finde ich super.</p><small>sinngemäß aus Google</small></div>
+  </div>
+</div></section>
+
+<section class="contact" id="besuch"><div class="wrap split">
+  <div class="fade">
+    <span class="lbl">Besuch</span><h2>Komm vorbei.</h2>
+    <div class="det">
+      <div><span class="lbl">Adresse</span><p>Pistorf 193/7<br>8443 Gleinstätten</p></div>
+      <div><span class="lbl">Öffnungszeiten</span><p>Montag bis Freitag 5:30 bis 19 Uhr<br>Samstag 5:30 bis 13 Uhr<br>Sonntag 7 bis 13 Uhr</p><p style="font-size:13px;color:var(--acc);margin-top:6px">Laut Herold, bitte bestätigen. Auf Google steht Mittwoch als Ruhetag.</p></div>
+      <div><span class="lbl">Kontakt</span><p><a href="tel:+436648631516">0664 8631516</a><br><a href="mailto:mariaknass@gmx.at">Nachricht schreiben</a></p></div>
+    </div>
+    <a class="bb d" href="tel:+436648631516">[ Jetzt anrufen ]</a>
+  </div>
+  <div class="img fade">Foto: das Cafe von außen</div>
+</div></section>
+
+<footer><div class="wrap">
+  <div><span class="bn">Delight</span><p style="font-size:14px;opacity:.7">Cafe und Shop in Pistorf.<br>Nur Barzahlung.</p></div>
+  <div><a href="#angebot">Angebot</a><a href="#ueber">Über uns</a><a href="#besuch">Besuch</a></div>
+  <div><a href="tel:+436648631516">0664 8631516</a><a href="#">Impressum</a><a href="#">Datenschutz</a></div>
+</div></footer>
+<div class="draft">Entwurf von David Tomoiaga für eine neue Website, nicht die offizielle Seite vom Cafe Delight</div>
+<script>
+const io=new IntersectionObserver(es=>es.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('in'),(i%4)*120);io.unobserve(e.target)}}),{threshold:.1});
+document.querySelectorAll('.fade').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
