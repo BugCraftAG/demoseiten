@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Malerbetrieb Spätauf, Bad Radkersburg</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bitter:wght@600&family=Karla:wght@300;400;600&display=swap">
+<style>
+/* Nach dem Prompt "Painter" von websiteprompts.ai: Kreideweiß, Farbkarten, Bitter und Karla. Ein Klick auf eine Farbkarte färbt die Akzente der Seite. */
+:root{--chalk:#F5F3EF;--fg:#1F2924;--primary:#2E5645;--on:#F7F6F3;--muted:#6A7770;--line:#E0DDD6;--card:#ECEAE4;--swatch:#2E5645;
+  --display:"Bitter",Georgia,serif;--body:"Karla",system-ui,sans-serif}
+*{box-sizing:border-box}
+html{color-scheme:light}
+body{margin:0;background:var(--chalk);color:var(--fg);font:300 17px/1.7 var(--body)}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:40;opacity:.04;mix-blend-mode:multiply;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--swatch);outline-offset:3px}
+.wrap{max-width:1240px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left));padding-right:max(20px,env(safe-area-inset-right))}
+.label{font:600 12px var(--body);text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin:0 0 14px}
+nav{border-bottom:1px solid var(--line);background:var(--chalk);position:sticky;top:0;z-index:20}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:82px;gap:20px}
+.word{font:600 21px var(--display);text-decoration:none}
+.word small{display:block;font:400 13px var(--body);color:var(--muted);margin-top:-2px}
+.links{display:flex;gap:28px;align-items:center;font-weight:400;font-size:16px}
+.links a{text-decoration:none}
+.btn{display:inline-block;text-decoration:none;font:600 15px var(--body);padding:13px 22px;border-radius:4px;background:var(--swatch);color:var(--on);border:1.5px solid var(--swatch);transition:background .4s,border-color .4s,color .4s}
+.btn.out{background:transparent;color:var(--swatch)}
+.hero{display:grid;grid-template-columns:55fr 45fr;gap:50px;align-items:center;padding-block:70px 90px}
+h1{font:600 clamp(42px,5.4vw,80px)/1.06 var(--display);margin:0 0 20px}
+h1 .ac{position:relative;white-space:nowrap}
+h1 .ac svg{position:absolute;left:-2%;bottom:-.18em;width:104%;height:.4em;overflow:visible}
+h1 .ac path{fill:none;stroke:var(--swatch);stroke-width:9;stroke-linecap:round;stroke-dasharray:420;stroke-dashoffset:420;animation:draw 1.1s .5s ease forwards;transition:stroke .4s}
+@keyframes draw{to{stroke-dashoffset:0}}
+.hero p.sub{font-size:19px;max-width:30em;margin:0 0 28px}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:24px}
+.cred{font-size:15px;color:var(--muted)}
+.room{aspect-ratio:4/5;background:linear-gradient(180deg,var(--swatch) 0 70%,#d9d2c4 70% 72%,#bfb39d 72%);border-radius:4px;transition:background .4s;display:flex;align-items:flex-end;padding:16px;color:#fff;font-size:14px;position:relative}
+.room::before{content:"";position:absolute;left:12%;top:16%;width:30%;aspect-ratio:3/4;border:6px solid #f2efe8;background:rgba(255,255,255,.15)}
+.up{opacity:0;transform:translateY(18px);animation:up .8s ease forwards}
+.up:nth-child(2){animation-delay:.08s}.up:nth-child(3){animation-delay:.16s}.up:nth-child(4){animation-delay:.24s}.up:nth-child(5){animation-delay:.32s}
+@keyframes up{to{opacity:1;transform:none}}
+section{padding-block:110px}
+h2{font:600 clamp(28px,3.4vw,48px)/1.12 var(--display);margin:0 0 16px}
+.lead{max-width:36em;color:var(--muted);margin:0 0 44px}
+.picker{background:var(--card)}
+.sw{display:grid;grid-template-columns:repeat(6,1fr);gap:18px}
+.sw button{all:unset;cursor:pointer;background:#fff;border-radius:6px;padding:10px 10px 16px;transform:rotate(var(--r));transition:transform .3s,box-shadow .3s;box-shadow:0 1px 0 var(--line)}
+.sw button:hover,.sw button:focus-visible{transform:rotate(0) translateY(-6px);box-shadow:0 10px 24px rgba(31,41,36,.12)}
+.sw button[aria-pressed="true"]{outline:2px solid var(--fg);outline-offset:4px}
+.sw i{display:block;aspect-ratio:1;border-radius:3px;background:var(--c);margin-bottom:10px}
+.sw b{font:600 12px var(--body);text-transform:uppercase;letter-spacing:.12em;display:block}
+.sw span{font-size:13px;color:var(--muted)}
+.svc{border-top:1px solid var(--fg)}
+.svc div{display:grid;grid-template-columns:1fr 2fr auto;gap:30px;padding:26px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.svc h3{font:600 24px var(--display);margin:0}
+.svc p{margin:0;color:var(--muted)}
+.svc .tag{font:600 12px var(--body);text-transform:uppercase;letter-spacing:.12em;color:var(--swatch);transition:color .4s;white-space:nowrap}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.gallery figure{margin:0}
+.gallery .ph{aspect-ratio:4/3;border-radius:4px;background:var(--card);display:flex;align-items:flex-end;padding:12px;font-size:14px;color:var(--muted)}
+.gallery figcaption{margin-top:10px;font:600 12px var(--body);text-transform:uppercase;letter-spacing:.12em}
+.gallery figcaption span{border-bottom:2px solid transparent;transition:border-color .3s}
+.gallery figure:hover figcaption span{border-color:var(--swatch)}
+.steps{position:relative;padding-left:40px;max-width:760px}
+.steps::before{content:"";position:absolute;left:9px;top:6px;bottom:6px;width:2px;background:var(--swatch);transform:scaleY(0);transform-origin:top;transition:transform 1.2s ease,background .4s}
+.steps.in::before{transform:none}
+.step{position:relative;padding-bottom:30px}
+.step::before{content:"";position:absolute;left:-38px;top:6px;width:16px;height:16px;border-radius:50%;background:var(--chalk);border:2px solid var(--swatch)}
+.step b{font:600 12px var(--body);text-transform:uppercase;letter-spacing:.12em;color:var(--muted)}
+.step h3{font:600 22px var(--display);margin:2px 0 4px}
+.step p{margin:0;color:var(--muted)}
+.shop{background:var(--swatch);color:var(--on);transition:background .4s}
+.shop .wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.shop .label{color:rgba(247,246,243,.75)}
+.shop ul{list-style:none;padding:0;margin:0;columns:2;gap:30px}
+.shop li{padding:8px 0;border-bottom:1px solid rgba(247,246,243,.25);break-inside:avoid}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:60px}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
+td{padding:10px 0;border-bottom:1px solid var(--line)}
+td:last-child{text-align:right;font-weight:400}
+footer{border-top:1px solid var(--line);padding-block:50px 90px;font-size:15px;color:var(--muted)}
+footer .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+footer b{color:var(--fg);font:600 18px var(--display);display:block;margin-bottom:6px}
+.draft{position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--fg);color:var(--chalk);font-size:13px;text-align:center;padding:8px 16px calc(8px + env(safe-area-inset-bottom))}
+.fade{opacity:0;transform:scale(1.03);transition:opacity .7s,transform .7s}
+.fade.in{opacity:1;transform:none}
+@media (max-width:1023px){.gallery{grid-template-columns:1fr 1fr}}
+@media (max-width:767px){.links a:not(.btn){display:none}.hero{grid-template-columns:1fr;padding-top:24px}.room{order:-1;aspect-ratio:auto;height:54vh}h1{font-size:42px}
+  .sw{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;padding:10px 4px 20px}.sw button{flex:0 0 42%;scroll-snap-align:start}
+  .svc div{grid-template-columns:1fr;gap:6px}.shop .wrap,.contact,footer .wrap{grid-template-columns:1fr}.shop ul{columns:1}section{padding-block:80px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.up,.fade{opacity:1;transform:none}h1 .ac path{stroke-dashoffset:0}.steps::before{transform:none}}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <a class="word" href="#">Spätauf<small>Malerbetrieb seit 1963</small></a>
+  <div class="links"><a href="#farben">Farben</a><a href="#leistungen">Leistungen</a><a href="#profishop">ProfiShop</a><a href="#kontakt">Kontakt</a><a class="btn out" href="tel:+436642845088">Angebot anfragen</a></div>
+</div></nav>
+
+<header class="wrap hero">
+  <div>
+    <p class="label up">Malerei, Böden, Trockenbau in Bad Radkersburg</p>
+    <h1 class="up">Ihre Wände in der <span class="ac">richtigen Farbe.<svg viewBox="0 0 400 30" preserveAspectRatio="none" aria-hidden="true"><path d="M4 20 C 80 8, 160 26, 240 14 S 360 10, 396 18"/></svg></span></h1>
+    <p class="sub up">Seit 1963 bringt die Familie Spätauf Farbe in Häuser und Wohnungen rund um Bad Radkersburg. Heute in dritter Generation, mit Roland Spätauf als Meister.</p>
+    <div class="cta up"><a class="btn" href="tel:+436642845088">Kostenloses Angebot</a><a class="btn out" href="#arbeiten">Arbeiten ansehen</a></div>
+    <p class="cred up">Maler, Stuckateur und Trockenbau Meisterbetrieb · Eigener ProfiShop mit Abtönstation</p>
+  </div>
+  <div class="room" id="room">Foto: frisch gestrichenes Wohnzimmer</div>
+</header>
+
+<section class="picker" id="farben"><div class="wrap">
+  <p class="label">Probieren Sie es aus</p>
+  <h2>Welche Farbe darf es sein?</h2>
+  <p class="lead">Tippen Sie eine Farbkarte an. Genau Ihren Ton mischen wir in unserer Abtönstation, passend zu Licht und Raum.</p>
+  <div class="sw" id="sw">
+    <button style="--c:#2E5645;--r:-2deg" data-c="#2E5645" aria-pressed="true"><i></i><b>Farn</b><span>Ruhiges Grün</span></button>
+    <button style="--c:#BA6F4F;--r:1.5deg" data-c="#BA6F4F" aria-pressed="false"><i></i><b>Terrakotta</b><span>Warm und erdig</span></button>
+    <button style="--c:#406182;--r:-1deg" data-c="#406182" aria-pressed="false"><i></i><b>Schieferblau</b><span>Kühl und klar</span></button>
+    <button style="--c:#A9874C;--r:2deg" data-c="#A9874C" aria-pressed="false"><i></i><b>Ocker</b><span>Sonnig</span></button>
+    <button style="--c:#814B56;--r:-1.5deg" data-c="#814B56" aria-pressed="false"><i></i><b>Weinrot</b><span>Tief und edel</span></button>
+    <button style="--c:#5B5148;--r:1deg" data-c="#5B5148" aria-pressed="false"><i></i><b>Erdbraun</b><span>Zeitlos</span></button>
+  </div>
+</div></section>
+
+<section id="leistungen"><div class="wrap">
+  <p class="label">Leistungen</p>
+  <h2>Alles aus einer Hand</h2>
+  <div class="svc">
+    <div><h3>Malerei</h3><p>Innen und außen, von der Wohnung bis zur Fassade, inklusive Spachteln und Vorbereitung.</p><span class="tag">Innen und außen</span></div>
+    <div><h3>Böden</h3><p>Neue Böden verlegen und alte Böden wieder schön machen.</p><span class="tag">Verlegen</span></div>
+    <div><h3>Trockenbau und Stuck</h3><p>Seit Juni 2018 auch Stuckateur und Trockenbau Meisterbetrieb.</p><span class="tag">Meisterbetrieb</span></div>
+    <div><h3>Sonnenschutz</h3><p>Lösungen gegen Hitze und Blendung für Fenster und Terrassen.</p><span class="tag">Beratung vor Ort</span></div>
+    <div><h3>Arbeitsbühnen</h3><p>Arbeitsbühnen zum Mieten, wenn es hoch hinaus geht.</p><span class="tag">Vermietung</span></div>
+  </div>
+</div></section>
+
+<section id="arbeiten" style="padding-top:0"><div class="wrap">
+  <p class="label">Referenzen</p>
+  <h2>Was wir zuletzt gemacht haben</h2>
+  <div class="gallery">
+    <figure class="fade"><div class="ph">Foto einfügen</div><figcaption><span>Wohnzimmer</span></figcaption></figure>
+    <figure class="fade"><div class="ph">Foto einfügen</div><figcaption><span>Fassade</span></figcaption></figure>
+    <figure class="fade"><div class="ph">Foto einfügen</div><figcaption><span>Stuckdecke</span></figcaption></figure>
+    <figure class="fade"><div class="ph">Foto einfügen</div><figcaption><span>Trockenbau</span></figcaption></figure>
+    <figure class="fade"><div class="ph">Foto einfügen</div><figcaption><span>Boden</span></figcaption></figure>
+    <figure class="fade"><div class="ph">Foto einfügen</div><figcaption><span>Sonnenschutz</span></figcaption></figure>
+  </div>
+  <p class="cred" style="margin-top:18px">Hier kommen Fotos von echten Projekten hin.</p>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <p class="label">Ablauf</p>
+  <h2>So läuft ein Auftrag</h2>
+  <div class="steps" id="steps">
+    <div class="step"><b>Schritt 1</b><h3>Anruf oder Nachricht</h3><p>Sie erzählen uns kurz, was gemacht werden soll.</p></div>
+    <div class="step"><b>Schritt 2</b><h3>Besichtigung</h3><p>Wir schauen uns alles vor Ort an und beraten Sie zu Farbe und Material.</p></div>
+    <div class="step"><b>Schritt 3</b><h3>Angebot</h3><p>Sie bekommen ein klares Angebot mit Termin.</p></div>
+    <div class="step"><b>Schritt 4</b><h3>Arbeit</h3><p>Abdecken, vorbereiten, ausführen.</p></div>
+    <div class="step"><b>Schritt 5</b><h3>Übergabe</h3><p>Gemeinsamer Rundgang, bis alles passt.</p></div>
+  </div>
+</div></section>
+
+<section class="shop" id="profishop"><div class="wrap">
+  <div><p class="label">ProfiShop</p><h2>Farbe zum Mitnehmen</h2><p>In unserem Betriebsgebäude in der Fehringer Straße gibt es seit April 2020 auch den ProfiShop. Für alle, die selbst streichen wollen, mit Beratung vom Profi.</p></div>
+  <ul><li>Farben</li><li>Putze</li><li>Lacke</li><li>Lasuren</li><li>Dekorbeschichtungen</li><li>Trockenbau Material</li><li>Bodenmaterial</li><li>Abtönstation</li></ul>
+</div></section>
+
+<section id="kontakt"><div class="wrap contact">
+  <div><p class="label">Kontakt</p><h2>Fehringer Straße 7, Bad Radkersburg</h2><p><a href="tel:+436642845088">0664 284 50 88</a><br><a href="mailto:roland@malerbetrieb-spaetauf.at">roland@malerbetrieb-spaetauf.at</a></p><p><a class="btn" href="tel:+436642845088">Angebot anfragen</a></p></div>
+  <div><p class="label">Öffnungszeiten</p>
+    <table><tr><td>Montag bis Freitag</td><td>8 bis 12 und 14 bis 18 Uhr</td></tr><tr><td>Samstag</td><td>9 bis 12 Uhr</td></tr><tr><td>Sonntag</td><td>geschlossen</td></tr></table>
+    <p class="cred" style="margin-top:16px">Unterwegs in Bad Radkersburg und Umgebung. Einzugsgebiet bitte ergänzen.</p></div>
+</div></section>
+
+<footer><div class="wrap">
+  <div><b>Malerbetrieb Spätauf</b>Roland Spätauf, seit 1963</div>
+  <div>Fehringer Straße 7<br>8490 Bad Radkersburg</div>
+  <div>Impressum, Datenschutz und AGB</div>
+</div></footer>
+<div class="draft">Entwurf von David Tomoiaga für eine neue Website, nicht die offizielle Seite vom Malerbetrieb Spätauf</div>
+<script>
+document.querySelectorAll('#sw button').forEach(b=>b.addEventListener('click',()=>{document.documentElement.style.setProperty('--swatch',b.dataset.c);document.querySelectorAll('#sw button').forEach(o=>o.setAttribute('aria-pressed',o===b))}));
+const io=new IntersectionObserver(es=>es.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('in'),(i%6)*80);io.unobserve(e.target)}}),{threshold:.2});
+document.querySelectorAll('.fade,#steps').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

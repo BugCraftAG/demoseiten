@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>KFZ Weber, Mureck</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;800&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap">
+<style>
+/* Nach dem Prompt "Mechanic" von websiteprompts.ai: Anthrazit, Signalorange, Space Grotesk und Plus Jakarta Sans. */
+:root{--bg:#111418;--card:#1c2028;--elev:#272d35;--line:#313840;--orange:#e85d04;--orange-h:#d15203;--light:#e8e8e8;--mid:#9e9e9e;--white:#fff;
+  --display:"Space Grotesk",system-ui,sans-serif;--body:"Plus Jakarta Sans",system-ui,sans-serif}
+*{box-sizing:border-box}
+html{color-scheme:dark;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--light);font:400 16px/1.65 var(--body)}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--orange);outline-offset:3px}
+.wrap{max-width:1160px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left));padding-right:max(20px,env(safe-area-inset-right))}
+nav{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:68px}
+.logo{font:700 21px var(--display);color:var(--white);text-decoration:none;letter-spacing:-.01em}
+.logo span{color:var(--orange)}
+.links{display:flex;gap:26px}
+.links a{text-decoration:none;font-weight:600;font-size:15px;color:var(--light)}
+.links a:hover{color:var(--white)}
+.btn{display:inline-block;background:var(--orange);color:var(--white);text-decoration:none;font:600 16px var(--body);padding:14px 28px;border-radius:6px;border:0;cursor:pointer;transition:background .2s}
+.btn:hover{background:var(--orange-h)}
+.btn.sm{padding:10px 20px;font-size:15px}
+.btn.ghost{background:rgba(255,255,255,.04);border:1px solid var(--line);color:var(--light)}
+.btn.ghost:hover{background:rgba(255,255,255,.08)}
+.hero{position:relative;overflow:hidden;padding-block:90px 110px;background:
+  linear-gradient(90deg,var(--bg) 0 38%,rgba(17,20,24,.7) 70%,rgba(17,20,24,.45)),
+  repeating-linear-gradient(115deg,#1a1e25 0 2px,#15181d 2px 26px)}
+.hero .mark{position:absolute;right:-2vw;bottom:-4vw;font:800 clamp(120px,24vw,330px)/.8 var(--display);color:rgba(255,255,255,.035);letter-spacing:-.04em;pointer-events:none;user-select:none}
+.eyebrow{display:flex;align-items:center;gap:12px;font-weight:600;font-size:14px;text-transform:uppercase;letter-spacing:.16em;color:var(--orange);margin:0 0 20px}
+.eyebrow::before{content:"";width:34px;height:2px;background:var(--orange)}
+h1{font:800 clamp(44px,8vw,96px)/.95 var(--display);letter-spacing:-.03em;margin:0 0 22px;color:var(--white);max-width:11em}
+h1 em{font-style:normal;color:var(--orange)}
+.hero p.sub{font-weight:300;font-size:19px;max-width:32em;margin:0 0 32px;color:var(--light)}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.chev{position:absolute;left:50%;bottom:22px;width:22px;height:22px;border-right:2px solid var(--mid);border-bottom:2px solid var(--mid);transform:translateX(-50%) rotate(45deg);animation:float 2.4s ease-in-out infinite}
+@keyframes float{50%{transform:translateX(-50%) translateY(6px) rotate(45deg)}}
+.callbar{position:fixed;left:0;right:0;bottom:37px;z-index:15;background:var(--orange);color:var(--white);transition:transform .35s ease}
+.callbar.hide{transform:translateY(160%)}
+.callbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:10px}
+.callbar a{color:var(--white);font:700 20px var(--display);text-decoration:none}
+.callbar span{font-weight:300}
+section{padding-block:96px}
+h2{font:800 clamp(32px,5vw,56px)/1 var(--display);letter-spacing:-.025em;margin:0 0 14px;color:var(--white)}
+.lead{color:var(--mid);max-width:34em;margin:0 0 40px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--line);border:1px solid var(--line)}
+.svc{background:var(--card);padding:30px 26px;border-left:3px solid transparent;transition:transform .25s,border-color .25s,box-shadow .25s}
+.svc:hover{transform:translateY(-3px);border-left-color:var(--orange);box-shadow:0 0 0 1px rgba(232,93,4,.18),0 18px 40px rgba(232,93,4,.12)}
+.svc svg{width:30px;height:30px;stroke:var(--orange);fill:none;stroke-width:1.8;margin-bottom:16px}
+.svc h3{font:700 21px var(--display);margin:0 0 8px;color:var(--white)}
+.svc p{margin:0 0 16px;color:var(--mid);font-size:15px}
+.chip{display:inline-block;font-weight:600;font-size:13px;padding:5px 11px;border-radius:999px;background:var(--elev);color:var(--light)}
+.why{background:var(--card)}
+.why .row{display:grid;grid-template-columns:repeat(4,1fr);gap:30px}
+.why .dot{width:34px;height:34px;border-radius:50%;background:var(--orange);display:grid;place-items:center;margin-bottom:14px}
+.why .dot::after{content:"";width:12px;height:7px;border-left:2.5px solid #fff;border-bottom:2.5px solid #fff;transform:rotate(-45deg) translate(1px,-1px)}
+.why h3{font:700 18px var(--display);color:var(--white);margin:0 0 6px}
+.why p{margin:0;color:var(--mid);font-size:15px}
+.marq{overflow:hidden;border-block:1px solid var(--line);padding-block:20px;background:var(--bg)}
+.marq .track{display:flex;width:max-content;animation:mq 35s linear infinite}
+.marq:hover .track{animation-play-state:paused}
+.marq span{font:700 20px var(--display);color:var(--light);white-space:nowrap;padding-inline:22px;display:flex;align-items:center;gap:44px}
+.marq span::after{content:"";width:7px;height:7px;border-radius:50%;background:var(--orange)}
+@keyframes mq{to{transform:translateX(-50%)}}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:6px}
+table{width:100%;border-collapse:collapse;min-width:520px;font-variant-numeric:tabular-nums}
+th{background:var(--orange);color:var(--white);text-align:left;font:700 15px var(--display);padding:14px 18px}
+td{padding:14px 18px;border-top:1px solid var(--line)}
+tr:nth-child(even) td{background:var(--card)}
+.note{color:var(--mid);font-size:14px;margin-top:12px}
+.urgent{background:var(--orange);color:var(--white);position:relative;overflow:hidden}
+.urgent .mark{position:absolute;right:2vw;top:50%;transform:translateY(-50%);font:800 clamp(110px,20vw,260px)/1 var(--display);color:rgba(255,255,255,.1);pointer-events:none}
+.urgent h2{color:var(--white);max-width:12em}
+.urgent p{font-weight:300;font-size:18px;max-width:30em}
+.urgent .big{display:inline-block;font:800 clamp(36px,7vw,72px)/1 var(--display);color:var(--white);text-decoration:none;margin-top:10px;letter-spacing:-.02em}
+footer{background:var(--bg);padding-block:70px 0;font-size:15px}
+footer .cols{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+footer h4{font:700 16px var(--display);color:var(--white);margin:0 0 12px}
+footer p{margin:0 0 6px;color:var(--mid)}
+footer .bar{border-top:1px solid var(--line);margin-top:50px;padding-block:22px 90px;text-align:center;color:var(--mid);font-size:14px}
+.menu-btn{display:none;background:none;border:1px solid var(--line);color:var(--light);font:600 15px var(--body);padding:8px 14px;border-radius:6px}
+.draft{position:fixed;left:0;right:0;bottom:0;z-index:30;background:#000;color:var(--light);font-size:13px;text-align:center;padding:9px 16px calc(9px + env(safe-area-inset-bottom))}
+.fade{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.fade.in{opacity:1;transform:none}
+@media (max-width:1023px){.links,.nav-cta{display:none}.menu-btn{display:block}.grid{grid-template-columns:1fr 1fr}.why .row{grid-template-columns:1fr 1fr}.callbar span{display:none}
+  nav.open .links{display:flex;position:fixed;inset:68px 0 0 0;background:var(--bg);flex-direction:column;padding:30px 20px;gap:22px}
+  nav.open .links a{font:700 28px var(--display)}}
+@media (max-width:639px){.grid,.why .row,footer .cols{grid-template-columns:1fr}.hero{padding-block:64px 90px}section{padding-block:72px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.fade{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<nav id="nav">
+  <div class="wrap">
+    <a class="logo" href="#">KFZ<span>·</span>Weber</a>
+    <div class="links"><a href="#leistungen">Leistungen</a><a href="#warum">Warum wir</a><a href="#ablauf">Ablauf</a><a href="#kontakt">Kontakt</a></div>
+    <a class="btn sm nav-cta" href="tel:+436641241906">Termin anrufen</a>
+    <button class="menu-btn" aria-expanded="false" onclick="const n=document.getElementById('nav');n.classList.toggle('open');this.setAttribute('aria-expanded',n.classList.contains('open'))">Menü</button>
+  </div>
+</nav>
+
+<header class="hero" id="hero">
+  <div class="mark" aria-hidden="true">WEBER</div>
+  <div class="wrap" style="position:relative">
+    <p class="eyebrow fade">Meisterbetrieb in Mureck</p>
+    <h1 class="fade">Ihr Auto. Unsere <em>Werkstatt.</em></h1>
+    <p class="sub fade">Reparatur, Lackierung und Pickerl für fast alle Automarken. In unserer Meisterwerkstatt in der Hoffeldstraße kümmern wir uns um Ihr Auto, als wäre es unseres.</p>
+    <div class="cta fade"><a class="btn" href="tel:+436641241906">Jetzt anrufen</a><a class="btn ghost" href="#leistungen">Unsere Leistungen</a></div>
+  </div>
+  <div class="chev" aria-hidden="true"></div>
+</header>
+<div class="callbar" id="callbar"><div class="wrap"><span>Termin für Pickerl, Service oder Lack?</span><a href="tel:+436641241906">0664 124 19 06</a></div></div>
+
+<section id="leistungen">
+  <div class="wrap">
+    <h2 class="fade">Was wir für Sie machen</h2>
+    <p class="lead fade">Ein Betrieb, alles unter einem Dach. Sie bringen das Auto, wir erklären Ihnen vorher, was gemacht wird.</p>
+    <div class="grid">
+      <div class="svc fade"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></svg><h3>Reparatur</h3><p>Von der Bremse bis zum Motor. Wir finden den Fehler und reparieren ihn sauber.</p><span class="chip">Alle Marken</span></div>
+      <div class="svc fade"><svg viewBox="0 0 24 24"><path d="M4 20h16M6 16l9-9 3 3-9 9H6z"/></svg><h3>Lackiererei</h3><p>Unsere neue Lackiererei bringt Kratzer, Dellen und Unfallschäden wieder in Form.</p><span class="chip">Neu im Betrieb</span></div>
+      <div class="svc fade"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M8.5 12.5l2.3 2.3 4.7-5"/></svg><h3>Pickerl</h3><p>Die wiederkehrende Begutachtung nach § 57a direkt bei uns in der Werkstatt.</p><span class="chip">§ 57a Gutachten</span></div>
+      <div class="svc fade"><svg viewBox="0 0 24 24"><path d="M3 13h18M5 13l2-6h10l2 6v5H5z"/><circle cx="8" cy="16" r="1"/><circle cx="16" cy="16" r="1"/></svg><h3>Service</h3><p>Regelmäßige Wartung nach Herstellerplan, damit Ihr Auto zuverlässig bleibt.</p><span class="chip">Nach Plan</span></div>
+      <div class="svc fade"><svg viewBox="0 0 24 24"><path d="M12 3v4M12 17v4M3 12h4M17 12h4"/><circle cx="12" cy="12" r="4"/></svg><h3>Räder und Reifen</h3><p>Wechsel, Montage und ein ehrlicher Blick auf das Profil.</p><span class="chip">Sommer und Winter</span></div>
+      <div class="svc fade"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 9h8M8 13h5"/></svg><h3>Galerie</h3><p>Hier zeigen wir Vorher und Nachher Bilder aus der Lackiererei und Werkstatt.</p><span class="chip">Fotos folgen</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="why" id="warum">
+  <div class="wrap">
+    <h2 class="fade">Warum zu KFZ Weber</h2>
+    <p class="lead fade">Weil Sie bei uns wissen, wer an Ihrem Auto arbeitet.</p>
+    <div class="row">
+      <div class="fade"><div class="dot"></div><h3>Meisterbetrieb</h3><p>Ausgebildete Mechaniker und ein Meister, der jede Arbeit abnimmt.</p></div>
+      <div class="fade"><div class="dot"></div><h3>Fast alle Marken</h3><p>Egal ob Kleinwagen, Familienauto oder Transporter.</p></div>
+      <div class="fade"><div class="dot"></div><h3>Lack im Haus</h3><p>Reparatur und Lackierung ohne Umweg zu einem anderen Betrieb.</p></div>
+      <div class="fade"><div class="dot"></div><h3>Aus der Region</h3><p>Direkt in Mureck, für Kunden aus dem ganzen Bezirk.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="marq" aria-hidden="true"><div class="track">
+  <span>KFZ Meisterbetrieb</span><span>Pickerl nach § 57a</span><span>Eigene Lackiererei</span><span>Fast alle Automarken</span><span>Hoffeldstraße 7, Mureck</span>
+  <span>KFZ Meisterbetrieb</span><span>Pickerl nach § 57a</span><span>Eigene Lackiererei</span><span>Fast alle Automarken</span><span>Hoffeldstraße 7, Mureck</span>
+</div></div>
+
+<section id="ablauf">
+  <div class="wrap">
+    <h2 class="fade">So läuft ein Termin</h2>
+    <p class="lead fade">Damit Sie vorher wissen, was auf Sie zukommt.</p>
+    <div class="tablewrap fade">
+      <table>
+        <tr><th>Leistung</th><th>Was passiert</th><th>Richtwert</th></tr>
+        <tr><td>Pickerl</td><td>Begutachtung, kleine Mängel gleich beheben</td><td>Preis eintragen</td></tr>
+        <tr><td>Service</td><td>Ölwechsel, Filter, Kontrolle nach Plan</td><td>Preis eintragen</td></tr>
+        <tr><td>Räderwechsel</td><td>Wechseln, Druck prüfen, Profil ansehen</td><td>Preis eintragen</td></tr>
+        <tr><td>Lackschaden</td><td>Schaden ansehen, Angebot, Termin</td><td>nach Besichtigung</td></tr>
+      </table>
+    </div>
+    <p class="note">Die Richtwerte bitte mit Ihren echten Preisen ergänzen.</p>
+  </div>
+</section>
+
+<section class="urgent">
+  <div class="mark" aria-hidden="true">KFZ</div>
+  <div class="wrap" style="position:relative">
+    <h2>Warnleuchte an? Rufen Sie einfach an.</h2>
+    <p>Wir sagen Ihnen ehrlich, ob es warten kann oder ob Sie gleich vorbeikommen sollten.</p>
+    <a class="big" href="tel:+436641241906">0664 124 19 06</a>
+  </div>
+</section>
+
+<footer id="kontakt">
+  <div class="wrap">
+    <div class="cols">
+      <div><h4>KFZ Weber GmbH</h4><p>Hoffeldstraße 7</p><p>8480 Mureck</p><p><a href="https://maps.google.com/?q=Hoffeldstra%C3%9Fe+7+8480+Mureck">Route öffnen</a></p></div>
+      <div><h4>Öffnungszeiten</h4><p>Montag bis Freitag: bitte ergänzen</p><p>Samstag: bitte ergänzen</p></div>
+      <div><h4>Kontakt</h4><p><a href="tel:+436641241906">0664 124 19 06</a></p><p><a href="mailto:office@weber-kfz.at">office@weber-kfz.at</a></p><p>Impressum und Datenschutz</p></div>
+    </div>
+    <div class="bar">KFZ Weber GmbH, Mureck</div>
+  </div>
+</footer>
+<div class="draft">Entwurf von David Tomoiaga für eine neue Website, nicht die offizielle Seite von KFZ Weber</div>
+<script>
+const io=new IntersectionObserver(es=>es.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('in'),(i%6)*80);io.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll('.fade').forEach(el=>io.observe(el));
+const bar=document.getElementById('callbar');
+new IntersectionObserver(([e])=>bar.classList.toggle('hide',!e.isIntersecting),{threshold:.05}).observe(document.getElementById('hero'));
+</script>
+</body>
+</html>

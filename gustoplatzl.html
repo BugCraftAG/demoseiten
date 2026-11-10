@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Gustoplatzl Pirchweingarten, Klöch</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Instrument+Sans:wght@400;500;600&display=swap">
+<style>
+/* Nach dem Prompt "Glamping" von websiteprompts.ai: Leinenpapier, Waldgrün, Young Serif und Instrument Sans, Haarlinien statt Boxen. */
+:root{--paper:#EEE7DA;--ink:#1C2A21;--forest:#2F4A36;--surface:#E3DACA;--muted:#5B5A4E;--muted-f:#C9C3B2;--hair:rgba(28,42,33,.18);
+  --display:"Young Serif",Georgia,serif;--body:"Instrument Sans",system-ui,sans-serif;--ease:cubic-bezier(.22,1,.36,1)}
+*{box-sizing:border-box}
+html{color-scheme:light}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.65 var(--body)}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--forest);outline-offset:3px}
+.wrap{max-width:1240px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left));padding-right:max(20px,env(safe-area-inset-right))}
+.label{font:600 14px var(--body);text-transform:uppercase;letter-spacing:.08em;margin:0 0 16px;color:var(--muted)}
+nav{position:fixed;top:0;left:0;right:0;z-index:20;color:var(--paper);transition:background .3s,color .3s,border-color .3s;border-bottom:1px solid transparent}
+nav.solid{background:var(--paper);color:var(--ink);border-bottom-color:var(--hair)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:76px;gap:20px}
+.word{font:400 22px var(--display);text-decoration:none}
+.links{display:flex;align-items:center;gap:28px;font-weight:500;font-size:15px}
+.links a{text-decoration:none}
+.btn{display:inline-block;text-decoration:none;font:500 15px var(--body);padding:13px 22px;border-radius:2px;background:var(--forest);color:var(--paper)}
+nav:not(.solid) .btn{background:var(--paper);color:var(--forest)}
+.btn.inv{background:var(--paper);color:var(--forest)}
+.tl{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:5px;font-weight:500}
+.tl:hover{text-decoration-thickness:2px}
+.hero{position:relative;height:clamp(560px,86vh,860px);overflow:hidden;color:var(--paper)}
+.hero .img{position:absolute;inset:0;background:
+  linear-gradient(0deg,rgba(28,42,33,.92) 0,rgba(28,42,33,.6) 35%,rgba(28,42,33,.25) 70%,rgba(28,42,33,.35) 100%),
+  linear-gradient(180deg,#6b6448 0,#80673f 28%,#55603c 52%,#3a4a31 72%,#25331f 100%);animation:settle 1.6s var(--ease) both}
+.hero .img::after{content:"Foto: Terrasse am Abend mit Blick über den Golfplatz";position:absolute;right:20px;top:96px;font-size:13px;color:rgba(255,255,255,.8)}
+@keyframes settle{from{transform:scale(1.04)}to{transform:none}}
+.hero .wrap{position:relative;height:100%;display:flex;align-items:flex-end;justify-content:space-between;gap:30px;padding-bottom:56px;flex-wrap:wrap}
+.hero .label{color:var(--muted-f)}
+h1{font:400 clamp(44px,8vw,104px)/1 var(--display);margin:0 0 12px;max-width:8.5em}
+.hero p{margin:0;max-width:30em;font-size:18px}
+.hero .act{display:flex;gap:22px;align-items:center}
+.up{opacity:0;transform:translateY(16px);animation:up .9s var(--ease) forwards}
+.up:nth-child(2){animation-delay:.1s}.up:nth-child(3){animation-delay:.2s}.up:nth-child(4){animation-delay:.3s}
+@keyframes up{to{opacity:1;transform:none}}
+section{padding-block:120px}
+h2{font:400 clamp(34px,5vw,64px)/1.05 var(--display);margin:0 0 24px}
+.intro{display:grid;grid-template-columns:1fr 2fr;gap:40px}
+.intro .st{font:400 clamp(26px,3.2vw,40px)/1.3 var(--display);margin:0 0 40px}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--hair)}
+.facts div{padding:20px 20px 0 0}
+.facts div+div{border-left:1px solid var(--hair);padding-left:20px}
+.facts b{display:block;font:400 24px var(--display)}
+.facts span{color:var(--muted);font-size:15px}
+.places{background:var(--surface)}
+.rowp{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center;padding-block:40px;border-bottom:1px solid var(--hair)}
+.rowp:last-child{border-bottom:0}
+.rowp:nth-child(even) .ph{order:2}
+.ph{aspect-ratio:4/3;border-radius:2px;display:flex;align-items:flex-end;padding:14px;font-size:14px;color:var(--paper);background:linear-gradient(180deg,#a8a27c,#5f6c47)}
+.rowp h3{font:400 34px var(--display);margin:0 0 10px}
+.rowp p{margin:0 0 14px;color:var(--muted)}
+.rowp .meta{font:500 15px var(--body);color:var(--ink);font-variant-numeric:tabular-nums}
+.slide{opacity:0;transition:opacity 1s var(--ease),transform 1s var(--ease)}
+.slide.l{transform:translateX(-24px)}.slide.r{transform:translateX(24px)}
+.slide.in{opacity:1;transform:none}
+.inv-list{display:grid;grid-template-columns:1fr 1fr;gap:0 60px;border-top:1px solid var(--hair)}
+.inv-list div{display:flex;justify-content:space-between;gap:20px;padding:16px 0;border-bottom:1px solid var(--hair)}
+.inv-list span:last-child{color:var(--muted);text-align:right}
+.seasons{background:var(--surface)}
+.sea{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;align-items:start}
+.sea figure{margin:0}
+.sea figure:nth-child(2){margin-top:80px}.sea figure:nth-child(3){margin-top:30px}
+.sea .ph{aspect-ratio:3/4}
+.sea figcaption{margin-top:12px;font-size:15px;color:var(--muted)}
+.sea figcaption b{color:var(--ink);font-weight:600;display:block}
+.night{background:var(--forest);color:var(--paper)}
+.night .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:center}
+.night .ph{aspect-ratio:3/4;background:linear-gradient(180deg,#1c2a21,#3c4d35 70%,#c88d48);color:var(--muted-f)}
+.night .label{color:var(--muted-f)}
+.night ol{padding:0;margin:30px 0 0;list-style:none;counter-reset:n}
+.night li{counter-increment:n;padding:14px 0;border-top:1px solid rgba(238,231,218,.2);display:flex;gap:16px}
+.night li::before{content:counter(n);font:400 20px var(--display);color:var(--muted-f)}
+table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;font-weight:500}
+th{text-align:left;font:600 14px var(--body);text-transform:uppercase;letter-spacing:.08em;color:var(--muted);padding:12px 0;border-bottom:1px solid var(--ink)}
+td{padding:16px 0;border-bottom:1px solid var(--hair)}
+td:last-child,th:last-child{text-align:right}
+.small{font-size:15px;color:var(--muted);margin:18px 0 28px}
+.here{display:grid;grid-template-columns:1fr 1fr;gap:60px}
+footer{background:var(--forest);color:var(--muted-f);padding-block:60px 90px;font-size:15px}
+footer .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+footer b{font:400 22px var(--display);color:var(--paper);display:block}
+.menu-btn{display:none;background:none;border:1px solid currentColor;color:inherit;font:500 15px var(--body);padding:8px 14px;border-radius:2px}
+.draft{position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--ink);color:var(--paper);font-size:13px;text-align:center;padding:8px 16px calc(8px + env(safe-area-inset-bottom))}
+@media (max-width:767px){.links{display:none}.menu-btn{display:block}
+  nav.open{background:var(--paper);color:var(--ink)}
+  nav.open .links{display:flex;flex-direction:column;align-items:flex-start;position:fixed;inset:76px 0 0;background:var(--paper);padding:30px 20px;gap:20px;font:400 30px var(--display)}
+  h1{font-size:44px}.hero .act{flex-direction:column;align-items:flex-start;gap:16px}
+  .intro,.rowp,.inv-list,.sea,.night .wrap,.here,footer .wrap{grid-template-columns:1fr}.facts{grid-template-columns:1fr}.facts div+div{border-left:0;padding-left:0;border-top:1px solid var(--hair)}
+  .rowp:nth-child(even) .ph{order:0}.sea figure:nth-child(n){margin-top:0}.night .ph{order:-1;aspect-ratio:4/3}section{padding-block:80px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.up,.slide{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<nav id="nav"><div class="wrap">
+  <a class="word" href="#">Gustoplatzl</a>
+  <div class="links"><a href="#platzl">Das Platzl</a><a href="#tisch">Auf dem Tisch</a><a href="#lodges">Lodges</a><a href="#zeiten">Zeiten</a><a class="btn" href="tel:+436645286912">Anrufen</a></div>
+  <button class="menu-btn" onclick="document.getElementById('nav').classList.toggle('open')">Menü</button>
+</div></nav>
+
+<header class="hero">
+  <div class="img" aria-hidden="true"></div>
+  <div class="wrap">
+    <div>
+      <p class="label up">Pirchweingarten, Klöch</p>
+      <h1 class="up">Jause, Sonne und Wein.</h1>
+      <p class="up">Auf unserer Terrasse neben dem Traminergolf sitzen Sie mit Blick bis nach Bad Radkersburg. Bei Wein und Jause vom eigenen Weinhof.</p>
+    </div>
+    <div class="act up"><a class="btn inv" href="#zeiten">Wann wir offen haben</a><a class="tl" href="#lodges">Übernachten in den Lodges</a></div>
+  </div>
+</header>
+
+<section id="platzl"><div class="wrap intro">
+  <p class="label">Das Platzl</p>
+  <div>
+    <p class="st">Flanieren, sitzen bleiben, noch ein Glas. Das Gustoplatzl ist der Ort zwischen Golfplatz und Weingarten, an dem man den Nachmittag verbringt.</p>
+    <div class="facts">
+      <div><b>Mittwoch bis Sonntag</b><span>ab 15 Uhr geöffnet</span></div>
+      <div><b>Überdacht und beheizt</b><span>die Terrasse, auch im Herbst</span></div>
+      <div><b>Eigene Weine</b><span>vom Weinhof Tomaschitz</span></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="places" id="lodges"><div class="wrap">
+  <p class="label">Drei Dinge, ein Ort</p>
+  <div class="rowp"><div class="ph slide l">Foto: das Gustoplatzl</div><div class="slide r"><h3>Gustoplatzl</h3><p>Unser Buschenschank am Pirchweingarten. Hausgemachte Spezialitäten, Wein und eine Terrasse mit weitem Blick.</p><span class="meta">Mittwoch bis Sonntag, 15 bis 24 Uhr</span></div></div>
+  <div class="rowp"><div class="ph slide r">Foto: Weinhof Tomaschitz</div><div class="slide l"><h3>Weinhof Tomaschitz</h3><p>Erlesene Weine und feine Spezialitäten aus unserem Familienweinhof. Dazu Säfte, Kernöl und Edelbrände.</p><span class="meta">Telefon 03475 2286</span></div></div>
+  <div class="rowp"><div class="ph slide l">Foto: eine der Gusto Lodges</div><div class="slide r"><h3>Gusto Lodges</h3><p>Kleine, feine Lodges in der Klöcher Weinregion. Hier ist Platz für Ausstattung, Größe und Preise.</p><a class="tl" href="tel:+436645286912">Lodge anfragen</a></div></div>
+</div></section>
+
+<section id="tisch"><div class="wrap">
+  <p class="label">Auf dem Tisch</p>
+  <h2>Was es bei uns gibt</h2>
+  <div class="inv-list">
+    <div><span>Ripperl vom Grill</span><span>Hausgemacht</span></div>
+    <div><span>Weine vom Weinhof Tomaschitz</span><span>Eigener Weinbau</span></div>
+    <div><span>Schafkäse im Speckmantel</span><span>Warm serviert</span></div>
+    <div><span>Säfte</span><span>Vom Weinhof Tomaschitz</span></div>
+    <div><span>Waffeln mit Früchten und Eis</span><span>Zum Abschluss</span></div>
+    <div><span>Kernöl und Edelbrände</span><span>Auch zum Mitnehmen</span></div>
+    <div><span>Jause und Spezialitäten</span><span>Karte ergänzen</span></div>
+    <div><span>Bier und Kaffee</span><span>Für alle, die keinen Wein mögen</span></div>
+  </div>
+</div></section>
+
+<section class="seasons"><div class="wrap">
+  <p class="label">Durchs Jahr</p>
+  <h2>Von Februar bis Dezember</h2>
+  <div class="sea">
+    <figure class="slide l"><div class="ph">Foto: Frühjahr</div><figcaption><b>Februar</b>Die Saison beginnt, die ersten sonnigen Nachmittage auf der Terrasse.</figcaption></figure>
+    <figure class="slide l"><div class="ph">Foto: Sommer</div><figcaption><b>Sommer</b>Lange Abende mit Blick über den Golfplatz.</figcaption></figure>
+    <figure class="slide l"><div class="ph">Foto: Herbst</div><figcaption><b>Herbst</b>Unter dem beheizten Dach sitzen, wenn es draußen kühler wird.</figcaption></figure>
+  </div>
+</div></section>
+
+<section class="night"><div class="wrap">
+  <div class="ph">Foto: die Terrasse nach Sonnenuntergang</div>
+  <div>
+    <p class="label">Am Abend</p>
+    <h2>Bis Mitternacht auf der Terrasse</h2>
+    <p>Wenn die Sonne hinter den Weingärten verschwindet, wird es bei uns erst gemütlich. Die Terrasse ist überdacht und beheizt.</p>
+    <ol><li>Der Blick über den Golfplatz bis Bad Radkersburg</li><li>Ein Glas Traminer aus Klöch</li><li>Eine Waffel mit Früchten und Eis zum Schluss</li></ol>
+  </div>
+</div></section>
+
+<section id="zeiten"><div class="wrap">
+  <p class="label">Zeiten</p>
+  <h2>Wann wir offen haben</h2>
+  <table>
+    <tr><th>Tag</th><th>Uhrzeit</th></tr>
+    <tr><td>Montag und Dienstag</td><td>Ruhetag</td></tr>
+    <tr><td>Mittwoch bis Samstag</td><td>15 bis 24 Uhr</td></tr>
+    <tr><td>Sonntag</td><td>15 bis 24 Uhr</td></tr>
+  </table>
+  <p class="small">Saison 2026 vom 6. Februar bis 23. Dezember. Bitte die Zeiten noch einmal bestätigen.</p>
+  <a class="btn" href="tel:+436645286912">Tisch anfragen</a>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap here">
+  <div><p class="label">Anfahrt</p><h2>Klöch 205</h2><p>Direkt neben dem Traminergolf Klöch. Von Bad Radkersburg sind es nur ein paar Minuten mit dem Auto.</p><a class="tl" href="https://maps.google.com/?q=Gustoplatzl+Kl%C3%B6ch+205">Route in Google Maps öffnen</a></div>
+  <div><p class="label">Kontakt</p><p>Gustoplatzl und Gusto Lodges<br><a href="tel:+436645286912">0664 528 69 12</a></p><p>Weinhof Tomaschitz<br><a href="tel:+4334752286">03475 2286</a></p><p><a href="mailto:info@gustoplatzl.at">info@gustoplatzl.at</a></p></div>
+</div></section>
+
+<footer><div class="wrap">
+  <div><b>Gustoplatzl</b>Jause, Sonne und Wein in Klöch</div>
+  <div>Klöch 205, 8493 Klöch</div>
+  <div>Bettina und Thomas<br>Impressum und Datenschutz</div>
+</div></footer>
+<div class="draft">Entwurf von David Tomoiaga für eine neue Website, nicht die offizielle Seite vom Gustoplatzl</div>
+<script>
+const nav=document.getElementById('nav');const f=()=>nav.classList.toggle('solid',scrollY>innerHeight*.6);addEventListener('scroll',f,{passive:true});f();
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll('.slide').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Weingut Frühwirth, Klöch</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Jost:wght@300;400;500&display=swap">
+<style>
+/* Nach dem Prompt "Winery" von websiteprompts.ai: Knochenweiß, Burgund, Playfair Display und Jost, ruhig wie ein Weinetikett. */
+:root{--bone:#f8f5f0;--ink:#29221f;--burg:#652034;--card:#f1ede6;--line:#dcd5ca;--muted:#7f716b;--vine:#5a6b4f;--gold:#c3a467;
+  --display:"Playfair Display",Georgia,serif;--body:"Jost",system-ui,sans-serif}
+*{box-sizing:border-box}
+html{color-scheme:light}
+body{margin:0;background:var(--bone);color:var(--ink);font:300 17px/1.85 var(--body)}
+a{color:inherit}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--burg);outline-offset:3px}
+.wrap{max-width:1240px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left));padding-right:max(20px,env(safe-area-inset-right))}
+.eyebrow{font:500 12px var(--body);text-transform:uppercase;letter-spacing:.22em;color:var(--muted);margin:0 0 14px}
+nav{position:fixed;top:0;left:0;right:0;z-index:20;transition:background .4s,border-color .4s;border-bottom:1px solid transparent;color:#fff}
+nav.solid{background:var(--bone);border-bottom-color:var(--line);color:var(--ink)}
+nav .wrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:84px;gap:20px}
+nav .l,nav .r{display:flex;gap:28px;font:500 14px var(--body);text-transform:uppercase;letter-spacing:.14em}
+nav .r{justify-content:flex-end;align-items:center}
+nav a{text-decoration:none}
+.word{font:400 26px var(--display);text-align:center}
+.word i{font-size:15px;display:block;letter-spacing:.2em;font-style:normal;font-family:var(--body);text-transform:uppercase;margin-top:-4px}
+.btn{display:inline-block;text-decoration:none;font:500 14px var(--body);text-transform:uppercase;letter-spacing:.14em;padding:14px 26px;border:1px solid var(--burg);background:var(--burg);color:#fff;transition:background .3s,color .3s}
+.btn:hover{background:#4f1828}
+.btn.out{background:transparent;color:inherit;border-color:currentColor}
+.btn.ghost{background:transparent;border-color:#fff;color:#fff}
+.btn.ghost:hover{background:#fff;color:var(--ink)}
+.hero{height:clamp(620px,100svh,960px);position:relative;overflow:hidden;color:#fff;display:grid;place-items:center;text-align:center}
+.hero .img{position:absolute;inset:0;background:
+  linear-gradient(rgba(41,34,31,.35),rgba(41,34,31,.55)),
+  repeating-linear-gradient(100deg,#5d6d44 0 18px,#6c5a3d 18px 34px);animation:kb 14s linear both}
+@keyframes kb{from{transform:scale(1.12)}to{transform:none}}
+.hero .wrap{position:relative}
+.hero .eyebrow{color:#efe6da}
+h1{font:400 clamp(44px,7vw,92px)/1.04 var(--display);margin:0 0 18px}
+h1 em{font-style:italic}
+.hero p{font-size:19px;max-width:30em;margin:0 auto 30px}
+.cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.cue{position:absolute;bottom:56px;left:50%;transform:translateX(-50%);font-size:12px;letter-spacing:.2em;text-transform:uppercase;animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.4}}
+.ph-note{position:absolute;right:20px;bottom:56px;font-size:13px;opacity:.8}
+section{padding-block:112px}
+h2{font:400 clamp(34px,4.6vw,56px)/1.1 var(--display);margin:0 0 20px}
+.phil{text-align:center;max-width:780px;margin:0 auto}
+.phil p{font:400 clamp(22px,2.6vw,28px)/1.5 var(--display);margin:0 0 20px}
+.phil .sig{font:italic 400 20px var(--display);color:var(--burg)}
+.wines{display:grid;grid-template-columns:repeat(3,1fr);gap:44px 32px}
+.bottle{text-decoration:none;display:block}
+.bottle .img{aspect-ratio:4/5;background:var(--card);display:grid;place-items:center;overflow:hidden;margin-bottom:16px}
+.bottle .img span{width:52px;height:72%;border-radius:20px 20px 6px 6px;background:var(--b,#c8b56e);position:relative;transition:transform .7s ease}
+.bottle .img span::before{content:"";position:absolute;left:50%;top:-18%;width:16px;height:22%;transform:translateX(-50%);background:inherit;border-radius:4px}
+.bottle .img span::after{content:"";position:absolute;left:8px;right:8px;top:45%;height:22%;background:var(--bone)}
+.bottle:hover .img span{transform:scale(1.04)}
+.bottle h3{font:italic 400 24px var(--display);margin:0;position:relative;display:inline-block}
+.bottle h3::after{content:"";position:absolute;left:0;bottom:-3px;height:1px;width:16px;background:var(--burg);transform:scaleX(0);transform-origin:left;transition:transform .5s}
+.bottle:hover h3::after{transform:scaleX(1)}
+.bottle p{margin:4px 0 0;font-size:15px;color:var(--muted)}
+.notes{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px;background:var(--card)}
+.notes .head{position:sticky;top:120px;align-self:start}
+details{border-bottom:1px solid var(--line);padding-block:18px}
+summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;font:italic 400 24px var(--display)}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";width:9px;height:9px;border-right:1.5px solid var(--ink);border-bottom:1.5px solid var(--ink);transform:rotate(45deg);transition:transform .3s}
+details[open] summary::after{transform:rotate(225deg)}
+details p{margin:10px 0 0;color:var(--muted)}
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:0;padding:0}
+.visit .ph{min-height:520px;background:linear-gradient(180deg,#d8cdbc,#b9a88f);display:flex;align-items:flex-end;padding:18px;font-size:13px;color:var(--ink)}
+.visit .txt{padding:90px max(20px,6vw)}
+.block{border-top:1px solid var(--line);padding-block:20px}
+.block h3{font:400 24px var(--display);margin:0 0 4px}
+.block p{margin:0;color:var(--muted)}
+.club{background:var(--burg);color:#f3e8eb}
+.club .eyebrow{color:#d9b8c1}
+.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
+.tier{border:1px solid rgba(255,255,255,.3);padding:34px 30px}
+.tier h3{font:italic 400 28px var(--display);margin:0 0 8px}
+.tier ul{list-style:none;padding:0;margin:0 0 26px}
+.tier li{padding:6px 0;border-bottom:1px solid rgba(255,255,255,.14);font-size:16px}
+.tier .btn{background:var(--bone);color:var(--burg);border-color:var(--bone)}
+.estate .row{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;margin-bottom:90px}
+.estate .row:last-child{margin-bottom:0}
+.estate .row:nth-child(even) .ph{order:2}
+.estate .ph{aspect-ratio:4/3;background:var(--card);display:flex;align-items:flex-end;padding:16px;font-size:13px;color:var(--muted)}
+.estate h3{font:400 34px/1.15 var(--display);margin:0 0 12px}
+.journal{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.journal div{background:var(--card);padding:30px}
+.journal small{font:500 12px var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.journal h3{font:400 24px/1.25 var(--display);margin:10px 0 8px}
+.journal p{margin:0;font-size:16px;color:var(--muted)}
+.final{background:var(--card);text-align:center}
+.final p{max-width:30em;margin:0 auto 28px;color:var(--muted)}
+footer{padding-block:70px 90px;font-size:15px;color:var(--muted)}
+footer .cols{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:40px}
+footer b{font:400 24px var(--display);color:var(--ink);display:block;margin-bottom:8px}
+footer h4{font:500 12px var(--body);letter-spacing:.22em;text-transform:uppercase;color:var(--ink);margin:0 0 10px}
+footer .bottom{border-top:1px solid var(--line);margin-top:44px;padding-top:20px;font-size:14px}
+.menu-btn{display:none;background:none;border:1px solid currentColor;color:inherit;font:500 13px var(--body);text-transform:uppercase;letter-spacing:.14em;padding:8px 12px}
+.draft{position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--ink);color:var(--bone);font-size:13px;text-align:center;padding:8px 16px calc(8px + env(safe-area-inset-bottom))}
+.fade{opacity:0;transform:translateY(20px);transition:opacity .75s,transform .75s}
+.fade.in{opacity:1;transform:none}
+@media (max-width:1024px){.wines{grid-template-columns:1fr 1fr}}
+@media (max-width:767px){nav .wrap{grid-template-columns:1fr auto;height:64px}nav .l,nav .r{display:none}.word{text-align:left;font-size:22px}.menu-btn{display:block}
+  nav.open{background:var(--bone);color:var(--ink)}
+  nav.open .l{display:flex;flex-direction:column;position:fixed;inset:64px 0 0;background:var(--bone);padding:30px 20px;gap:18px;font:400 30px var(--display);text-transform:none;letter-spacing:0}
+  h1{font-size:44px}.cta .btn{width:100%}.cue{display:none}
+  .wines,.notes,.visit,.tiers,.estate .row,.journal,footer .cols{grid-template-columns:1fr}.notes .head{position:static}
+  .estate .row:nth-child(even) .ph{order:0}.estate .row{gap:24px}.visit .ph{min-height:300px}section{padding-block:80px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.fade{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<nav id="nav"><div class="wrap">
+  <div class="l"><a href="#weine">Weine</a><a href="#linien">Linien</a><a href="#besuch">Besuch</a></div>
+  <div class="word">Frühwirth<i>Klöch</i></div>
+  <div class="r"><a href="#weingut">Weingut</a><a class="btn out" href="#">Onlineshop</a></div>
+  <button class="menu-btn" onclick="document.getElementById('nav').classList.toggle('open')">Menü</button>
+</div></nav>
+
+<header class="hero">
+  <div class="img" aria-hidden="true"></div>
+  <div class="wrap">
+    <p class="eyebrow">Weingut und Buschenschank in Klöch</p>
+    <h1>Traminer vom <em>Vulkan.</em></h1>
+    <p>Vater und Sohn keltern in Deutsch Haseldorf Weine aus dem Klöcher Vulkanland. Unser Gelber Traminer 2025 ist Landessieger 2026.</p>
+    <div class="cta"><a class="btn" href="#">Weine entdecken</a><a class="btn ghost" href="#besuch">Besuch planen</a></div>
+  </div>
+  <span class="cue">Weiter</span><span class="ph-note">Foto: Weingärten in Klöch</span>
+</header>
+
+<section><div class="wrap phil fade">
+  <p class="eyebrow">Unser Weg</p>
+  <p>Wir arbeiten seit vielen Jahren in den Weingärten rund um Klöch. Was dort wächst, soll man im Glas schmecken: den Boden, das Jahr und die Handarbeit.</p>
+  <span class="sig">Familie Frühwirth, Vater und Sohn</span>
+</div></section>
+
+<section id="weine" style="padding-top:0"><div class="wrap">
+  <p class="eyebrow">Die Weine</p>
+  <h2 class="fade">Aus unserem Keller</h2>
+  <div class="wines">
+    <a class="bottle fade" href="#" style="--b:#c8a94b"><div class="img"><span></span></div><h3>Gelber Traminer 2025</h3><p>Landessieger 2026</p></a>
+    <a class="bottle fade" href="#" style="--b:#b99d48"><div class="img"><span></span></div><h3>Klöcher Traminer DAC</h3><p>Das Aushängeschild von Klöch</p></a>
+    <a class="bottle fade" href="#" style="--b:#9e8a4a"><div class="img"><span></span></div><h3>Riedenweine DAC</h3><p>Aus einzelnen Lagen</p></a>
+    <a class="bottle fade" href="#" style="--b:#a7a15c"><div class="img"><span></span></div><h3>Gebietsweine DAC</h3><p>Für jeden Tag</p></a>
+    <a class="bottle fade" href="#" style="--b:#c98b8f"><div class="img"><span></span></div><h3>Schilcher frizzante</h3><p>Prickelndes aus dem Haus</p></a>
+    <a class="bottle fade" href="#" style="--b:#652034"><div class="img"><span></span></div><h3>Roter Koasasteffl</h3><p>Aus der Premiumlinie</p></a>
+  </div>
+</div></section>
+
+<section class="notes" id="linien"><div class="wrap" style="display:contents">
+  <div class="head" style="padding-left:max(20px,6vw)"><p class="eyebrow">Linien</p><h2>Was auf dem Etikett steht</h2><p style="color:var(--muted)">Kurz erklärt für alle, die nicht jeden Tag mit Wein zu tun haben.</p></div>
+  <div style="padding-right:max(20px,6vw)">
+    <details open><summary>Gebietsweine DAC</summary><p>Weine aus dem ganzen Vulkanland. Fruchtig, unkompliziert und für jeden Tag gedacht.</p></details>
+    <details><summary>Klöcher Traminer DAC</summary><p>Ortswein aus Klöch. Der Traminer ist die Sorte, für die unser Ort bekannt ist.</p></details>
+    <details><summary>Riedenweine DAC</summary><p>Aus einzelnen Rieden mit eigenem Boden und eigener Lage. Die Spitze der Herkunftspyramide.</p></details>
+    <details><summary>Koasasteffl</summary><p>Unsere Premiumlinie. Hier ist Platz für die Geschichte hinter dem Namen.</p></details>
+  </div>
+</div></section>
+
+<section class="visit" id="besuch">
+  <div class="ph">Foto: Buschenschank Frühwirth</div>
+  <div class="txt">
+    <p class="eyebrow">Besuch</p>
+    <h2>Kommen Sie vorbei</h2>
+    <div class="block"><h3>Ab Hof</h3><p>Montag bis Samstag 9 bis 12 und 14 bis 18 Uhr, Sonntag 9 bis 12 Uhr.</p></div>
+    <div class="block"><h3>Buschenschank</h3><p>Mittwoch bis Samstag ab 16 Uhr. Die Saison 2026 ist mit 7. November zu Ende, die neuen Termine folgen.</p></div>
+    <div class="block"><h3>Onlineshop</h3><p>Alle Weine, Weinpakete und Prickelndes auch zum Bestellen.</p></div>
+    <p style="margin-top:24px"><a class="btn" href="tel:+4334752338">03475 2338</a></p>
+  </div>
+</section>
+
+<section class="club"><div class="wrap">
+  <p class="eyebrow">Zum Verschenken und Genießen</p>
+  <h2 class="fade">Weinpakete</h2>
+  <div class="tiers">
+    <div class="tier fade"><h3>Klöch kennenlernen</h3><ul><li>Gebietsweine DAC</li><li>Klöcher Traminer DAC</li><li>Inhalt und Preis ergänzen</li></ul><a class="btn" href="#">Ansehen</a></div>
+    <div class="tier fade"><h3>Vom Vulkan</h3><ul><li>Riedenweine DAC</li><li>Ausgewählte Lagen</li><li>Inhalt und Preis ergänzen</li></ul><a class="btn" href="#">Ansehen</a></div>
+    <div class="tier fade"><h3>Prickelnd</h3><ul><li>Schilcher frizzante</li><li>Sekt aus dem Haus</li><li>Inhalt und Preis ergänzen</li></ul><a class="btn" href="#">Ansehen</a></div>
+  </div>
+</div></section>
+
+<section class="estate" id="weingut"><div class="wrap">
+  <div class="row"><div class="ph fade">Foto: Vater und Sohn im Weingarten</div><div class="fade"><p class="eyebrow">Die Familie</p><h3>Zwei Generationen, ein Keller</h3><p>Vater und Sohn führen das Weingut gemeinsam. Hier ist Platz für Ihre Familiengeschichte.</p></div></div>
+  <div class="row"><div class="ph fade">Foto: Boden und Reben</div><div class="fade"><p class="eyebrow">Der Boden</p><h3>Vulkanland Klöch</h3><p>Rund um Klöch wachsen die Reben auf Böden mit vulkanischem Ursprung. Genau daher kommt der typische Traminer.</p></div></div>
+  <div class="row"><div class="ph fade">Foto: im Keller</div><div class="fade"><p class="eyebrow">Nachhaltig</p><h3>Zertifiziert seit 2021</h3><p>Seit März 2021 ist das Weingut nach Nachhaltig Austria zertifiziert.</p></div></div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <p class="eyebrow">Neuigkeiten</p>
+  <h2 class="fade">Aus dem Weingut</h2>
+  <div class="journal">
+    <div class="fade"><small>2026</small><h3>Landessieger mit dem Gelben Traminer</h3><p>Der Gelbe Traminer 2025 ist Landessieger 2026.</p></div>
+    <div class="fade"><small>2021</small><h3>Nachhaltig Austria</h3><p>Seit März 2021 arbeiten wir zertifiziert nachhaltig.</p></div>
+    <div class="fade"><small>2020</small><h3>SALON Auszeichnung</h3><p>Hier die Details zur Auszeichnung ergänzen.</p></div>
+  </div>
+</div></section>
+
+<section class="final"><div class="wrap">
+  <h2>Bis bald in Klöch</h2>
+  <p>Für Verkostungen und größere Bestellungen rufen Sie uns am besten kurz an.</p>
+  <a class="btn" href="tel:+4334752338">Jetzt anrufen</a>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="cols">
+    <div><b>Weingut Frühwirth</b>Deutsch Haseldorf 46<br>8493 Klöch, Südoststeiermark</div>
+    <div><h4>Kontakt</h4><a href="tel:+4334752338">03475 2338</a><br><a href="mailto:weingut@fruehwirth.at">weingut@fruehwirth.at</a></div>
+    <div><h4>Mehr</h4>Onlineshop<br>Buschenschank<br>Impressum und Datenschutz</div>
+  </div>
+  <div class="bottom">Weingut Frühwirth, Klöch. Bitte genießen Sie verantwortungsvoll.</div>
+</div></footer>
+<div class="draft">Entwurf von David Tomoiaga für eine neue Website, nicht die offizielle Seite vom Weingut Frühwirth</div>
+<script>
+const nav=document.getElementById('nav');const f=()=>nav.classList.toggle('solid',scrollY>80);addEventListener('scroll',f,{passive:true});f();
+const io=new IntersectionObserver(es=>es.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('in'),(i%6)*90);io.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll('.fade').forEach(el=>io.observe(el));
+document.querySelectorAll('details').forEach(d=>d.addEventListener('toggle',()=>{if(d.open)document.querySelectorAll('details').forEach(o=>{if(o!==d)o.open=false})}));
+</script>
+</body>
+</html>

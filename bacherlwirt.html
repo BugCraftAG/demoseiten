@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Bacherlwirt, Bad Radkersburg</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap">
+<style>
+/* Nach dem Prompt "Butcher Shop" von websiteprompts.ai: dunkles Braun, Knochenweiß, Ochsenblut, Messing, Marmor. Herzstück ist der Reifeschrank. */
+:root{--bg:#1d1815;--fg:#f0e9df;--ox:#832a33;--ox-fg:#f6f1ea;--marble:#e8e1d6;--brass:#c59d5f;--card:#29221f;--line:#3a312c;--muted:#9d948a;
+  --display:"Bitter",Georgia,serif;--body:"Inter",system-ui,sans-serif}
+*{box-sizing:border-box}
+html{color-scheme:dark}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 16px/1.72 var(--body)}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+.wrap{max-width:1160px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left));padding-right:max(20px,env(safe-area-inset-right))}
+nav{position:sticky;top:0;z-index:20;background:rgba(29,24,21,.92);backdrop-filter:blur(8px);border-bottom:1px solid transparent;transition:border-color .3s}
+nav.scrolled{border-bottom-color:var(--brass)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:72px}
+.logo{font:700 21px var(--display);text-decoration:none}
+.logo b{color:var(--brass);font-weight:400}
+.links{display:flex;gap:28px;font-size:15px}
+.links a{text-decoration:none;color:var(--muted)}
+.links a:hover{color:var(--fg)}
+.btn{display:inline-block;background:var(--ox);color:var(--ox-fg);text-decoration:none;font:600 15px var(--body);padding:13px 22px;border-radius:3px;border:1px solid var(--ox);transition:background .2s}
+.btn:hover{background:#962f3a}
+.btn.line{background:transparent;border-color:var(--brass);color:var(--fg)}
+.eyebrow{font:600 11px var(--body);text-transform:uppercase;letter-spacing:.2em;color:var(--brass);margin:0 0 16px}
+.hero{min-height:clamp(560px,82vh,820px);display:flex;align-items:flex-end;padding-block:120px 80px;position:relative;overflow:hidden}
+.hero .img{position:absolute;inset:0;background:
+  linear-gradient(0deg,var(--bg) 6%,rgba(29,24,21,.55) 55%,rgba(29,24,21,.25)),
+  radial-gradient(ellipse at 70% 30%,#5a2a22 0,#2b1d18 55%,#1d1815 100%);animation:settle 11s ease-out both}
+.hero .img::after{content:"Foto: Dry Aged Steak am Holzbrett";position:absolute;right:20px;top:90px;font-size:13px;color:var(--muted)}
+@keyframes settle{from{transform:scale(1.05)}to{transform:none}}
+.hero .wrap{position:relative}
+h1{font:700 clamp(40px,5.4vw,80px)/1.02 var(--display);letter-spacing:-.02em;margin:0 0 20px;max-width:12em}
+h1 span{display:block;clip-path:inset(0 100% 0 0);animation:wipe .9s cubic-bezier(.22,1,.36,1) forwards}
+h1 span:nth-child(2){animation-delay:.1s}
+@keyframes wipe{to{clip-path:inset(0 0 0 0)}}
+.hero p.sub{font-weight:300;font-size:18px;max-width:34em;margin:0 0 30px;color:#d9d0c4}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.strip{border-block:1px solid var(--line);padding-block:34px}
+.strip .row{display:grid;grid-template-columns:repeat(4,1fr);gap:30px}
+.strip b{display:block;font:600 19px var(--display)}
+.strip span{font-size:14px;color:var(--muted)}
+section{padding-block:80px}
+h2{font:600 clamp(32px,4.4vw,46px)/1.1 var(--display);margin:0 0 14px}
+.lead{color:var(--muted);max-width:36em;margin:0 0 40px}
+.marble{background:var(--marble);color:#2a221d}
+.marble .eyebrow{color:#8a6a3a}
+.marble .lead{color:#6c6158}
+.counter{display:grid;grid-template-columns:1fr 1fr;gap:20px 60px}
+.cat h3{font:600 21px var(--display);margin:0 0 6px;padding-bottom:10px;border-bottom:1px solid #cfc5b7}
+.cat ul{list-style:none;margin:0;padding:0}
+.cat li{display:flex;justify-content:space-between;gap:16px;padding:10px 6px;border-bottom:1px solid #ddd4c7;transition:background .2s}
+.cat li:hover{background:#ded5c8}
+.cat li span:last-child{font:700 15px var(--display);color:var(--ox);text-align:right}
+.age{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.batch{background:var(--card);border:1px solid var(--line);padding:28px;display:grid;grid-template-columns:96px 1fr;gap:20px;align-items:center}
+.batch svg{width:96px;height:96px;transform:rotate(-90deg)}
+.batch circle{fill:none;stroke-width:6}
+.batch .bg{stroke:var(--line)}
+.batch .fg{stroke:var(--brass);stroke-linecap:round;transition:stroke-dashoffset 1.2s ease-out}
+.batch .days{font:700 34px/1 var(--display);font-variant-numeric:tabular-nums}
+.batch .days small{font:400 14px var(--body);color:var(--muted)}
+.batch h3{font:600 18px var(--display);margin:6px 0 2px}
+.batch p{margin:0;font-size:14px;color:var(--muted)}
+.hint{font-size:14px;color:var(--muted);margin-top:16px}
+.shop{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--line)}
+.shop div{background:var(--bg);padding:26px}
+.shop h3{font:600 19px var(--display);margin:0 0 6px}
+.shop p{margin:0;font-size:15px;color:var(--muted)}
+.faq{display:grid;grid-template-columns:1fr 1fr;gap:30px 60px}
+.faq h3{font:600 19px var(--display);margin:0 0 6px}
+.faq p{margin:0;color:#4d433b}
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:60px}
+table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+td{padding:10px 0;border-bottom:1px solid var(--line)}
+td:last-child{text-align:right}
+td small{display:block;color:var(--muted);font-size:13px}
+.ph{aspect-ratio:4/3;background:repeating-linear-gradient(135deg,#2a221f 0 10px,#251e1b 10px 20px);display:flex;align-items:flex-end;padding:14px;font-size:13px;color:var(--muted)}
+footer{background:#151110;border-top:1px solid var(--brass);padding-block:50px 90px;font-size:14px;color:var(--muted)}
+footer .cols{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+footer b{color:var(--fg);font:600 17px var(--display);display:block;margin-bottom:8px}
+.menu-btn{display:none;background:none;border:1px solid var(--line);color:var(--fg);font:500 15px var(--body);padding:8px 14px;border-radius:3px}
+.sticky{display:none}
+.draft{position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--brass);color:#1d1815;font-size:13px;text-align:center;padding:8px 16px calc(8px + env(safe-area-inset-bottom))}
+.fade{opacity:0;transform:translateY(14px);transition:opacity .6s,transform .6s}
+.fade.in{opacity:1;transform:none}
+@media (max-width:900px){.age{grid-template-columns:1fr}.shop{grid-template-columns:1fr 1fr}}
+@media (max-width:767px){.links,.nav-cta{display:none}.menu-btn{display:block}
+  nav.open .links{display:flex;flex-direction:column;position:fixed;inset:72px 0 0;background:var(--bg);padding:30px 20px;gap:20px}
+  nav.open .links a{font:600 26px var(--display);color:var(--fg)}
+  .strip .row{grid-template-columns:1fr 1fr}.counter,.faq,.visit,footer .cols{grid-template-columns:1fr}.shop{grid-template-columns:1fr}
+  .batch{grid-template-columns:64px 1fr}.batch svg{width:64px;height:64px}
+  .sticky{display:block;position:fixed;left:0;right:0;bottom:36px;z-index:15;padding:10px 16px;background:var(--bg);border-top:1px solid var(--line)}
+  .sticky .btn{display:block;text-align:center}footer{padding-bottom:150px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}h1 span{clip-path:none}.fade{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<nav id="nav"><div class="wrap">
+  <a class="logo" href="#">Bacherlwirt <b>&amp;</b> Greißlerei</a>
+  <div class="links"><a href="#karte">Karte</a><a href="#reifung">Reifeschrank</a><a href="#greisslerei">Greißlerei</a><a href="#besuch">Besuch</a></div>
+  <a class="btn nav-cta" href="tel:+436641656396">Tisch oder Abholung</a>
+  <button class="menu-btn" onclick="document.getElementById('nav').classList.toggle('open')">Menü</button>
+</div></nav>
+
+<header class="hero">
+  <div class="img" aria-hidden="true"></div>
+  <div class="wrap">
+    <p class="eyebrow">Restaurant und Greißlerei in Bad Radkersburg</p>
+    <h1><span>Gereift im eigenen Schrank.</span><span>Gekocht von Manuel Koller.</span></h1>
+    <p class="sub">Steaks, die mindestens 27 Tage im hauseigenen Reifeschrank liegen, eine Karte mit Wochenmenü und eine kleine Greißlerei mit Selbstgemachtem zum Mitnehmen.</p>
+    <div class="cta"><a class="btn" href="tel:+436641656396">Jetzt reservieren</a><a class="btn line" href="#karte">Zur Karte</a></div>
+  </div>
+</header>
+
+<div class="strip"><div class="wrap row">
+  <div class="fade"><b>27 Tage</b><span>Mindestens reift jedes Dry Aged Steak</span></div>
+  <div class="fade"><b>4 Monate</b><span>reift unser steirischer Reh Prosciutto</span></div>
+  <div class="fade"><b>30 Minuten</b><span>ungefähr, dann ist Ihre Bestellung abholbereit</span></div>
+  <div class="fade"><b>Ab 10 Personen</b><span>bitte rechtzeitig reservieren</span></div>
+</div></div>
+
+<section class="marble" id="karte"><div class="wrap">
+  <p class="eyebrow">Die Karte</p>
+  <h2 class="fade">Klassisch, saisonal und jede Woche neu</h2>
+  <p class="lead fade">Neben der klassischen Karte gibt es ein Wochenmenü, das wir auf Facebook posten. Gerichte und Preise hier aus der echten Karte übernehmen.</p>
+  <div class="counter">
+    <div class="cat fade"><h3>Vom Reifeschrank</h3><ul><li><span>Dry Aged Steak</span><span>Preis</span></li><li><span>Steak nach Tagesangebot</span><span>Preis</span></li><li><span>Steak der Woche</span><span>Preis</span></li></ul></div>
+    <div class="cat fade"><h3>Klassiker</h3><ul><li><span>Gericht aus der Karte</span><span>Preis</span></li><li><span>Gericht aus der Karte</span><span>Preis</span></li><li><span>Gericht aus der Karte</span><span>Preis</span></li></ul></div>
+    <div class="cat fade"><h3>Saisonal</h3><ul><li><span>Saisonales Gericht</span><span>Preis</span></li><li><span>Saisonales Gericht</span><span>Preis</span></li></ul></div>
+    <div class="cat fade"><h3>Wochenmenü</h3><ul><li><span>Jede Woche neu, auch hier auf der Seite</span><span>Preis</span></li></ul></div>
+  </div>
+</div></section>
+
+<section id="reifung"><div class="wrap">
+  <p class="eyebrow">Der Reifeschrank</p>
+  <h2 class="fade">Was gerade im Schrank liegt</h2>
+  <p class="lead fade">Jedes Stück reift mindestens 27 Tage. Hier sehen Gäste jeden Tag, wie weit es schon ist.</p>
+  <div class="age" id="age"></div>
+  <p class="hint">Beispielwerte. Die Tage zählen automatisch mit, sobald Sie das Startdatum eintragen.</p>
+</div></section>
+
+<section id="greisslerei" style="padding-top:0"><div class="wrap">
+  <p class="eyebrow">Die Greißlerei</p>
+  <h2 class="fade">Selbstgemacht zum Mitnehmen</h2>
+  <p class="lead fade">Was wir in der Küche selbst machen, gibt es auch für zu Hause.</p>
+  <div class="shop">
+    <div class="fade"><h3>Steirischer Reh Prosciutto</h3><p>Rund vier Monate gereift.</p></div>
+    <div class="fade"><h3>Geselchtes</h3><p>Aus der eigenen Selch.</p></div>
+    <div class="fade"><h3>Gewürzmischungen</h3><p>Für Steak, Grill und Braten.</p></div>
+    <div class="fade"><h3>Chutneys</h3><p>Passend zu Käse und Fleisch.</p></div>
+    <div class="fade"><h3>Pestos</h3><p>Hausgemacht, je nach Saison.</p></div>
+    <div class="fade"><h3>Digestifs</h3><p>Für den Abschluss nach dem Essen.</p></div>
+  </div>
+</div></section>
+
+<section class="marble"><div class="wrap">
+  <p class="eyebrow">Gut zu wissen</p>
+  <h2 class="fade">Fragen an den Wirt</h2>
+  <div class="faq" style="margin-top:30px">
+    <div class="fade"><h3>Kann ich Essen abholen?</h3><p>Ja. Rufen Sie an und bestellen Sie, nach ungefähr 30 Minuten ist alles fertig.</p></div>
+    <div class="fade"><h3>Was heißt dry aged?</h3><p>Das Fleisch reift am Knochen im Reifeschrank. Es wird zarter und bekommt mehr Geschmack.</p></div>
+    <div class="fade"><h3>Wo finde ich das Wochenmenü?</h3><p>Auf Facebook und künftig direkt hier auf der Seite.</p></div>
+    <div class="fade"><h3>Wir sind eine größere Gruppe.</h3><p>Ab 10 Personen bitte vorher reservieren, dann planen wir gut für Sie.</p></div>
+  </div>
+</div></section>
+
+<section id="besuch"><div class="wrap visit">
+  <div>
+    <p class="eyebrow">Besuch</p>
+    <h2>Markowitschweg 2, Bad Radkersburg</h2>
+    <table>
+      <tr><td>Mittwoch bis Samstag</td><td>9:30 bis 21:30<small>Küche 11:30 bis 20:00</small></td></tr>
+      <tr><td>Sonntag und Feiertag</td><td>9:30 bis 16:00<small>Küche 11:30 bis 15:00</small></td></tr>
+      <tr><td>Montag und Dienstag</td><td>Ruhetag</td></tr>
+    </table>
+    <p style="margin-top:24px"><a class="btn" href="tel:+436641656396">0664 165 63 96</a></p>
+  </div>
+  <div class="ph">Foto: Gaststube vom Bacherlwirt</div>
+</div></section>
+
+<footer><div class="wrap cols">
+  <div><b>Bacherlwirt</b>Restaurant und Greißlerei<br>Markowitschweg 2, 8490 Bad Radkersburg</div>
+  <div><b>Kontakt</b><a href="tel:+436641656396">0664 165 63 96</a><br><a href="mailto:manuel.koller90@gmx.at">manuel.koller90@gmx.at</a></div>
+  <div><b>Mehr</b>Wochenmenü auf Facebook<br>Impressum und Datenschutz</div>
+</div></footer>
+<div class="sticky"><a class="btn" href="tel:+436641656396">Tisch oder Abholung</a></div>
+<div class="draft">Entwurf von David Tomoiaga für eine neue Website, nicht die offizielle Seite vom Bacherlwirt</div>
+<script>
+const day=864e5,today=Date.now();
+const batches=[{n:'Stück 1',f:'Beispielwert',start:today-12*day,target:27},{n:'Stück 2',f:'Beispielwert',start:today-21*day,target:27},{n:'Stück 3',f:'Beispielwert',start:today-30*day,target:35}];
+const C=2*Math.PI*42,box=document.getElementById('age');
+batches.forEach(b=>{const d=Math.floor((today-b.start)/day),p=Math.min(d/b.target,1);
+  box.insertAdjacentHTML('beforeend',`<div class="batch fade"><svg viewBox="0 0 100 100"><circle class="bg" cx="50" cy="50" r="42"/><circle class="fg" cx="50" cy="50" r="42" stroke-dasharray="${C}" stroke-dashoffset="${C}" data-o="${C*(1-p)}"/></svg><div><div class="days">${d} <small>von ${b.target} Tagen</small></div><h3>${b.n}</h3><p>${b.f}${d>=b.target?', bereit für die Küche':''}</p></div></div>`)});
+const io=new IntersectionObserver(es=>es.forEach((e,i)=>{if(e.isIntersecting){const t=e.target;setTimeout(()=>{t.classList.add('in');const fg=t.querySelector('.fg');if(fg)fg.style.strokeDashoffset=fg.dataset.o},i*120);io.unobserve(t)}}),{threshold:.2});
+document.querySelectorAll('.fade').forEach(el=>io.observe(el));
+const nav=document.getElementById('nav');addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40),{passive:true});
+</script>
+</body>
+</html>

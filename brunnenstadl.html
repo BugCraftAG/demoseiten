@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Brunnenstadl, Bad Radkersburg</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Manrope:wght@400;600;700&display=swap">
+<style>
+/* Nach dem Prompt "Mexican Restaurant" von websiteprompts.ai, übertragen auf ein steirisches Erlebniswirtshaus: Sand, Terrakotta, Petrol, Young Serif und Manrope, Knöpfe zum Drücken. */
+:root{--paper:#FBF3E9;--ink:#2A1A12;--terra:#B5401F;--teal:#0F5257;--surface:#F2E2CF;--muted:#6B5446;--line:rgba(42,26,18,.15);
+  --display:"Young Serif",Georgia,serif;--body:"Manrope",system-ui,sans-serif}
+*{box-sizing:border-box}
+html{color-scheme:light}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--body);border-top:6px solid var(--terra)}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+.wrap{max-width:1200px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left));padding-right:max(20px,env(safe-area-inset-right))}
+.label{font:700 14px var(--body);text-transform:uppercase;letter-spacing:.1em;color:var(--terra);margin:0 0 14px}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:84px;gap:20px}
+.word{font:400 25px var(--display);text-decoration:none}
+.links{display:flex;gap:28px;font-weight:600;font-size:15px}
+.links a{text-decoration:none}
+.btn{display:inline-block;text-decoration:none;font:700 16px var(--body);padding:16px 28px;border-radius:999px;background:var(--terra);color:#fff;border:2px solid var(--ink);box-shadow:4px 4px 0 var(--ink);transition:transform .12s,box-shadow .12s;cursor:pointer}
+.btn:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--ink)}
+.btn.sec{background:var(--paper);color:var(--ink)}
+.btn.sm{padding:11px 20px;font-size:15px}
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;padding-block:50px 100px}
+h1{font:400 clamp(40px,6vw,96px)/1.02 var(--display);margin:0 0 20px}
+.hero p{font-size:19px;max-width:28em;margin:0 0 30px;color:var(--muted)}
+.cta{display:flex;gap:16px;flex-wrap:wrap}
+.pics{position:relative;height:520px}
+.pic{position:absolute;border-radius:20px;border:2px solid var(--ink);display:flex;align-items:flex-end;padding:14px;font-size:14px;color:#fff;opacity:0;animation:drop .5s ease-out forwards}
+.pic.a{width:58%;height:64%;left:0;top:6%;background:linear-gradient(160deg,#c9894e,#7a3c1c);--rot:-3deg}
+.pic.b{width:52%;height:56%;right:0;top:0;background:linear-gradient(160deg,#5f8a6b,#244e40);--rot:2deg;animation-delay:.12s}
+.pic.c{width:56%;height:48%;left:24%;bottom:0;background:linear-gradient(160deg,#d6b27a,#8e6a35);--rot:-1deg;animation-delay:.24s}
+@keyframes drop{from{opacity:0;transform:translateY(-30px) rotate(calc(var(--rot) - 4deg))}to{opacity:1;transform:rotate(var(--rot))}}
+section{padding-block:100px}
+h2{font:400 clamp(34px,4.6vw,58px)/1.05 var(--display);margin:0 0 20px}
+.story{background:var(--surface)}
+.story .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
+.story p{margin:0 0 16px}
+.ph{border-radius:20px;border:2px solid var(--ink);aspect-ratio:4/3;display:flex;align-items:flex-end;padding:14px;font-size:14px;color:#fff;background:linear-gradient(160deg,#a8754a,#5b3620)}
+.tabs{display:flex;gap:10px;margin:10px 0 36px;flex-wrap:wrap}
+.tab{font:700 15px var(--body);padding:10px 20px;border-radius:999px;border:2px solid var(--ink);background:var(--paper);cursor:pointer}
+.tab[aria-selected="true"]{background:var(--terra);color:#fff}
+.dishes{display:grid;grid-template-columns:1fr 1fr;gap:0 60px}
+.dish{padding:18px 0;border-bottom:1px solid var(--line);animation:in .25s ease}
+@keyframes in{from{opacity:0;transform:translateY(8px)}}
+.dish .top{display:flex;justify-content:space-between;gap:16px;align-items:baseline}
+.dish b{font:400 22px var(--display)}
+.dish .pr{font-weight:700;font-variant-numeric:tabular-nums;color:var(--muted);white-space:nowrap}
+.dish p{margin:4px 0 0;color:var(--muted);font-size:16px}
+.note{font-size:15px;color:var(--muted);margin-top:20px}
+.teal{background:var(--teal);color:#f6eee3}
+.teal .wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.teal .label{color:#f2c9a6}
+.teal .ph{background:linear-gradient(160deg,#2f7f84,#0a3a3e);border-color:#f6eee3}
+.teal .btn{box-shadow:4px 4px 0 #f6eee3;border-color:#f6eee3}
+.teal .btn:hover{box-shadow:2px 2px 0 #f6eee3}
+.rooms{display:grid;grid-template-columns:1fr 1fr;gap:0 60px;border-top:2px solid var(--ink)}
+.rooms div{display:grid;grid-template-columns:1fr auto;gap:4px 20px;padding:18px 0;border-bottom:1px solid var(--line)}
+.rooms b{font:400 22px var(--display)}
+.rooms span{color:var(--terra);font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:.06em;align-self:center}
+.rooms p{grid-column:1/-1;margin:0;color:var(--muted);font-size:16px}
+.visit{background:var(--surface)}
+.visit .wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;margin:10px 0 30px}
+td{padding:12px 0;border-bottom:1px solid var(--line)}
+td:last-child{text-align:right;font-weight:600}
+footer{background:var(--teal);color:#d8e6e4;padding-block:56px 90px;font-size:15px}
+footer .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+footer b{font:400 24px var(--display);color:#fff;display:block;margin-bottom:6px}
+.menu-btn{display:none;font:700 15px var(--body);padding:9px 18px;border-radius:999px;border:2px solid var(--ink);background:var(--paper)}
+.sticky{display:none}
+.draft{position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--ink);color:var(--paper);font-size:13px;text-align:center;padding:8px 16px calc(8px + env(safe-area-inset-bottom))}
+@media (max-width:767px){.links,.nav-cta{display:none}.menu-btn{display:block}
+  nav.open .links{display:flex;flex-direction:column;position:fixed;inset:90px 0 0;background:var(--paper);z-index:25;padding:30px 20px;gap:20px;font:400 30px var(--display)}
+  .hero,.story .wrap,.teal .wrap,.visit .wrap,.dishes,.rooms,footer .wrap{grid-template-columns:1fr}
+  .pics{height:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.pic{position:static;width:auto!important;height:auto!important;aspect-ratio:3/4;font-size:0}
+  .tabs{flex-wrap:nowrap;overflow-x:auto;padding-bottom:6px}.tab{flex:none}.teal .ph{order:-1}section{padding-block:76px}
+  .sticky{display:block;position:fixed;left:16px;right:16px;bottom:calc(46px + env(safe-area-inset-bottom));z-index:15}.sticky .btn{display:block;text-align:center}footer{padding-bottom:160px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.pic{opacity:1;transform:rotate(var(--rot))}}
+</style>
+</head>
+<body>
+<nav id="nav"><div class="wrap">
+  <a class="word" href="#">Brunnenstadl</a>
+  <div class="links"><a href="#geschichte">Geschichte</a><a href="#karte">Karte</a><a href="#catering">Catering</a><a href="#feiern">Feiern</a><a href="#besuch">Besuch</a></div>
+  <a class="btn sm nav-cta" href="tel:+4334763710">Tisch reservieren</a>
+  <button class="menu-btn" onclick="document.getElementById('nav').classList.toggle('open')">Menü</button>
+</div></nav>
+
+<header class="wrap hero">
+  <div>
+    <p class="label">Erlebniswirtshaus in Bad Radkersburg</p>
+    <h1>Gemütlich essen, groß feiern.</h1>
+    <p>Gaststube, Festsaal, Innenhof mit Presshaus und im Sommer ein Streichelzoo für die Kinder. Dazu eine Küche mit Beuschl, Tafelspitz und Schnitzel.</p>
+    <div class="cta"><a class="btn" href="tel:+4334763710">Tisch reservieren</a><a class="btn sec" href="#karte">Zur Karte</a></div>
+  </div>
+  <div class="pics" aria-hidden="true">
+    <div class="pic a">Foto: Tafelspitz</div><div class="pic b">Foto: Innenhof</div><div class="pic c">Foto: Gaststube</div>
+  </div>
+</header>
+
+<section class="story" id="geschichte"><div class="wrap">
+  <div>
+    <p class="label">Familie Stoisser</p>
+    <h2>Aus einer alten Huabn wurde ein Wirtshaus.</h2>
+    <p>Wo heute die Gaststube ist, stand früher eine alte Huabn. Franz und Elisabeth Stoisser haben daraus einen Ort gemacht, an dem man gut isst und gerne feiert.</p>
+    <p>Hier ist Platz für die Geschichte, wie aus dem Hof der Brunnenstadl wurde.</p>
+  </div>
+  <div class="ph">Foto: Franz und Elisabeth Stoisser</div>
+</div></section>
+
+<section id="karte"><div class="wrap">
+  <p class="label">Die Karte</p>
+  <h2>Regional und international</h2>
+  <div class="tabs" role="tablist" id="tabs">
+    <button class="tab" role="tab" aria-selected="true" data-t="0">Wirtshaus</button>
+    <button class="tab" role="tab" aria-selected="false" data-t="1">Saison</button>
+    <button class="tab" role="tab" aria-selected="false" data-t="2">Getränke</button>
+  </div>
+  <div class="dishes" id="dishes"></div>
+  <p class="note">Gerichte und Preise aus der aktuellen Speisekarte übernehmen. Die PDF Karte kann zusätzlich bleiben.</p>
+</div></section>
+
+<section class="teal" id="catering"><div class="wrap">
+  <div>
+    <p class="label">Catering und Kochbox</p>
+    <h2>Wir kochen auch bei Ihnen.</h2>
+    <p>Für Taufe, Firmung, Geburtstag oder Trauerfeier liefern wir das Essen dorthin, wo Sie feiern. Mit der Kochbox brauchen wir vor Ort nur einen Stromanschluss.</p>
+    <p style="margin-top:28px"><a class="btn" href="tel:+436643383220">Catering anfragen</a></p>
+  </div>
+  <div class="ph">Foto: die Kochbox im Einsatz</div>
+</div></section>
+
+<section id="feiern"><div class="wrap">
+  <p class="label">Räume</p>
+  <h2>Für jede Runde der richtige Platz</h2>
+  <div class="rooms">
+    <div><b>Gaststube</b><span>Alltag</span><p>Gemütlich für Mittag und Abend.</p></div>
+    <div><b>Festsaal</b><span>Feiern</span><p>Für Hochzeiten, Geburtstage und große Gesellschaften.</p></div>
+    <div><b>Innenhof mit Presshaus</b><span>Sommer</span><p>Draußen sitzen zwischen alten Mauern.</p></div>
+    <div><b>Biergarten</b><span>Sommer</span><p>Für laue Abende.</p></div>
+    <div><b>Streichelzoo</b><span>Für Kinder</span><p>Im Sommer, während die Großen in Ruhe essen.</p></div>
+    <div><b>Kochbox</b><span>Unterwegs</span><p>Unser mobiles Catering für Ihre Feier.</p></div>
+  </div>
+</div></section>
+
+<section class="visit" id="besuch"><div class="wrap">
+  <div>
+    <p class="label">Besuch</p>
+    <h2>Fehringerstraße 14</h2>
+    <table>
+      <tr><td>Dienstag bis Sonntag</td><td>ab 10 Uhr</td></tr>
+      <tr><td>Küche</td><td>11 bis 20 Uhr</td></tr>
+      <tr><td>Montag</td><td>Ruhetag, außer an Feiertagen</td></tr>
+    </table>
+    <p><a href="tel:+4334763710">03476 3710</a> oder <a href="tel:+436643383220">0664 338 32 20</a></p>
+    <p style="margin-top:24px"><a class="btn" href="tel:+4334763710">Tisch reservieren</a></p>
+  </div>
+  <div class="ph">Foto: der Biergarten im Sommer</div>
+</div></section>
+
+<footer><div class="wrap">
+  <div><b>Brunnenstadl</b>Erlebniswirtshaus der Familie Stoisser</div>
+  <div>Fehringerstraße 14<br>8490 Bad Radkersburg<br><a href="mailto:info@brunnenstadl.at">info@brunnenstadl.at</a></div>
+  <div>Grüß Gott und herzlich willkommen.<br>Impressum und Datenschutz</div>
+</div></footer>
+<div class="sticky"><a class="btn" href="tel:+4334763710">Tisch reservieren</a></div>
+<div class="draft">Entwurf von David Tomoiaga für eine neue Website, nicht die offizielle Seite vom Brunnenstadl</div>
+<script>
+const menu=[
+ [["Beuschl","Ein Wiener Klassiker, wie er sein soll."],["Tafelspitz","Mit den passenden Beilagen."],["Wiener Schnitzel","Goldgelb herausgebacken."],["Steak","Für alle, die es kräftig mögen."]],
+ [["Gansl","Saisonal, wenn die Ganslzeit beginnt."],["Ente","Aus dem Ofen, nur in der Saison."],["Saisonales","Was die Jahreszeit hergibt."]],
+ [["Weinkarte","Heute als PDF, künftig direkt hier."],["Bier","Im Biergarten und in der Gaststube."],["Alkoholfreies","Hier ergänzen."]]];
+const box=document.getElementById('dishes');
+function show(i){box.innerHTML=menu[i].map(([n,d])=>`<div class="dish"><div class="top"><b>${n}</b><span class="pr">Preis</span></div><p>${d}</p></div>`).join('');
+  document.querySelectorAll('.tab').forEach(t=>t.setAttribute('aria-selected',t.dataset.t==i))}
+document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>show(+t.dataset.t)));show(0);
+</script>
+</body>
+</html>
