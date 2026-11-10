@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Hasan's Barbershop, Feldbach</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono&display=swap">
+<style>
+/* Nach dem Prompt "Barber" von websiteprompts.ai: Navy, Rot und Weiß der Barber Pole, Playfair Display, Inter und JetBrains Mono. */
+:root{--bg:#0c1220;--surface:#111a2e;--card:#172138;--line:#243050;--line2:#2e3e62;--fg:#f0f4fc;--muted:#8a95b2;--red:#e8220a;--red-d:#c11a07;--blue:#1a3a9c;
+  --serif:"Playfair Display",Georgia,serif;--sans:"Inter",system-ui,sans-serif;--mono:"JetBrains Mono",ui-monospace,monospace}
+*{box-sizing:border-box}
+html{color-scheme:dark}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 16px/1.65 var(--sans)}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left));padding-right:max(20px,env(safe-area-inset-right))}
+.mono{font:400 12px var(--mono);text-transform:uppercase;letter-spacing:.12em;color:var(--muted)}
+nav{position:sticky;top:0;z-index:20;background:rgba(12,18,32,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:70px;gap:16px}
+.word{font:900 22px var(--serif);color:var(--red);text-decoration:none}
+.links{display:flex;gap:26px;font:500 13px var(--sans);text-transform:uppercase;letter-spacing:.1em}
+.links a{text-decoration:none;color:var(--muted)}
+.links a:hover{color:var(--fg)}
+.btn{display:inline-block;text-decoration:none;font:600 13px var(--sans);text-transform:uppercase;letter-spacing:.1em;padding:14px 24px;border-radius:2px;background:var(--red);color:#fff;border:1px solid var(--red);transition:background .2s,color .2s}
+.btn:hover{background:var(--red-d)}
+.btn.ghost{background:transparent;border-color:var(--line2);color:var(--fg)}
+.btn.ghost:hover{border-color:var(--fg)}
+.btn.outline{background:transparent;color:var(--red)}
+.btn.outline:hover{background:var(--red);color:#fff}
+.hero{min-height:clamp(600px,92vh,880px);position:relative;overflow:hidden;display:flex;align-items:flex-end;padding-block:120px 80px}
+.hero .img{position:absolute;inset:0;background:linear-gradient(0deg,var(--bg) 5%,rgba(12,18,32,.55) 55%,rgba(12,18,32,.35)),linear-gradient(160deg,#2c3550,#121828)}
+.hero .img::after{content:"Foto: Hasan's Barbershop von innen";position:absolute;left:20px;top:90px;font-size:13px;color:var(--muted)}
+.pole{position:absolute;right:max(20px,6vw);top:16%;bottom:16%;width:46px;border-radius:23px;overflow:hidden;border:3px solid #cfd6e6;background:repeating-linear-gradient(-45deg,var(--red) 0 16px,#fff 16px 32px,var(--blue) 32px 48px,#fff 48px 64px);background-size:100% 181px;animation:pole 3s linear infinite}
+@keyframes pole{to{background-position:0 181px}}
+.hero .wrap{position:relative;width:100%}
+h1{font:900 clamp(56px,10vw,128px)/.95 var(--serif);margin:12px 0 20px}
+h1 span{display:block;clip-path:inset(0 100% 0 0);animation:wipe .8s cubic-bezier(.22,1,.36,1) forwards}
+h1 span:nth-child(2){animation-delay:.12s}h1 span:nth-child(3){animation-delay:.24s;font-style:italic;color:var(--red)}
+@keyframes wipe{to{clip-path:inset(0 0 0 0)}}
+.hero p.sub{font-size:18px;color:#c8cfe0;max-width:30em;margin:0 0 28px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.strip{border-block:1px solid var(--line);background:var(--surface)}
+.strip .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.strip div{padding:22px 18px}
+.strip div+div{border-left:1px solid var(--line)}
+.strip b{display:block;font-weight:600}
+section{padding-block:100px}
+.rule{width:48px;height:2px;background:var(--red);margin-bottom:18px;transform:scaleX(0);transform-origin:left;transition:transform .6s}
+.rule.in{transform:none}
+h2{font:900 clamp(38px,5vw,60px)/1.05 var(--serif);margin:0 0 14px}
+h2 em{color:var(--red)}
+.lead{color:var(--muted);max-width:36em;margin:0 0 40px}
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.svc div{background:var(--card);padding:30px 26px;transition:transform .25s,box-shadow .25s}
+.svc div:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(232,34,10,.12)}
+.svc .n{font:400 12px var(--mono);color:var(--red)}
+.svc h3{font:700 24px var(--serif);margin:10px 0 6px}
+.svc p{margin:0 0 14px;color:var(--muted);font-size:15px}
+.svc .pr{font:400 14px var(--mono);color:var(--fg)}
+.divider{height:56px;background:repeating-linear-gradient(-45deg,var(--red) 0 22px,rgba(255,255,255,.12) 22px 44px,var(--blue) 44px 66px,rgba(255,255,255,.12) 66px 88px);background-size:125px 100%;animation:slide 3s linear infinite}
+@keyframes slide{to{background-position:125px 0}}
+.team{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.bar{background:var(--card);border:1px solid var(--line);transition:transform .25s}
+.bar:hover{transform:translateY(-3px)}
+.bar .ph{aspect-ratio:3/4;background:linear-gradient(160deg,#2a3656,#141c30);display:flex;align-items:flex-end;padding:12px;font-size:13px;color:var(--muted)}
+.bar .in{padding:18px}
+.bar h3{font:700 22px var(--serif);margin:0}
+.bar a{color:var(--red);font-weight:600;font-size:14px;text-decoration:none}
+.gallery{background:var(--surface)}
+.grid{columns:3;gap:14px}
+.grid div{break-inside:avoid;margin-bottom:14px;background:var(--card);display:flex;align-items:flex-end;padding:12px;font-size:13px;color:var(--muted);transition:filter .3s,transform .3s}
+.grid div:hover{filter:brightness(.85);transform:scale(1.01)}
+.book{background:var(--red);position:relative;overflow:hidden}
+.book::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(-45deg,rgba(255,255,255,.06) 0 2px,transparent 2px 18px)}
+.book .wrap{position:relative;text-align:center}
+.book h2{font-style:italic;color:#fff;font-size:clamp(44px,7vw,84px)}
+.book p{max-width:32em;margin:0 auto 26px;color:#ffe3de}
+.book .btn{background:#fff;color:var(--red);border-color:#fff}
+.book .btn.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.6)}
+.live{display:inline-flex;align-items:center;gap:10px;margin-top:24px;font:400 13px var(--mono);color:#fff;text-transform:uppercase;letter-spacing:.1em}
+.live i{width:10px;height:10px;border-radius:50%;background:#3ddc84;animation:dot 1.6s ease-in-out infinite}
+@keyframes dot{50%{opacity:.3}}
+.find{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.map{aspect-ratio:4/3;background:repeating-linear-gradient(0deg,#141d33 0 38px,#172138 38px 76px);border:1px solid var(--line);position:relative}
+.map .addr{position:absolute;left:20px;bottom:20px;background:var(--bg);border:1px solid var(--line2);padding:16px 18px}
+table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+td{padding:10px 0;border-bottom:1px solid var(--line)}
+td:last-child{text-align:right;font-family:var(--mono);font-size:14px}
+footer{background:#0d0d0d;padding-block:56px 90px;font-size:14px;color:var(--muted)}
+footer .wrap{display:grid;grid-template-columns:2fr 1fr 1fr;gap:30px}
+footer b{font:900 22px var(--serif);color:var(--red);display:block;margin-bottom:8px}
+.menu-btn{display:none;background:none;border:1px solid var(--line2);color:var(--fg);font:600 13px var(--sans);padding:8px 14px;border-radius:2px;text-transform:uppercase;letter-spacing:.1em}
+.draft{position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--red);color:#fff;font-size:13px;text-align:center;padding:8px 16px calc(8px + env(safe-area-inset-bottom))}
+.fade{opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s}
+.fade.in{opacity:1;transform:none}
+@media (max-width:1024px){.svc,.team{grid-template-columns:1fr 1fr}}
+@media (max-width:767px){.links,.nav-cta{display:none}.menu-btn{display:block}
+  nav.open .links{display:flex;flex-direction:column;position:fixed;inset:70px 0 0;background:var(--bg);padding:30px 20px;gap:22px;font:700 34px var(--serif);text-transform:none;letter-spacing:0}
+  .pole{display:none}.strip .wrap{grid-template-columns:1fr 1fr}.strip div:nth-child(3){border-left:0}.strip div:nth-child(n+3){border-top:1px solid var(--line)}
+  .svc,.find,footer .wrap{grid-template-columns:1fr}.grid{columns:2}section{padding-block:76px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}h1 span{clip-path:none}.fade{opacity:1;transform:none}.rule{transform:none}}
+</style>
+</head>
+<body>
+<nav id="nav"><div class="wrap">
+  <a class="word" href="#">Hasan's</a>
+  <div class="links"><a href="#leistungen">Leistungen</a><a href="#team">Team</a><a href="#bilder">Bilder</a><a href="#finden">Anfahrt</a></div>
+  <a class="btn outline nav-cta" href="tel:+4366475071863">Termin</a>
+  <button class="menu-btn" onclick="document.getElementById('nav').classList.toggle('open')">Menü</button>
+</div></nav>
+
+<header class="hero">
+  <div class="img" aria-hidden="true"></div><div class="pole" aria-hidden="true"></div>
+  <div class="wrap">
+    <span class="mono">Gleichenberger Straße 2 · Feldbach</span>
+    <h1><span>Der Schnitt,</span><span>den du</span><span>verdienst.</span></h1>
+    <p class="sub">Haarschnitt, Fade und Bart bei Hasan's in Feldbach. Kurz anrufen, oft geht es noch am selben Tag.</p>
+    <div class="cta"><a class="btn" href="tel:+4366475071863">Jetzt anrufen</a><a class="btn ghost" href="#leistungen">Leistungen</a></div>
+  </div>
+</header>
+
+<div class="strip"><div class="wrap">
+  <div><span class="mono">Montag bis Freitag</span><b>9 bis 19 Uhr</b></div>
+  <div><span class="mono">Samstag</span><b>9 bis 16 Uhr</b></div>
+  <div><span class="mono">Sonntag</span><b>geschlossen</b></div>
+  <div><span class="mono">Adresse</span><b>Gleichenberger Str. 2</b></div>
+</div></div>
+
+<section id="leistungen"><div class="wrap">
+  <div class="rule"></div>
+  <h2 class="fade">Was wir <em>machen</em></h2>
+  <p class="lead fade">Sauber, genau und ohne lange Wartezeit. Preise bitte aus der echten Preisliste übernehmen.</p>
+  <div class="svc">
+    <div class="fade"><span class="n">01</span><h3>Haarschnitt</h3><p>Klassisch oder modern, so wie du es willst.</p><span class="pr">Preis</span></div>
+    <div class="fade"><span class="n">02</span><h3>Fade</h3><p>Sauber verblendet, vom Skin Fade bis zum Taper.</p><span class="pr">Preis</span></div>
+    <div class="fade"><span class="n">03</span><h3>Bart</h3><p>Trimmen, Konturen und Form.</p><span class="pr">Preis</span></div>
+    <div class="fade"><span class="n">04</span><h3>Haar und Bart</h3><p>Das ganze Paket in einem Termin.</p><span class="pr">Preis</span></div>
+    <div class="fade"><span class="n">05</span><h3>Weitere Leistung</h3><p>Hier eintragen.</p><span class="pr">Preis</span></div>
+    <div class="fade"><span class="n">06</span><h3>Weitere Leistung</h3><p>Hier eintragen.</p><span class="pr">Preis</span></div>
+  </div>
+</div></section>
+
+<div class="divider" aria-hidden="true"></div>
+
+<section id="team"><div class="wrap">
+  <div class="rule"></div>
+  <h2 class="fade">Das <em>Team</em></h2>
+  <p class="lead fade">Hier stellen sich die Barber vor. Namen und Fotos bitte ergänzen.</p>
+  <div class="team">
+    <div class="bar fade"><div class="ph">Foto</div><div class="in"><span class="mono">Barber</span><h3>Ali</h3><a href="tel:+4366475071863">Termin bei Ali</a></div></div>
+    <div class="bar fade"><div class="ph">Foto</div><div class="in"><span class="mono">Barber</span><h3>Name ergänzen</h3><a href="tel:+4366475071863">Termin</a></div></div>
+    <div class="bar fade"><div class="ph">Foto</div><div class="in"><span class="mono">Barber</span><h3>Name ergänzen</h3><a href="tel:+4366475071863">Termin</a></div></div>
+    <div class="bar fade"><div class="ph">Foto</div><div class="in"><span class="mono">Barber</span><h3>Name ergänzen</h3><a href="tel:+4366475071863">Termin</a></div></div>
+  </div>
+</div></section>
+
+<section class="gallery" id="bilder"><div class="wrap">
+  <div class="rule"></div>
+  <h2 class="fade">Frische <em>Schnitte</em></h2>
+  <div class="grid">
+    <div style="height:280px">Foto</div><div style="height:200px">Foto</div><div style="height:320px">Foto</div>
+    <div style="height:220px">Foto</div><div style="height:300px">Foto</div><div style="height:240px">Foto</div>
+  </div>
+</div></section>
+
+<section class="book"><div class="wrap">
+  <h2>Kurz anrufen, gleich drankommen.</h2>
+  <p>Viele Kunden rufen an und sitzen ein paar Minuten später auf dem Stuhl. Am besten vorher kurz durchklingeln.</p>
+  <div class="cta" style="justify-content:center"><a class="btn" href="tel:+4366475071863">0664 750 718 63</a><a class="btn ghost" href="#finden">Anfahrt</a></div>
+  <div class="live"><i></i><span id="live">Heute geöffnet</span></div>
+</div></section>
+
+<section id="finden"><div class="wrap find">
+  <div class="map fade"><div class="addr"><span class="mono">Hasan's Barbershop</span><br><b>Gleichenberger Straße 2</b><br>8330 Feldbach</div></div>
+  <div class="fade">
+    <div class="rule in"></div>
+    <h2>So findest du <em>uns</em></h2>
+    <table>
+      <tr><td>Montag bis Freitag</td><td>9 bis 19 Uhr</td></tr>
+      <tr><td>Samstag</td><td>9 bis 16 Uhr</td></tr>
+      <tr><td>Sonntag</td><td>geschlossen</td></tr>
+    </table>
+    <p style="margin-top:20px">Telefon <a href="tel:+4366475071863">0664 750 718 63</a><br><a href="https://maps.google.com/?q=Gleichenberger+Stra%C3%9Fe+2+8330+Feldbach">Route in Google Maps öffnen</a></p>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div><b>Hasan's Barbershop</b>Gleichenberger Straße 2, 8330 Feldbach</div>
+  <div><a href="tel:+4366475071863">0664 750 718 63</a><br><a href="mailto:hasans.barbershop@gmail.com">Nachricht schreiben</a></div>
+  <div>Impressum<br>Datenschutz</div>
+</div></footer>
+<div class="draft">Entwurf von David Tomoiaga für eine neue Website, nicht die offizielle Seite von Hasan's Barbershop</div>
+<script>
+const io=new IntersectionObserver(es=>es.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('in'),(i%6)*70);io.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll('.fade,.rule').forEach(el=>io.observe(el));
+const d=new Date(),day=d.getDay(),h=d.getHours()+d.getMinutes()/60;
+const open=(day>=1&&day<=5&&h>=9&&h<19)||(day===6&&h>=9&&h<16);
+document.getElementById('live').textContent=open?'Gerade geöffnet':'Gerade geschlossen';
+</script>
+</body>
+</html>

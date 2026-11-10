@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Der Südsteirer, Leibnitz</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap">
+<style>
+/* Nach dem Prompt "Food Truck" von websiteprompts.ai: fast schwarz, Safran, Bebas Neue und Plus Jakarta Sans. Für ein schnelles, regionales Lokal in der Grazergasse. */
+:root{--bg:#0f0f0f;--deep:#0a0a0a;--card:#161616;--card2:#1a1a1a;--line:#2a2a2a;--saf:#f0a82a;--saf-d:#c47a1a;--white:#fafafa;--body:#a3a3a3;--nav:#c0c0c0;
+  --display:"Bebas Neue",Impact,sans-serif;--sans:"Plus Jakarta Sans",system-ui,sans-serif}
+*{box-sizing:border-box}
+html{color-scheme:dark}
+body{margin:0;background:var(--bg);color:var(--body);font:400 16px/1.65 var(--sans)}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--saf);outline-offset:3px}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left));padding-right:max(20px,env(safe-area-inset-right))}
+nav{position:sticky;top:0;z-index:20;background:rgba(15,15,15,.95);border-bottom:1px solid #1f1f1f;animation:down .45s ease-out both}
+@keyframes down{from{transform:translateY(-100%)}}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:16px}
+.word{font:400 28px/1 var(--display);color:var(--white);text-decoration:none;letter-spacing:.02em}
+.word span{color:var(--saf)}
+.links{display:flex;gap:26px;font-size:14px;color:var(--nav)}
+.links a{text-decoration:none}
+.links a:hover{color:var(--saf)}
+.btn{display:inline-block;text-decoration:none;font:600 15px var(--sans);padding:13px 24px;border-radius:3px;background:var(--saf);color:#0f0f0f;border:1px solid var(--saf);transition:background .2s}
+.btn:hover{background:#e09a20}
+.btn.sec{background:transparent;color:var(--white);border-color:rgba(240,168,42,.5)}
+.btn.sm{padding:9px 16px;font-size:14px}
+.hero{min-height:clamp(620px,92vh,880px);position:relative;overflow:hidden;display:flex;align-items:center;padding-block:60px}
+.hero .img{position:absolute;inset:0;background:linear-gradient(90deg,#0f0f0f 0 38%,rgba(15,15,15,.75) 62%,rgba(15,15,15,.35)),radial-gradient(ellipse at 75% 45%,#5a3b18,#24180c 55%,#0f0f0f)}
+.hero .img::after{content:"Foto: Grazergasse 3 am Abend";position:absolute;right:20px;bottom:20px;font-size:13px;color:#777}
+.hero .bgword{position:absolute;right:-2vw;top:50%;transform:translateY(-50%);font:400 clamp(160px,30vw,420px)/.8 var(--display);color:rgba(250,250,250,.04);pointer-events:none}
+.hero .wrap{position:relative;width:100%}
+.hero .txt{max-width:620px}
+.kick{font:600 13px var(--sans);text-transform:uppercase;letter-spacing:.16em;color:var(--saf);margin:0 0 14px}
+h1{font:400 clamp(60px,10vw,128px)/.9 var(--display);color:var(--white);margin:0 0 18px;letter-spacing:.01em;animation:left .7s .1s ease-out both}
+h1 em{font-style:normal;color:var(--saf)}
+@keyframes left{from{opacity:0;transform:translateX(-30px)}}
+.hero p.sub{font-size:18px;max-width:30em;margin:0 0 28px;animation:rise .6s .3s ease-out both}
+.cta{display:flex;gap:12px;flex-wrap:wrap;animation:rise .6s .5s ease-out both}
+@keyframes rise{from{opacity:0;transform:translateY(16px)}}
+.mcard{margin-top:30px;background:var(--card);border:1px solid rgba(240,168,42,.3);border-radius:4px;padding:18px 20px;max-width:420px;animation:pop .5s .4s cubic-bezier(.2,1.4,.4,1) both}
+@keyframes pop{from{opacity:0;transform:scale(.9)}}
+.mcard b{font:400 22px var(--display);color:var(--white);letter-spacing:.03em}
+.mcard div{display:flex;justify-content:space-between;gap:12px;font-size:14px;padding:6px 0;border-top:1px solid var(--line)}
+.mcard div:first-of-type{border-top:0}
+section{padding-block:90px}
+h2{font:400 clamp(44px,6vw,72px)/.95 var(--display);color:var(--white);margin:0 0 10px;letter-spacing:.01em}
+.lead{max-width:36em;margin:0 0 36px}
+.rows a{display:grid;grid-template-columns:1fr auto auto;gap:20px;align-items:center;padding:22px 20px;border-bottom:1px solid #1f1f1f;text-decoration:none;border-left:3px solid transparent;transition:transform .2s,border-color .2s,box-shadow .2s}
+.rows a:hover{transform:translateY(-2px);border-left-color:var(--saf);box-shadow:0 0 30px rgba(240,168,42,.08)}
+.rows b{font:400 30px var(--display);color:var(--white);letter-spacing:.02em}
+.rows span{font-size:15px}
+.rows i{font-style:normal;color:var(--saf);font-size:22px}
+.sig{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:var(--card);border:1px solid #1f1f1f;border-radius:4px;overflow:hidden;transition:transform .25s,border-color .25s}
+.card:hover{transform:translateY(-4px);border-color:rgba(240,168,42,.5)}
+.card .ph{aspect-ratio:4/3;overflow:hidden}
+.card .ph div{height:100%;display:flex;align-items:flex-end;padding:12px;font-size:13px;color:#999;transition:transform .5s}
+.card:hover .ph div{transform:scale(1.05)}
+.card .in{padding:18px}
+.card h3{font:400 28px var(--display);color:var(--white);margin:0;letter-spacing:.02em}
+.card p{margin:4px 0 0;font-size:15px}
+.stats{background:var(--saf);color:#0f0f0f}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding-block:40px;text-align:center}
+.stats b{display:block;font:400 clamp(48px,6vw,72px)/1 var(--display)}
+.stats span{font-weight:600;font-size:14px;color:#3a2a00}
+.when{background:var(--card2);border:1px solid var(--line);border-radius:4px;padding:28px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.chip{display:flex;gap:14px;align-items:flex-start;background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:16px}
+.chip svg{width:22px;height:22px;stroke:var(--saf);fill:none;stroke-width:2;flex:none;margin-top:2px}
+.chip b{color:var(--white);display:block}
+.tag{display:inline-block;margin-top:6px;font:600 11px var(--sans);letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border-radius:3px;background:rgba(240,168,42,.15);color:var(--saf)}
+.full{display:grid;grid-template-columns:repeat(2,1fr);gap:40px}
+.full h3{font:400 30px var(--display);color:var(--saf);margin:0 0 8px;letter-spacing:.03em}
+.full div div{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px solid #1f1f1f}
+.full div div span:first-child{color:var(--white)}
+.full small{display:block;color:var(--body);font-size:14px}
+.special{background:rgba(240,168,42,.06);border:1px solid rgba(240,168,42,.3);border-radius:4px;padding:20px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start}
+.about .tagline{color:var(--saf);font-weight:600;margin-top:16px}
+.hungry{background:var(--saf);color:#0f0f0f;text-align:center}
+.hungry h2{color:#0f0f0f;font-size:clamp(64px,12vw,150px)}
+.hungry .btn{background:#0f0f0f;color:var(--saf);border-color:#0f0f0f}
+footer{background:var(--deep);padding-block:50px 90px;font-size:14px}
+footer .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+footer h4{font:400 22px var(--display);color:var(--white);margin:0 0 8px;letter-spacing:.04em}
+footer p{margin:0 0 4px}
+.menu-btn{display:none;background:none;border:1px solid var(--line);color:var(--white);font:600 14px var(--sans);padding:7px 12px;border-radius:3px}
+.draft{position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--saf);color:#0f0f0f;font-size:13px;text-align:center;padding:8px 16px calc(8px + env(safe-area-inset-bottom))}
+.fade{opacity:0;transform:translateY(18px);transition:opacity .5s,transform .5s}
+.fade.in{opacity:1;transform:none}
+@media (max-width:1024px){.sig{grid-template-columns:1fr 1fr}.stats .wrap{grid-template-columns:1fr 1fr}.when{grid-template-columns:1fr}}
+@media (max-width:767px){.links,.nav-cta{display:none}.menu-btn{display:block}
+  nav.open .links{display:flex;flex-direction:column;position:fixed;inset:60px 0 0;background:var(--bg);padding:30px 20px;gap:18px;font:400 40px var(--display);color:var(--white)}
+  .hero .bgword{display:none}.mcard{max-width:none}.sig,.full,.about,footer .wrap{grid-template-columns:1fr}
+  .rows a{grid-template-columns:1fr auto;padding:18px 12px}.rows span{grid-column:1/-1;order:3}section{padding-block:70px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.fade{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<nav id="nav"><div class="wrap">
+  <a class="word" href="#">Der <span>Südsteirer</span></a>
+  <div class="links"><a href="#karte">Karte</a><a href="#beliebt">Beliebt</a><a href="#zeiten">Zeiten</a><a href="#ueber">Über uns</a></div>
+  <a class="btn sm nav-cta" href="#zeiten">So findest du uns</a>
+  <button class="menu-btn" onclick="document.getElementById('nav').classList.toggle('open')">Menü</button>
+</div></nav>
+
+<header class="hero">
+  <div class="img" aria-hidden="true"></div>
+  <div class="bgword" aria-hidden="true">LEIBNITZ</div>
+  <div class="wrap"><div class="txt">
+    <p class="kick">Grazergasse 3, mitten in Leibnitz</p>
+    <h1>Ehrlich gutes Essen. <em>Schnell.</em></h1>
+    <p class="sub">Hotdogs, Leberkäse, Schnitzel und Pommes aus eigenem Kartoffelteig. Mit Fleisch aus der Region, hausgemachten Saucen, Hauswein und Hausbier.</p>
+    <div class="cta"><a class="btn" href="#karte">Zur Karte</a><a class="btn sec" href="tel:+436644131933">Anrufen</a></div>
+    <div class="mcard"><b>Heute in der Küche</b>
+      <div><span>Steirischer Hotdog</span><span>Preis</span></div>
+      <div><span>Leberkäse im Weckerl</span><span>Preis</span></div>
+      <div><span>Schnitzel mit Pommes</span><span>Preis</span></div>
+    </div>
+  </div></div>
+</header>
+
+<section id="karte"><div class="wrap">
+  <h2 class="fade">Was es gibt</h2>
+  <p class="lead fade">Einfache Gerichte, aber jedes mit Sorgfalt gemacht. Die Saucen kommen aus unserer Küche, die Pommes auch.</p>
+  <div class="rows">
+    <a class="fade" href="#voll"><b>Hotdogs</b><span>Mit regionaler Wurst und hausgemachten Saucen</span><i>→</i></a>
+    <a class="fade" href="#voll"><b>Leberkäse und Brüstl</b><span>Warm aus dem Ofen, im Weckerl oder am Teller</span><i>→</i></a>
+    <a class="fade" href="#voll"><b>Schnitzel und Koteletts</b><span>Klassisch steirisch, mit Beilage nach Wahl</span><i>→</i></a>
+    <a class="fade" href="#voll"><b>Pommes</b><span>Selbst gemacht aus Kartoffelteig, nicht aus dem Sack</span><i>→</i></a>
+  </div>
+</div></section>
+
+<section id="beliebt" style="padding-top:0"><div class="wrap">
+  <h2 class="fade">Die Lieblinge</h2>
+  <p class="lead fade">Das bestellen unsere Gäste am öftesten.</p>
+  <div class="sig">
+    <div class="card fade"><div class="ph"><div style="background:linear-gradient(160deg,#6b4518,#2a1a0b)">Foto: Hotdog mit Röstzwiebeln</div></div><div class="in"><h3>Südsteirer Hotdog</h3><p>Regionale Wurst, hausgemachte Sauce</p></div></div>
+    <div class="card fade"><div class="ph"><div style="background:linear-gradient(160deg,#7a3a1c,#2b150b)">Foto: Leberkäse im Weckerl</div></div><div class="in"><h3>Leberkäse</h3><p>Warm, mit Senf oder Sauce nach Wahl</p></div></div>
+    <div class="card fade"><div class="ph"><div style="background:linear-gradient(160deg,#8a6a2a,#2e220c)">Foto: Hausgemachte Pommes</div></div><div class="in"><h3>Hauspommes</h3><p>Aus eigenem Kartoffelteig</p></div></div>
+  </div>
+</div></section>
+
+<div class="stats"><div class="wrap">
+  <div><b data-n="368">0</b><span>Google Bewertungen</span></div>
+  <div><b>4,9</b><span>Sterne im Schnitt</span></div>
+  <div><b data-n="6">0</b><span>Tage die Woche offen</span></div>
+  <div><b>100 %</b><span>hausgemachte Saucen</span></div>
+</div></div>
+
+<section id="zeiten"><div class="wrap">
+  <h2 class="fade">Wann und wo</h2>
+  <p class="lead fade">Wir sind kein Foodtruck, aber genauso schnell. Einfach vorbeikommen.</p>
+  <div class="when fade">
+    <div class="chip"><svg viewBox="0 0 24 24"><path d="M12 22s7-7.5 7-13a7 7 0 0 0-14 0c0 5.5 7 13 7 13z"/><circle cx="12" cy="9" r="2.5"/></svg><div><b>Grazergasse 3</b>8430 Leibnitz<br><span class="tag" id="status">Montag bis Samstag</span></div></div>
+    <div class="chip"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><b>Montag bis Samstag</b>8:30 bis 21:00 Uhr<br>Küche bis 19:30 Uhr</div></div>
+    <div class="chip"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M4 9h16"/></svg><div><b>Sonntag und Feiertag</b>geschlossen</div></div>
+  </div>
+  <p style="margin-top:16px;font-size:14px">Neuigkeiten und das Tagesgericht gibt es auf Facebook.</p>
+</div></section>
+
+<section id="voll" style="padding-top:0"><div class="wrap">
+  <h2 class="fade">Die ganze Karte</h2>
+  <div class="full">
+    <div class="fade"><h3>Aus der Küche</h3>
+      <div><span>Hotdog<small>regionale Wurst, Sauce nach Wahl</small></span><span>Preis</span></div>
+      <div><span>Leberkäse<small>im Weckerl oder am Teller</small></span><span>Preis</span></div>
+      <div><span>Brüstl<small>mit Beilage</small></span><span>Preis</span></div>
+      <div><span>Kotelett<small>mit Beilage</small></span><span>Preis</span></div>
+      <div><span>Schnitzel<small>klassisch</small></span><span>Preis</span></div>
+    </div>
+    <div class="fade"><h3>Dazu</h3>
+      <div><span>Hauspommes<small>aus eigenem Kartoffelteig</small></span><span>Preis</span></div>
+      <div><span>Hauswein<small>Sorte hier eintragen</small></span><span>Preis</span></div>
+      <div><span>Hausbier</span><span>Preis</span></div>
+      <div class="special" style="display:block;margin-top:16px"><b style="color:var(--saf)">Tagesgericht</b><br>Hier steht jeden Tag, was es heute Besonderes gibt.</div>
+    </div>
+  </div>
+  <p style="font-size:14px;margin-top:20px">Gerichte und Preise bitte aus der echten Karte übernehmen.</p>
+</div></section>
+
+<section id="ueber" style="padding-top:0"><div class="wrap about">
+  <h2 class="fade">Regional.<br>Ohne Umwege.</h2>
+  <div class="fade">
+    <p>Das Fleisch kommt von Jaga's Steirerei, die Pommes machen wir selbst aus Kartoffelteig, und die Saucen rühren wir in der eigenen Küche an. Dazu gibt es Hauswein und Hausbier.</p>
+    <p>Das Lokal ist mit Holz und natürlichen Materialien eingerichtet. Ein Treffpunkt mitten in Leibnitz, für eine schnelle Mittagspause genauso wie für einen Abend mit Freunden.</p>
+    <p class="tagline">Kulinarischer Treffpunkt im Herzen von Leibnitz.</p>
+  </div>
+</div></section>
+
+<section class="hungry"><div class="wrap">
+  <h2>Hungrig?</h2>
+  <p style="font-weight:600;margin:0 0 24px">Grazergasse 3, Montag bis Samstag ab 8:30 Uhr.</p>
+  <a class="btn" href="tel:+436644131933">0664 413 19 33</a>
+</div></section>
+
+<footer><div class="wrap">
+  <div><h4>Der Südsteirer</h4><p>Alexander Warasdin</p><p>Grazergasse 3, 8430 Leibnitz</p></div>
+  <div><h4>Karte</h4><p>Hotdogs, Leberkäse, Schnitzel</p><p>Hauspommes, Hauswein, Hausbier</p></div>
+  <div><h4>Kontakt</h4><p><a href="tel:+436644131933">0664 413 19 33</a></p><p><a href="mailto:alexander.warasdin@gmx.at">Nachricht schreiben</a></p><p>Impressum und Datenschutz</p></div>
+</div></footer>
+<div class="draft">Entwurf von David Tomoiaga für eine neue Website, nicht die offizielle Seite vom Südsteirer</div>
+<script>
+const io=new IntersectionObserver(es=>es.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('in'),(i%4)*80);io.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll('.fade').forEach(el=>io.observe(el));
+const rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const so=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;e.target.querySelectorAll('[data-n]').forEach(b=>{const n=+b.dataset.n;if(rm){b.textContent=n;return}const t0=performance.now();const f=t=>{const p=Math.min((t-t0)/1600,1);b.textContent=Math.round(n*(1-Math.pow(1-p,4)));if(p<1)requestAnimationFrame(f)};requestAnimationFrame(f)});so.unobserve(e.target)}),{threshold:.4});
+so.observe(document.querySelector('.stats'));
+const d=new Date(),day=d.getDay(),h=d.getHours()+d.getMinutes()/60,st=document.getElementById('status');
+st.textContent=(day>=1&&day<=6&&h>=8.5&&h<21)?'Jetzt offen':'Gerade geschlossen';
+</script>
+</body>
+</html>

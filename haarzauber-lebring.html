@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Haarzauber Styling by Natalie Zettel, Lebring</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Raleway:wght@300;400;500;600&display=swap">
+<style>
+/* Nach dem Prompt "Hair Salon Editorial" von websiteprompts.ai: warmes Creme, Roségold, Libre Baskerville und Raleway, mit Vorher Nachher Regler. */
+:root{--bg:#faf6f0;--ink:#1a1612;--rose:#a8705a;--rose-l:#c4907a;--muted:#7d7166;--card:#f2ebe1;--line:#e6dccf;
+  --serif:"Libre Baskerville",Georgia,serif;--sans:"Raleway",system-ui,sans-serif}
+*{box-sizing:border-box}
+html{color-scheme:light}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.8 var(--sans)}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--rose);outline-offset:3px}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left));padding-right:max(20px,env(safe-area-inset-right))}
+.lab{font:500 11px var(--sans);text-transform:uppercase;letter-spacing:.2em;color:var(--rose);margin:0 0 12px}
+nav{position:fixed;top:0;left:0;right:0;z-index:20;color:#fff;transition:background .25s,color .25s}
+nav.solid{background:rgba(250,246,240,.92);backdrop-filter:blur(10px);color:var(--ink);border-bottom:1px solid var(--line)}
+nav .wrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:72px;gap:20px}
+.l{display:flex;gap:24px;font:500 13px var(--sans);text-transform:uppercase;letter-spacing:.12em}
+.l a{text-decoration:none}
+.word{font:700 20px var(--serif);text-align:center;text-decoration:none}
+.word i{font-weight:400;display:block;font-size:12px;letter-spacing:.1em}
+.r{justify-self:end}
+.btn{display:inline-block;text-decoration:none;font:500 14px var(--sans);padding:15px 30px;background:var(--rose);color:#fff;border:1px solid var(--rose);letter-spacing:.04em}
+.btn.sm{padding:10px 18px;font-size:12px;text-transform:uppercase;letter-spacing:.15em}
+.btn.sec{background:transparent;border-color:rgba(255,255,255,.5)}
+.hero{height:clamp(600px,100svh,920px);position:relative;color:#fff;display:flex;align-items:flex-end;overflow:hidden}
+.hero .img{position:absolute;inset:0;background:linear-gradient(90deg,rgba(26,22,18,.75),rgba(26,22,18,.2) 70%),linear-gradient(160deg,#b89580,#5b4234)}
+.hero .img::after{content:"Foto: Haarschnitt im Salon";position:absolute;right:20px;top:90px;font-size:13px;opacity:.8}
+.hero .wrap{position:relative;padding-bottom:80px;width:100%}
+.hero .lab{color:#f1d2c3}
+h1{font:400 clamp(44px,6.6vw,86px)/1.08 var(--serif);margin:0 0 18px;max-width:12em}
+h1 em{color:#f1d2c3}
+.st{opacity:0;transform:translateY(24px);animation:up .8s ease forwards}
+.st.d1{animation-delay:.3s}.st.d2{animation-delay:.5s}.st.d3{animation-delay:.7s}.st.d4{animation-delay:.9s}
+@keyframes up{to{opacity:1;transform:none}}
+.hero p{font-weight:300;font-size:18px;max-width:30em;margin:0 0 28px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.marq{background:var(--ink);color:var(--bg);overflow:hidden;padding-block:14px}
+.marq .t{display:flex;width:max-content;animation:mq 22s linear infinite}
+.marq:hover .t{animation-play-state:paused}
+.marq span{font:500 12px var(--sans);text-transform:uppercase;letter-spacing:.2em;padding-inline:20px;display:flex;align-items:center;gap:40px;white-space:nowrap}
+.marq span::after{content:"";width:6px;height:6px;border-radius:50%;background:var(--rose-l)}
+@keyframes mq{to{transform:translateX(-50%)}}
+section{padding-block:100px}
+h2{font:400 clamp(32px,4.2vw,50px)/1.15 var(--serif);margin:0 0 20px}
+h2 em{color:var(--rose)}
+.svc{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.card{background:#fff;padding:30px 24px;border-top:3px solid transparent;transition:transform .3s,border-color .3s}
+.card:hover{transform:translateY(-4px);border-top-color:var(--rose-l)}
+.card h3{font:400 22px var(--serif);margin:0 0 8px}
+.card p{margin:0 0 14px;color:var(--muted);font-size:15px}
+.card .pr{font:italic 400 16px var(--serif);color:var(--rose)}
+.ba{position:relative;max-width:900px;margin:30px auto 0;aspect-ratio:16/10;overflow:hidden;user-select:none;touch-action:none;cursor:ew-resize}
+.ba .after,.ba .before{position:absolute;inset:0;display:flex;align-items:flex-end;padding:16px;font-size:13px}
+.ba .after{background:linear-gradient(160deg,#c49b82,#7a5341);color:#fff;justify-content:flex-end}
+.ba .before{background:linear-gradient(160deg,#a6a199,#5f5a54);color:#fff;clip-path:inset(0 50% 0 0)}
+.ba .handle{position:absolute;top:0;bottom:0;left:50%;width:2px;background:#fff;transform:translateX(-1px)}
+.ba .handle::after{content:"‹ ›";position:absolute;top:50%;left:50%;width:48px;height:48px;border-radius:50%;background:#fff;color:var(--rose);display:grid;place-items:center;transform:translate(-50%,-50%);font:600 16px var(--sans);transition:transform .2s}
+.ba.drag .handle::after{transform:translate(-50%,-50%) scale(1.1)}
+.port{overflow:hidden}
+.port .t{display:flex;gap:14px;width:max-content;animation:mq 35s linear infinite}
+.port .t div{width:240px;height:320px;background:var(--card);display:flex;align-items:flex-end;padding:12px;font-size:13px;color:var(--muted);transition:transform .4s}
+.port .t div:hover{transform:scale(1.05)}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.about .ph{aspect-ratio:4/5;background:linear-gradient(160deg,#d8bfae,#9c7a66);display:flex;align-items:flex-end;padding:14px;font-size:13px;color:#fff}
+blockquote{margin:24px 0;padding-left:20px;border-left:3px solid var(--rose-l);font:italic 400 20px/1.5 var(--serif)}
+.nums{display:flex;gap:40px;margin-top:24px}
+.nums b{display:block;font:400 34px var(--serif);color:var(--rose)}
+.nums span{font-size:13px;color:var(--muted)}
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.revs div{background:#fff;padding:28px}
+.stars{color:var(--rose-l);letter-spacing:3px}
+.revs p{font:italic 400 17px/1.6 var(--serif);margin:12px 0}
+.revs span{font-size:13px;color:var(--muted)}
+.book{background:var(--ink);color:var(--bg)}
+.book .wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px}
+.book h2{color:var(--bg)}
+.book table{border-collapse:collapse;width:100%}
+.book td{padding:10px 0;border-bottom:1px solid #3a332d}
+.book td:last-child{text-align:right}
+.glass{background:rgba(250,246,240,.06);border:1px solid rgba(250,246,240,.15);padding:30px}
+footer{background:var(--ink);color:#a99c90;padding-block:0 90px;font-size:14px}
+footer .wrap{border-top:1px solid #3a332d;padding-top:30px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.menu-btn{display:none;background:none;border:1px solid currentColor;color:inherit;font:500 12px var(--sans);text-transform:uppercase;letter-spacing:.15em;padding:8px 12px}
+.draft{position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--rose);color:#fff;font-size:13px;text-align:center;padding:8px 16px calc(8px + env(safe-area-inset-bottom))}
+.fade{opacity:0;transform:translateY(20px);transition:opacity .7s,transform .7s}
+.fade.in{opacity:1;transform:none}
+@media (max-width:1023px){.svc{grid-template-columns:1fr 1fr}}
+@media (max-width:767px){nav .wrap{grid-template-columns:auto 1fr auto}.l,.r{display:none}.menu-btn{display:block;justify-self:end}.word{text-align:left}
+  nav.open{background:var(--bg);color:var(--ink)}nav.open .l{display:flex;flex-direction:column;position:fixed;inset:72px 0 0;background:var(--bg);padding:30px 20px;gap:18px;font:400 30px var(--serif);text-transform:none;letter-spacing:0}
+  h1{font-size:44px}.svc,.revs,.about,.book .wrap{grid-template-columns:1fr}.about .ph{order:-1;aspect-ratio:4/3}.port .t div{width:190px;height:256px}.marq .t{animation-duration:18s}section{padding-block:76px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.st,.fade{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<nav id="nav"><div class="wrap">
+  <div class="l"><a href="#leistungen">Leistungen</a><a href="#salon">Salon</a><a href="#termin">Termin</a></div>
+  <a class="word" href="#">Haarzauber<i>Styling by Natalie</i></a>
+  <div class="r"><a class="btn sm" href="tel:+436608613221">Termin buchen</a></div>
+  <button class="menu-btn" onclick="document.getElementById('nav').classList.toggle('open')">Menü</button>
+</div></nav>
+
+<header class="hero">
+  <div class="img" aria-hidden="true"></div>
+  <div class="wrap">
+    <p class="lab st">Friseur in Lebring</p>
+    <h1 class="st d1">Ein bisschen <em>Zauber</em> für Ihr Haar.</h1>
+    <p class="st d2">Natalie Zettel und ihr Team schneiden, färben und stylen in Lebring. Für die ganze Familie, mit Parkplätzen vor der Tür.</p>
+    <div class="cta st d3"><a class="btn" href="tel:+436608613221">Termin vereinbaren</a><a class="btn sec" href="#leistungen">Leistungen</a></div>
+  </div>
+</header>
+
+<div class="marq" aria-hidden="true"><div class="t"><span>Schnitt</span><span>Farbe</span><span>Strähnen</span><span>Styling</span><span>Für die ganze Familie</span><span>Choogan Parfums</span><span>Schnitt</span><span>Farbe</span><span>Strähnen</span><span>Styling</span><span>Für die ganze Familie</span><span>Choogan Parfums</span></div></div>
+
+<section id="leistungen"><div class="wrap">
+  <p class="lab">Leistungen</p>
+  <h2 class="fade">Was wir für Sie <em>tun</em></h2>
+  <div class="svc">
+    <div class="card fade"><h3>Schnitt und Styling</h3><p>Damen, Herren und Kinder.</p><span class="pr">ab Preis</span></div>
+    <div class="card fade"><h3>Farbe</h3><p>Ansatz, Färben und Strähnen.</p><span class="pr">ab Preis</span></div>
+    <div class="card fade"><h3>Pflege</h3><p>Damit das Haar gesund bleibt.</p><span class="pr">ab Preis</span></div>
+    <div class="card fade"><h3>Anlässe</h3><p>Hochsteckfrisuren und Styling.</p><span class="pr">ab Preis</span></div>
+  </div>
+  <p style="font-size:14px;color:var(--muted);margin-top:16px">Leistungen und Preise bitte aus der echten Preisliste übernehmen.</p>
+</div></section>
+
+<section style="background:var(--card)"><div class="wrap" style="text-align:center">
+  <p class="lab">Vorher und nachher</p>
+  <h2 class="fade">Die <em>Verwandlung</em></h2>
+  <div class="ba" id="ba"><div class="after">Nachher, Foto einfügen</div><div class="before" id="before">Vorher, Foto einfügen</div><div class="handle" id="handle"></div></div>
+  <p style="font-size:14px;color:var(--muted)">Regler nach links und rechts ziehen</p>
+</div></section>
+
+<section style="padding-bottom:40px"><div class="port"><div class="t">
+  <div>Foto</div><div>Foto</div><div>Foto</div><div>Foto</div><div>Foto</div><div>Foto</div><div>Foto</div><div>Foto</div>
+  <div>Foto</div><div>Foto</div><div>Foto</div><div>Foto</div><div>Foto</div><div>Foto</div><div>Foto</div><div>Foto</div>
+</div></div></section>
+
+<section id="salon"><div class="wrap about">
+  <div class="fade">
+    <p class="lab">Der Salon</p>
+    <h2>Viele kommen <em>seit Jahren.</em></h2>
+    <p>Im Haarzauber in Lebring sind viele Kundinnen und Kunden Stammgäste, oft gleich die ganze Familie. Das Team ist flexibel bei Terminen und immer bei den neuesten Frisuren und Trends dabei.</p>
+    <blockquote>Hier ist Platz für einen Satz von Natalie, warum sie Friseurin geworden ist.</blockquote>
+    <div class="nums"><div><b>4,9</b><span>Sterne auf Google</span></div><div><b>50+</b><span>Bewertungen</span></div></div>
+  </div>
+  <div class="ph fade">Foto: Natalie Zettel im Salon</div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <p class="lab">Stimmen</p>
+  <h2 class="fade">Was Kunden <em>sagen</em></h2>
+  <div class="revs">
+    <div class="fade"><span class="stars">★★★★★</span><p>Seit vielen Jahren Stammkundin, die ganze Familie geht hin.</p><span>sinngemäß aus Google</span></div>
+    <div class="fade"><span class="stars">★★★★★</span><p>Sehr nettes Team, entspannte Atmosphäre und genau das Ergebnis, das ich wollte.</p><span>sinngemäß aus Google</span></div>
+    <div class="fade"><span class="stars">★★★★★</span><p>Die Flexibilität und Freundlichkeit des Teams sind unschlagbar.</p><span>sinngemäß aus Google</span></div>
+  </div>
+</div></section>
+
+<section class="book" id="termin"><div class="wrap">
+  <div>
+    <p class="lab">Termin</p>
+    <h2>Wir freuen uns <em style="color:var(--rose-l)">auf Sie.</em></h2>
+    <p>Grazer Straße 17, 8403 Lebring. Parkplätze direkt beim Salon.</p>
+    <p><a class="btn" href="tel:+436608613221">0660 861 32 21</a></p>
+    <p><a href="mailto:zettel2@gmx.at" style="color:var(--rose-l)">Nachricht schreiben</a></p>
+  </div>
+  <div class="glass">
+    <table>
+      <tr><td>Montag</td><td>geschlossen</td></tr>
+      <tr><td>Dienstag</td><td>8 bis 18 Uhr</td></tr>
+      <tr><td>Mittwoch</td><td>8 bis 12 Uhr</td></tr>
+      <tr><td>Donnerstag und Freitag</td><td>8 bis 18 Uhr</td></tr>
+      <tr><td>Samstag</td><td>7 bis 12 Uhr</td></tr>
+    </table>
+  </div>
+</div></section>
+<footer><div class="wrap"><span>Haarzauber Styling by Natalie Zettel, Lebring</span><span>Impressum · Datenschutz</span></div></footer>
+<div class="draft">Entwurf von David Tomoiaga für eine neue Website, nicht die offizielle Seite vom Haarzauber</div>
+<script>
+const nav=document.getElementById('nav');const f=()=>nav.classList.toggle('solid',scrollY>60);addEventListener('scroll',f,{passive:true});f();
+const ba=document.getElementById('ba'),bf=document.getElementById('before'),hd=document.getElementById('handle');
+function set(x){const r=ba.getBoundingClientRect();let p=(x-r.left)/r.width*100;p=Math.max(5,Math.min(95,p));bf.style.clipPath=`inset(0 ${100-p}% 0 0)`;hd.style.left=p+'%'}
+ba.addEventListener('pointermove',e=>{if(e.pointerType==='mouse'||ba.classList.contains('drag'))set(e.clientX)});
+ba.addEventListener('pointerdown',e=>{ba.classList.add('drag');ba.setPointerCapture(e.pointerId);set(e.clientX)});
+ba.addEventListener('pointerup',()=>ba.classList.remove('drag'));
+const io=new IntersectionObserver(es=>es.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('in'),(i%4)*150);io.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll('.fade').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
